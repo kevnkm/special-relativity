@@ -46,6 +46,9 @@ public class DialogueManager : MonoBehaviour
             choiceButtons[i].gameObject.SetActive(false);
         }
 
+        // Listen to CompleteTextRevealed event to show choices
+        TypewriterEffect.CompleteTextRevealed += RevealChoices;
+
         StartDialogue(startNode);
     }
 
@@ -61,6 +64,19 @@ public class DialogueManager : MonoBehaviour
         currentNode.onNodeEnter?.Invoke();
 
         ClearChoices();
+
+        if (currentNode.choices.Count == 0)
+        {
+            choiceButtons[0].gameObject.SetActive(true);
+            choiceTexts[0].text = "Continue";
+
+            choiceTexts[0].ForceMeshUpdate();
+
+            choiceButtons[0].GetComponent<RectTransform>().sizeDelta = new Vector2(
+                choiceButtons[0].GetComponent<RectTransform>().sizeDelta.x,
+                choiceTexts[0].preferredHeight + 50f
+            );
+        }
 
         for (int i = 0; i < currentNode.choices.Count; i++)
         {
@@ -88,16 +104,33 @@ public class DialogueManager : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
+
+        choicesContainer.SetActive(false);
     }
 
-    private int OnButtonClick(int choiceIndex)
+    private void OnButtonClick(int choiceIndex)
     {
+        if (currentNode.autoAdvance && currentNode.nextNode != null)
+        {
+            StartDialogue(currentNode.nextNode);
+            return;
+        }
+
         if (choiceIndex < 0 || choiceIndex >= currentNode.choices.Count)
         {
             Debug.LogWarning("Invalid choice index.");
-            return -1;
+            return;
         }
 
-        return choiceIndex;
+        DialogueChoice selectedChoice = currentNode.choices[choiceIndex];
+        if (selectedChoice.nextNode != null)
+            StartDialogue(selectedChoice.nextNode);
+        else
+            Debug.Log("No next node defined for this choice.");
+    }
+
+    private void RevealChoices()
+    {
+        choicesContainer.SetActive(true);
     }
 }
