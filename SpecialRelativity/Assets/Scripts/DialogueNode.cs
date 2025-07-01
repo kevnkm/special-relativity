@@ -10,6 +10,10 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> choices;
 
+    [Header("Auto-Advance Settings")]
+    public bool autoAdvance;
+    public DialogueNode nextNode;
+
     [Header("Optional Events")]
     public UnityEvent onNodeEnter;
 }

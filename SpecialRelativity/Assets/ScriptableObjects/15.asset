@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 15
+  m_EditorClassIdentifier: 
+  dialogueText: "This may seem strange, but now that we are on the train and moving
+    together with it, we no longer perceive the train to be moving. \nInstead, we
+    can say that it is the platform and even the whole world around us that is moving,
+    while the train stays completely still.\nThe key idea here is that velocity is
+    relative! When you are measuring velocity, you are always measuring it with respect
+    to a specific frame of reference. \nFurthermore, there is no preferred frame
+    of reference. In other words, there is no single absolute answer for the velocity
+    of an object.\nYou may think otherwise. After all, the train is clearly moving
+    at a velocity of 2m/s, and the only reason we perceive it to not be moving right
+    now is an illusion created by the fact that we are moving together with the train.\nHowever,
+    if I removed the platform and everything else, then you will find that it is
+    impossible to tell what velocity the train is moving at!"
+  choices: []
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: d99781d3e59fc4f96af649a31e5fa313, type: 2}
+  onNodeEnter:
+    m_PersistentCalls:
+      m_Calls: []

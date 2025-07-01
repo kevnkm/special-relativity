@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 16
+  m_EditorClassIdentifier: 
+  dialogueText: "This is because the laws of physics are the same in every non-accelerating
+    frame of reference. Regardless of the velocity, if I drop a ball, it falls straight
+    down. \nIn fact, no other physics experiments I can conduct will allow me to
+    determine what velocity we are travelling at. \nAnother point you might find
+    interesting is that the speed of light remains the same regardless of the frame
+    of reference."
+  choices: []
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  onNodeEnter:
+    m_PersistentCalls:
+      m_Calls: []
