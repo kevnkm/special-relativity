@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -9,6 +10,17 @@ public class DialogueManager : MonoBehaviour
     public GameObject choicesContainer;
     public Button choiceButtonPrefab;
     public DialogueNode startNode;
+
+    [Header("Choice")]
+    [SerializeField]
+    private Button[] choiceButtons;
+
+    [SerializeField]
+    private TextMeshProUGUI[] choiceTexts;
+
+    [Header("Optional Events")]
+    [SerializeField]
+    private UnityEvent onTrainEnter;
 
     private void Awake()
     {
@@ -27,6 +39,13 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            var index = i;
+            choiceButtons[i].onClick.AddListener(() => OnButtonClick(index));
+            choiceButtons[i].gameObject.SetActive(false);
+        }
+
         StartDialogue(startNode);
     }
 
@@ -39,17 +58,46 @@ public class DialogueManager : MonoBehaviour
     private void ShowNode()
     {
         dialogueText.text = currentNode.dialogueText;
-
         currentNode.onNodeEnter?.Invoke();
 
-        foreach (Transform child in choicesContainer.transform)
-            Destroy(child.gameObject);
+        ClearChoices();
 
-        foreach (var choice in currentNode.choices)
+        for (int i = 0; i < currentNode.choices.Count; i++)
         {
-            var button = Instantiate(choiceButtonPrefab, choicesContainer.transform);
-            button.GetComponentInChildren<Text>().text = choice.choiceText;
-            button.onClick.AddListener(() => StartDialogue(choice.nextNode));
+            if (i >= choiceButtons.Length)
+            {
+                Debug.LogWarning("Not enough choice buttons available.");
+                break;
+            }
+
+            choiceButtons[i].gameObject.SetActive(true);
+            choiceTexts[i].text = currentNode.choices[i].choiceText;
+
+            choiceTexts[i].ForceMeshUpdate();
+
+            choiceButtons[i].GetComponent<RectTransform>().sizeDelta = new Vector2(
+                choiceButtons[i].GetComponent<RectTransform>().sizeDelta.x,
+                choiceTexts[i].preferredHeight + 50f
+            );
         }
+    }
+
+    private void ClearChoices()
+    {
+        foreach (Button button in choiceButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+    }
+
+    private int OnButtonClick(int choiceIndex)
+    {
+        if (choiceIndex < 0 || choiceIndex >= currentNode.choices.Count)
+        {
+            Debug.LogWarning("Invalid choice index.");
+            return -1;
+        }
+
+        return choiceIndex;
     }
 }
