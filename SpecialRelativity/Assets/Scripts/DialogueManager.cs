@@ -4,11 +4,31 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance { get; private set; }
     public TextMeshProUGUI dialogueText;
     public GameObject choicesContainer;
     public Button choiceButtonPrefab;
+    public DialogueNode startNode;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private DialogueNode currentNode;
+
+    public void Start()
+    {
+        StartDialogue(startNode);
+    }
 
     public void StartDialogue(DialogueNode startNode)
     {
