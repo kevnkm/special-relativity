@@ -8,12 +8,17 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
     public TextMeshProUGUI dialogueText;
     public GameObject choicesContainer;
-    public Button choiceButtonPrefab;
     public DialogueNode startNode;
+
+    [SerializeField]
+    private Canvas dialogueCanvas;
 
     [Header("Choice")]
     [SerializeField]
     private Button[] choiceButtons;
+
+    [SerializeField]
+    private Button backgroundButton;
 
     [SerializeField]
     private TextMeshProUGUI[] choiceTexts;
@@ -39,6 +44,16 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
+        backgroundButton.onClick.AddListener(() => OnBackgroundClick());
+
+        TypewriterEffect.TextHeightUpdated += (float height) =>
+        {
+            dialogueCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(
+                dialogueCanvas.GetComponent<RectTransform>().sizeDelta.x,
+                height + 220f
+            );
+        };
+
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             var index = i;
@@ -68,7 +83,7 @@ public class DialogueManager : MonoBehaviour
         if (currentNode.choices.Count == 0)
         {
             choiceButtons[0].gameObject.SetActive(true);
-            choiceTexts[0].text = "Continue";
+            choiceTexts[0].text = "Click anywhere to continue";
 
             choiceTexts[0].ForceMeshUpdate();
 
@@ -127,6 +142,18 @@ public class DialogueManager : MonoBehaviour
             StartDialogue(selectedChoice.nextNode);
         else
             Debug.Log("No next node defined for this choice.");
+    }
+
+    private void OnBackgroundClick()
+    {
+        if (currentNode.autoAdvance && currentNode.nextNode != null)
+        {
+            StartDialogue(currentNode.nextNode);
+        }
+        else
+        {
+            Debug.Log("No auto-advance or next node defined.");
+        }
     }
 
     private void RevealChoices()
