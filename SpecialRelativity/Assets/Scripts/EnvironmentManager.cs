@@ -9,7 +9,6 @@ public class EnvironmentManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(DeactivateLever(0));
-        StartCoroutine(DeactivateLever(1));
     }
 
     private IEnumerator DeactivateLever(int index = 0)
