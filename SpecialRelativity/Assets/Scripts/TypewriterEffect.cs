@@ -27,6 +27,7 @@ public class TypewriterEffect : MonoBehaviour
     // Events
     public static event Action CompleteTextRevealed;
     public static event Action<char> CharacterRevealed;
+    public static event Action<float> TextHeightUpdated;
 
     // Properties
     public bool IsTyping { get; private set; }
@@ -38,6 +39,8 @@ public class TypewriterEffect : MonoBehaviour
     private int _currentVisibleCharacterIndex;
     private Coroutine _typewriterCoroutine;
     private bool _readyForNewText = true;
+
+    private float _lastReportedHeight = -1f;
 
     // Cached delays for performance
     private WaitForSeconds _normalDelay;
@@ -151,6 +154,7 @@ public class TypewriterEffect : MonoBehaviour
         _readyForNewText = true;
 
         CompleteTextRevealed?.Invoke();
+        NotifyHeightUpdate();
     }
 
     private IEnumerator TypewriterCoroutine()
@@ -170,16 +174,15 @@ public class TypewriterEffect : MonoBehaviour
 
         while (_currentVisibleCharacterIndex < textInfo.characterCount)
         {
-            // Update visible characters
             _textBox.maxVisibleCharacters = _currentVisibleCharacterIndex + 1;
 
-            // Get current character safely
             if (_currentVisibleCharacterIndex < textInfo.characterInfo.Length)
             {
                 char currentChar = textInfo.characterInfo[_currentVisibleCharacterIndex].character;
                 CharacterRevealed?.Invoke(currentChar);
 
-                // Determine delay based on character and skip state
+                NotifyHeightUpdate();
+
                 WaitForSeconds delay = GetDelayForCharacter(currentChar);
                 yield return delay;
             }
@@ -187,13 +190,42 @@ public class TypewriterEffect : MonoBehaviour
             _currentVisibleCharacterIndex++;
         }
 
-        // Ensure all characters are visible
         _textBox.maxVisibleCharacters = textInfo.characterCount;
 
-        // Wait before completing
         yield return _completionWait;
 
         CompleteTypewriter();
+    }
+
+    private void NotifyHeightUpdate()
+    {
+        float currentHeight = GetVisibleTextHeight();
+        if (!Mathf.Approximately(currentHeight, _lastReportedHeight))
+        {
+            _lastReportedHeight = currentHeight;
+            TextHeightUpdated?.Invoke(currentHeight);
+        }
+    }
+
+    private float GetVisibleTextHeight()
+    {
+        float height = 0f;
+        TMP_LineInfo[] lines = _textBox.textInfo.lineInfo;
+
+        for (int i = 0; i < _textBox.textInfo.lineCount; i++)
+        {
+            TMP_LineInfo line = lines[i];
+            if (line.lastVisibleCharacterIndex < _currentVisibleCharacterIndex)
+            {
+                height += line.lineHeight;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        return height;
     }
 
     private WaitForSeconds GetDelayForCharacter(char character)
@@ -201,7 +233,6 @@ public class TypewriterEffect : MonoBehaviour
         if (IsSkipping)
             return _skipDelay;
 
-        // Check if character is punctuation that should have longer delay
         for (int i = 0; i < PunctuationChars.Length; i++)
         {
             if (PunctuationChars[i] == character)
@@ -218,5 +249,6 @@ public class TypewriterEffect : MonoBehaviour
         IsComplete = true;
         _readyForNewText = true;
         CompleteTextRevealed?.Invoke();
+        NotifyHeightUpdate();
     }
 }
