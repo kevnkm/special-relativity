@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -48,10 +49,7 @@ public class DialogueManager : MonoBehaviour
 
         TypewriterEffect.TextHeightUpdated += (float height) =>
         {
-            dialogueCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(
-                dialogueCanvas.GetComponent<RectTransform>().sizeDelta.x,
-                height + 220f
-            );
+            StartCoroutine(UpdateSizeNextFrame(height));
         };
 
         for (int i = 0; i < choiceButtons.Length; i++)
@@ -159,5 +157,12 @@ public class DialogueManager : MonoBehaviour
     private void RevealChoices()
     {
         choicesContainer.SetActive(true);
+    }
+
+    private IEnumerator UpdateSizeNextFrame(float height)
+    {
+        yield return null; // wait until next frame
+        var rectTransform = dialogueCanvas.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, height + 220f);
     }
 }
