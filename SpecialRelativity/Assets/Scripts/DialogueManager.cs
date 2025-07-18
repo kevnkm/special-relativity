@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
     private void ShowNode()
     {
         dialogueText.text = currentNode.dialogueText;
-        currentNode.onNodeEnter?.Invoke();
+        // currentNode.onNodeEnter?.Invoke();
 
         ClearChoices();
 
