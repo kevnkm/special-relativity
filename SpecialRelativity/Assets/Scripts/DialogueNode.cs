@@ -1,21 +1,23 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "New Dialogue Node", menuName = "Dialogue/Node")]
 public class DialogueNode : ScriptableObject
 {
+    public bool isEventNode;
+
+    [Tooltip("If event mode is enabled, this GameObject will be triggered.")]
+    public GameObject eventObject;
+
     [TextArea]
     public string dialogueText;
 
     public List<DialogueChoice> choices;
 
+    [Header("Auto-Advance Settings")]
     public bool autoAdvance;
     public DialogueNode nextNode;
-
-    [Header("Optional Events")]
-    public UnityEvent onNodeEnter;
 }
 
 [CustomEditor(typeof(DialogueNode))]
@@ -25,21 +27,40 @@ public class DialogueNodeEditor : Editor
     {
         serializedObject.Update();
 
+        // Get all properties
+        SerializedProperty isEventNode = serializedObject.FindProperty("isEventNode");
+        SerializedProperty eventObject = serializedObject.FindProperty("eventObject");
         SerializedProperty dialogueText = serializedObject.FindProperty("dialogueText");
         SerializedProperty choices = serializedObject.FindProperty("choices");
         SerializedProperty autoAdvance = serializedObject.FindProperty("autoAdvance");
         SerializedProperty nextNode = serializedObject.FindProperty("nextNode");
 
-        EditorGUILayout.PropertyField(dialogueText);
+        // Mode switch
+        EditorGUILayout.PropertyField(isEventNode);
+
         EditorGUILayout.Space();
 
-        EditorGUILayout.LabelField("Auto-Advance Settings", EditorStyles.boldLabel);
-        EditorGUILayout.PropertyField(autoAdvance);
-
-        if (autoAdvance.boolValue)
-            EditorGUILayout.PropertyField(nextNode);
+        if (isEventNode.boolValue)
+        {
+            EditorGUILayout.PropertyField(eventObject);
+        }
         else
-            EditorGUILayout.PropertyField(choices, true);
+        {
+            EditorGUILayout.PropertyField(dialogueText);
+            EditorGUILayout.Space();
+
+            EditorGUILayout.LabelField("Auto-Advance Settings", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(autoAdvance);
+
+            if (autoAdvance.boolValue)
+            {
+                EditorGUILayout.PropertyField(nextNode);
+            }
+            else
+            {
+                EditorGUILayout.PropertyField(choices, true);
+            }
+        }
 
         serializedObject.ApplyModifiedProperties();
     }
