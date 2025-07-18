@@ -16,14 +16,24 @@ public class FollowCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        // Offset is applied relative to the camera's local space
-        Vector3 targetPosition =
-            cameraTransform.position
-            + cameraTransform.right * offset.x
-            + cameraTransform.forward * offset.z;
-        targetPosition = new Vector3(targetPosition.x, yPos, targetPosition.z);
+        // Flattened forward and right to avoid Y tilt
+        Vector3 flatForward = new Vector3(
+            cameraTransform.forward.x,
+            0f,
+            cameraTransform.forward.z
+        ).normalized;
+        Vector3 flatRight = new Vector3(
+            cameraTransform.right.x,
+            0f,
+            cameraTransform.right.z
+        ).normalized;
 
-        // Smooth position follow
+        // Apply offset in flattened local space
+        Vector3 targetPosition =
+            cameraTransform.position + flatRight * offset.x + flatForward * offset.z;
+        targetPosition.y = yPos; // fixed Y position
+
+        // Smooth follow
         transform.position = Vector3.Lerp(
             transform.position,
             targetPosition,
