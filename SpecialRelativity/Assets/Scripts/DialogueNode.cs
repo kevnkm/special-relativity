@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,10 +11,36 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> choices;
 
-    [Header("Auto-Advance Settings")]
     public bool autoAdvance;
     public DialogueNode nextNode;
 
     [Header("Optional Events")]
     public UnityEvent onNodeEnter;
+}
+
+[CustomEditor(typeof(DialogueNode))]
+public class DialogueNodeEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+
+        SerializedProperty dialogueText = serializedObject.FindProperty("dialogueText");
+        SerializedProperty choices = serializedObject.FindProperty("choices");
+        SerializedProperty autoAdvance = serializedObject.FindProperty("autoAdvance");
+        SerializedProperty nextNode = serializedObject.FindProperty("nextNode");
+
+        EditorGUILayout.PropertyField(dialogueText);
+        EditorGUILayout.Space();
+
+        EditorGUILayout.LabelField("Auto-Advance Settings", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(autoAdvance);
+
+        if (autoAdvance.boolValue)
+            EditorGUILayout.PropertyField(nextNode);
+        else
+            EditorGUILayout.PropertyField(choices, true);
+
+        serializedObject.ApplyModifiedProperties();
+    }
 }
