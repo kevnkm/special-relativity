@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 7
+  m_Name: 7 3
   m_EditorClassIdentifier: 
   isEventNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 'You will notice that the ball has travelled a horizontal distance,
-    even though I dropped the ball simply by letting go of it. '
+  dialogueText: "From our point of view on the platform, the ball has a horizontal
+    velocity matching the train: we can call this perspective the \u201Cplatform
+    frame of reference\u201D."
   choices: []
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 43c86f281e80f42aba6192c5600898e9, type: 2}
+  nextNode: {fileID: 11400000, guid: ce9277c2aba21484d8c949452f50beec, type: 2}

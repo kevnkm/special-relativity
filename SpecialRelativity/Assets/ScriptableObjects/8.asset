@@ -12,20 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 8
   m_EditorClassIdentifier: 
-  dialogueText: Could you tell me what velocity is the train moving at?
+  isEventNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: Could you tell me what velocity the train is moving at?
   choices:
   - choiceText: 2m/s to our left
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 3562aa7250c4e46ce9757702a52e12aa, type: 2}
   - choiceText: 0.5m/s to our left
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: d6127263ec2b443e6a2d96824df089e3, type: 2}
   - choiceText: 0m/s
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 4927c433089004313b89ccddda5f8d67, type: 2}
   - choiceText: 0.5m/s to our right
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 8c42e33eca38246d9b2579002c9dc783, type: 2}
   - choiceText: 2m/s to our right
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: e00ce15db3da94ecf917b0f31d9b8e5e, type: 2}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
