@@ -12,18 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  dialogueText: "I\u2019m doing well too! \nYou know, I heard a rumor. See those
-    gates at the ends of the platform? \nApparently, they are supposed to be closed
-    when a train is in the station.\nBut because the architects made a mistake when
-    building the platform and made it too short, the head of the train just sticks
-    out, and they can\u2019t close the gates!"
-  choices:
-  - choiceText: Oh, really?
-    nextNode: {fileID: 11400000, guid: 055e25ca057f3496ab3c3eeca5da70d1, type: 2}
-  - choiceText: Why do they need to close anyway?
-    nextNode: {fileID: 11400000, guid: 50a42deff072a48a0b791620775503a0, type: 2}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
+  dialogueText: "I\u2019m doing well too! "
+  choices: []
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 6383b2f987dce4edf892528063fc49c9, type: 2}
   onNodeEnter:
     m_PersistentCalls:
       m_Calls: []
