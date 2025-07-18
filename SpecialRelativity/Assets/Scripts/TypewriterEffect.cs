@@ -192,6 +192,8 @@ public class TypewriterEffect : MonoBehaviour
 
         _textBox.maxVisibleCharacters = textInfo.characterCount;
 
+        _lastReportedHeight = GetVisibleTextHeight();
+
         yield return _completionWait;
 
         CompleteTypewriter();
