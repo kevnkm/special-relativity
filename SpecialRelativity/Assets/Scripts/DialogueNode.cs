@@ -6,6 +6,7 @@ using UnityEngine;
 public class DialogueNode : ScriptableObject
 {
     public bool isEventNode;
+    public bool isQuizNode;
 
     [Tooltip("If event mode is enabled, this GameObject will be triggered.")]
     public GameObject eventObject;
@@ -14,11 +15,17 @@ public class DialogueNode : ScriptableObject
     public string dialogueText;
 
     public List<DialogueChoice> choices;
+    public int quizIndex;
 
     public bool autoAdvance;
     public DialogueNode nextNode;
 
     public AudioClip voiceClip;
+}
+
+public static class DialogueEditorContext
+{
+    public static bool isQuizNode;
 }
 
 [CustomEditor(typeof(DialogueNode))]
@@ -28,18 +35,18 @@ public class DialogueNodeEditor : Editor
     {
         serializedObject.Update();
 
-        // Get all properties
         SerializedProperty isEventNode = serializedObject.FindProperty("isEventNode");
         SerializedProperty eventObject = serializedObject.FindProperty("eventObject");
         SerializedProperty dialogueText = serializedObject.FindProperty("dialogueText");
-        SerializedProperty choices = serializedObject.FindProperty("choices");
+        SerializedProperty voiceClip = serializedObject.FindProperty("voiceClip");
         SerializedProperty autoAdvance = serializedObject.FindProperty("autoAdvance");
         SerializedProperty nextNode = serializedObject.FindProperty("nextNode");
-        SerializedProperty voiceClip = serializedObject.FindProperty("voiceClip");
+        SerializedProperty choices = serializedObject.FindProperty("choices");
+        SerializedProperty isQuizNode = serializedObject.FindProperty("isQuizNode");
+        SerializedProperty quizIndex = serializedObject.FindProperty("quizIndex");
 
-        // Mode switch
         EditorGUILayout.PropertyField(isEventNode);
-
+        // EditorGUILayout.PropertyField(choices, true);
         EditorGUILayout.Space();
 
         if (isEventNode.boolValue)
@@ -50,8 +57,15 @@ public class DialogueNodeEditor : Editor
         {
             EditorGUILayout.PropertyField(dialogueText);
             EditorGUILayout.PropertyField(voiceClip);
-            EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(isQuizNode); // <-- Here
+            DialogueEditorContext.isQuizNode = isQuizNode.boolValue; // <-- IMPORTANT!
 
+            if (isQuizNode.boolValue)
+            {
+                EditorGUILayout.PropertyField(quizIndex);
+            }
+
+            EditorGUILayout.Space();
             EditorGUILayout.LabelField("Auto-Advance Settings", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(autoAdvance);
 
@@ -66,5 +80,43 @@ public class DialogueNodeEditor : Editor
         }
 
         serializedObject.ApplyModifiedProperties();
+    }
+}
+
+[CustomPropertyDrawer(typeof(DialogueChoice))]
+public class DialogueChoiceDrawer : PropertyDrawer
+{
+    public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+    {
+        int lines = DialogueEditorContext.isQuizNode ? 4 : 2;
+        return EditorGUIUtility.singleLineHeight * lines + 10f;
+    }
+
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+    {
+        EditorGUI.BeginProperty(position, label, property);
+
+        float lineHeight = EditorGUIUtility.singleLineHeight;
+        float spacing = 2f;
+
+        var choiceText = property.FindPropertyRelative("choiceText");
+        var nextNode = property.FindPropertyRelative("nextNode");
+        var isCorrectChoice = property.FindPropertyRelative("isCorrectChoice");
+
+        Rect lineRect = new Rect(position.x, position.y, position.width, lineHeight);
+        EditorGUI.PropertyField(lineRect, choiceText);
+
+        lineRect.y += lineHeight + spacing;
+        EditorGUI.PropertyField(lineRect, nextNode);
+
+        if (DialogueEditorContext.isQuizNode)
+        {
+            EditorGUI.indentLevel++;
+            lineRect.y += lineHeight + spacing;
+            EditorGUI.PropertyField(lineRect, isCorrectChoice);
+            EditorGUI.indentLevel--;
+        }
+
+        EditorGUI.EndProperty();
     }
 }
