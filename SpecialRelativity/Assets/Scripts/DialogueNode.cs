@@ -15,7 +15,6 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> choices;
 
-    [Header("Auto-Advance Settings")]
     public bool autoAdvance;
     public DialogueNode nextNode;
 
@@ -36,6 +35,7 @@ public class DialogueNodeEditor : Editor
         SerializedProperty choices = serializedObject.FindProperty("choices");
         SerializedProperty autoAdvance = serializedObject.FindProperty("autoAdvance");
         SerializedProperty nextNode = serializedObject.FindProperty("nextNode");
+        SerializedProperty voiceClip = serializedObject.FindProperty("voiceClip");
 
         // Mode switch
         EditorGUILayout.PropertyField(isEventNode);
@@ -49,6 +49,7 @@ public class DialogueNodeEditor : Editor
         else
         {
             EditorGUILayout.PropertyField(dialogueText);
+            EditorGUILayout.PropertyField(voiceClip);
             EditorGUILayout.Space();
 
             EditorGUILayout.LabelField("Auto-Advance Settings", EditorStyles.boldLabel);
