@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 8
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
+  isQuizNode: 1
   eventObject: {fileID: 0}
   dialogueText: Could you tell me what velocity the train is moving at?
   choices:
@@ -31,8 +31,9 @@ MonoBehaviour:
     isCorrectChoice: 0
   - choiceText: 2m/s to our right
     nextNode: {fileID: 11400000, guid: e00ce15db3da94ecf917b0f31d9b8e5e, type: 2}
-    isCorrectChoice: 0
+    isCorrectChoice: 1
   quizIndex: 0
+  allowedTries: 0
   autoAdvance: 0
   nextNode: {fileID: 0}
   voiceClip: {fileID: 8300000, guid: fa74937880d6b437fa40af58976ef00f, type: 3}
