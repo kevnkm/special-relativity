@@ -16,6 +16,7 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> choices;
     public int quizIndex;
+    public int allowedTries;
 
     public bool autoAdvance;
     public DialogueNode nextNode;
@@ -44,9 +45,9 @@ public class DialogueNodeEditor : Editor
         SerializedProperty choices = serializedObject.FindProperty("choices");
         SerializedProperty isQuizNode = serializedObject.FindProperty("isQuizNode");
         SerializedProperty quizIndex = serializedObject.FindProperty("quizIndex");
+        SerializedProperty allowedTries = serializedObject.FindProperty("allowedTries");
 
         EditorGUILayout.PropertyField(isEventNode);
-        // EditorGUILayout.PropertyField(choices, true);
         EditorGUILayout.Space();
 
         if (isEventNode.boolValue)
@@ -57,12 +58,15 @@ public class DialogueNodeEditor : Editor
         {
             EditorGUILayout.PropertyField(dialogueText);
             EditorGUILayout.PropertyField(voiceClip);
-            EditorGUILayout.PropertyField(isQuizNode); // <-- Here
-            DialogueEditorContext.isQuizNode = isQuizNode.boolValue; // <-- IMPORTANT!
+
+            EditorGUILayout.Space();
+            EditorGUILayout.PropertyField(isQuizNode);
+            DialogueEditorContext.isQuizNode = isQuizNode.boolValue;
 
             if (isQuizNode.boolValue)
             {
                 EditorGUILayout.PropertyField(quizIndex);
+                EditorGUILayout.PropertyField(allowedTries);
             }
 
             EditorGUILayout.Space();
