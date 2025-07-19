@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 6 1
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: "To understand special relativity, we first need to understand a
     concept called \u201Cframes of reference,\u201D which basically refers to different
     perspectives that you can observe the world from. "
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 977be070155f74b198819677e71b1fb8, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 9091a9b7b5d654ead8cd70736e413111, type: 3}

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Perhaps surprisingly, special relativity does not require much background
     knowledge or mathematics to understand, and I intend to take things step by step.
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 534655c71e5fc4eb48ffc9607120b789, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 097e08799731447b98b34ddcabfb6ed0, type: 3}

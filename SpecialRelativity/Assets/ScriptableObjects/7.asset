@@ -19,3 +19,4 @@ MonoBehaviour:
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 43c86f281e80f42aba6192c5600898e9, type: 2}
+  voiceClip: {fileID: 8300000, guid: 82b8e90c5eb814b40a9c769b4eb43b29, type: 3}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 2 2
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: "But because the architects made a mistake when building the platform
     and made it too short, the head of the train just sticks out, and they can\u2019t
     close the gates!"
@@ -22,6 +24,4 @@ MonoBehaviour:
     nextNode: {fileID: 11400000, guid: 50a42deff072a48a0b791620775503a0, type: 2}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 3830038be2cf14d65a4b0a8ad2aaaafc, type: 3}

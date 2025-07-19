@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 9-3
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: "That\u2019s not quite right. If it has zero velocity, then the train
     must be at rest. But here we can clearly see that it is moving!"
   choices: []
   autoAdvance: 0
   nextNode: {fileID: 11400000, guid: 8b925b094bda24a6c943a9c36321c998, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 0316498d52d314210b64d7600cee2372, type: 3}

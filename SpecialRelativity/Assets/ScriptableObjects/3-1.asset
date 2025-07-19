@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 3-1
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Yeah, I do wonder why they have the gates in the first place, nobody
     seems to know!
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: be52b6e9c77b1427d822a330837ac81d, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: da5736ed32a7649f2a2e6cf454bda209, type: 3}

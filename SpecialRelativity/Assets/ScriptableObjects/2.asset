@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  dialogueText: "I\u2019m doing well too! "
+  isEventNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: "I\u2019m doing well too!"
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 6383b2f987dce4edf892528063fc49c9, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 7580ff29807e54239a78a8db52acf0c4, type: 3}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 4 2
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Seeing as that we have some time while waiting for the train, would
     you mind playing the role of an audience for me please?
   choices:
@@ -21,6 +23,4 @@ MonoBehaviour:
     nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 7f2aadab842bf42b095e977fceed71e7, type: 3}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Small talk aside, I have a favor to ask, if I may.
   choices:
   - choiceText: "That sounds interesting! I\u2019m all ears."
@@ -20,6 +22,4 @@ MonoBehaviour:
     nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 959ee671ed7cb4c059f6903b2b8c85c6, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 625d006fa658c41ce9016fc4f7bf70c6, type: 3}

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 4 1
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: "See, I am heading out to give my very first lecture on my new theory,
     the  \u201CTheory of Special Relativity\u201D today."
   choices:
@@ -21,6 +23,4 @@ MonoBehaviour:
     nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 65135028d0e9e4eb2869064102f79e22, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 399e9800677f54838a6cf650b206a745, type: 3}

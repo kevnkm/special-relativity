@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 5-2
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Oh, don't worry.
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 4ee985fb2ae6843d7b6bcdb64e2d90ea, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: e37a950e885ae44e98984c1dfbd7420e, type: 3}

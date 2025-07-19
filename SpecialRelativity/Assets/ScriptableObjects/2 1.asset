@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 2 1
   m_EditorClassIdentifier: 
-  dialogueText: "You know, I heard a rumor. See those gates at the ends of the platform?
-    \nApparently, they are supposed to be closed when a train is in the station."
+  isEventNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: 'You know, I heard a rumor. See those gates at the ends of the platform?
+
+    Apparently,
+    they are supposed to be closed when a train is in the station.'
   choices: []
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 110b26f0139fc40da8a681c88c973077, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: f6ad811a33fe144cebbe84b00dcc2657, type: 3}

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 9-4
   m_EditorClassIdentifier: 
+  isEventNode: 0
+  eventObject: {fileID: 0}
   dialogueText: Almost! Recall that the speed of an object is given by the distance
     it travels over the amount of time taken.
   choices: []
   autoAdvance: 0
   nextNode: {fileID: 11400000, guid: 8b925b094bda24a6c943a9c36321c998, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 8300000, guid: 9187ba782d3db460caefde0699759990, type: 3}
