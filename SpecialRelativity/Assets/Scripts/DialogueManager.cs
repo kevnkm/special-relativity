@@ -74,7 +74,12 @@ public class DialogueManager : MonoBehaviour
     private void ShowNode()
     {
         dialogueText.text = currentNode.dialogueText;
-        // currentNode.onNodeEnter?.Invoke();
+
+        // 🔊 Play voice clip if present
+        if (currentNode.voiceClip != null)
+        {
+            AudioManager.Instance.Play(currentNode.voiceClip);
+        }
 
         ClearChoices();
 

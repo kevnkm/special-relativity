@@ -18,6 +18,8 @@ public class DialogueNode : ScriptableObject
     [Header("Auto-Advance Settings")]
     public bool autoAdvance;
     public DialogueNode nextNode;
+
+    public AudioClip voiceClip;
 }
 
 [CustomEditor(typeof(DialogueNode))]
