@@ -24,6 +24,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI[] choiceTexts;
 
+    [Header("Animation")]
+    [SerializeField]
+    private Animator einsteinAnimator;
+
     [Header("Optional Events")]
     [SerializeField]
     private UnityEvent onTrainEnter;
@@ -63,6 +67,9 @@ public class DialogueManager : MonoBehaviour
         TypewriterEffect.CompleteTextRevealed += RevealChoices;
 
         StartDialogue(startNode);
+
+        einsteinAnimator.ResetTrigger("Walk Stop");
+        einsteinAnimator.SetTrigger("Walk Start");
     }
 
     public void StartDialogue(DialogueNode startNode)
