@@ -91,7 +91,10 @@ public class DialogueManager : MonoBehaviour
 
             // 🔊 Play voice clip if present
             if (currentNode.voiceClip != null)
+            {
+                StartCoroutine(TalkAnimation());
                 AudioManager.Instance.Play(currentNode.voiceClip);
+            }
 
             ClearChoices();
 
@@ -116,7 +119,6 @@ public class DialogueManager : MonoBehaviour
                         Debug.LogWarning("Not enough choice buttons available.");
                         break;
                     }
-                    Debug.Log($"Setting up choice {i}: {currentNode.choices[i].choiceText}");
 
                     choiceButtons[i].gameObject.SetActive(true);
                     choiceTexts[i].text = currentNode.choices[i].choiceText;
@@ -193,5 +195,32 @@ public class DialogueManager : MonoBehaviour
         yield return null; // wait until next frame
         var rectTransform = dialogueCanvas.GetComponent<RectTransform>();
         rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, height + 220f);
+    }
+
+    private IEnumerator TalkAnimation()
+    {
+        if (currentNode.voiceClip != null)
+        {
+            float clipLength = currentNode.voiceClip.length;
+            float startTime = Time.time;
+
+            while (Time.time - startTime < clipLength)
+            {
+                int talkIndex = Random.Range(0, 4);
+                EinsteinAnimator.SetInteger("TalkIndex", talkIndex);
+                EinsteinAnimator.SetTrigger("Talk");
+
+                yield return new WaitUntil(() =>
+                {
+                    if (Time.time - startTime >= clipLength)
+                        return true;
+
+                    AnimatorStateInfo stateInfo = EinsteinAnimator.GetCurrentAnimatorStateInfo(0);
+                    return stateInfo.normalizedTime >= 1.0f && !EinsteinAnimator.IsInTransition(0);
+                });
+            }
+
+            EinsteinAnimator.SetTrigger("Idle");
+        }
     }
 }
