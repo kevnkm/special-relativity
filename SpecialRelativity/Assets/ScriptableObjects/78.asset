@@ -20,10 +20,10 @@ MonoBehaviour:
   choices:
   - choiceText: The gates are going to hit the train, since the platform is even
       shorter now!
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 0a04c2d92f133458780692f03f055cde, type: 2}
     isCorrectChoice: 0
   - choiceText: "The gates somehow don\u2019t hit the train."
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 7ba21fd931451436aa9054f6877a181b, type: 2}
     isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
