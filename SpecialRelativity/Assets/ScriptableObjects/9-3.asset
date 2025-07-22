@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: 9-3
   m_EditorClassIdentifier: 
   isEventNode: 0
+  isQuizNode: 0
   eventObject: {fileID: 0}
   dialogueText: "That\u2019s not quite right. If it has zero velocity, then the train
     must be at rest. But here we can clearly see that it is moving!"
   choices: []
-  autoAdvance: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 8b925b094bda24a6c943a9c36321c998, type: 2}
   voiceClip: {fileID: 8300000, guid: 0316498d52d314210b64d7600cee2372, type: 3}

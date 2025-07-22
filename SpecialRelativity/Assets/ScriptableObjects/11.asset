@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 11
   m_EditorClassIdentifier: 
-  dialogueText: "Now, imagine if you are standing on the train. By doing so, we can
-    say that we are in a different frame of reference, the \u201Ctrain frame of reference\u201D.
-    Watch the ball this time\u2026"
+  isEventNode: 1
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: 
   choices: []
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
   autoAdvance: 0
   nextNode: {fileID: 11400000, guid: 967ba6a0d34fa47c19c107a4f189aeb6, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 0}

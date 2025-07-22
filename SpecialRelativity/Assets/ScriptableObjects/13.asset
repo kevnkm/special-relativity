@@ -12,17 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 13
   m_EditorClassIdentifier: 
-  dialogueText: "From this new perspective, the \u201Ctrain frame of reference,\u201D
-    what velocity is the train moving at?"
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: "This fits what we mentioned earlier \u2013 the ball moves together
+    with the train."
   choices:
   - choiceText: 2m/s to our left
     nextNode: {fileID: 11400000, guid: 04a979617448f444da12f3765a381427, type: 2}
+    isCorrectChoice: 0
   - choiceText: 0m/s
     nextNode: {fileID: 11400000, guid: 8579371609fda47f285d481ddcc322e6, type: 2}
+    isCorrectChoice: 0
   - choiceText: 2m/s to our right
     nextNode: {fileID: 11400000, guid: 7eff4cb853aec4452b0134b659833d26, type: 2}
+    isCorrectChoice: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 0}

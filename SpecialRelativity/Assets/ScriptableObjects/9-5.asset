@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: 9-5
   m_EditorClassIdentifier: 
   isEventNode: 0
+  isQuizNode: 0
   eventObject: {fileID: 0}
   dialogueText: Yes, indeed! We can say that the train is moving to our right at
     2m/s.
   choices: []
-  autoAdvance: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 2690dfe1cd86b4978b42a8774f0da94a, type: 2}
   voiceClip: {fileID: 8300000, guid: 055deb7d0889b4fc7b46980e399ca702, type: 3}

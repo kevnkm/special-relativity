@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 36
+  m_EditorClassIdentifier: 
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: "Now, let\u2019s take a moment to recall what we have just discussed.
+    Do you feel like you understand the concepts thus far?"
+  choices:
+  - choiceText: "Yes, I\u2019m good to go!"
+    nextNode: {fileID: 11400000, guid: 63100721907024b9fb7783c78cec757c, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Not quite! I think I need a quick review.
+    nextNode: {fileID: 11400000, guid: 31eacefdcb9ea4698bff9110ecc6e16d, type: 2}
+    isCorrectChoice: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 0}

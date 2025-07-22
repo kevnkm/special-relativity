@@ -17,6 +17,7 @@ public class DialogueNode : ScriptableObject
     public List<DialogueChoice> choices;
     public int quizIndex;
     public int allowedTries;
+    public DialogueNode answerExplanationNode;
 
     public bool autoAdvance;
     public DialogueNode nextNode;
@@ -46,6 +47,9 @@ public class DialogueNodeEditor : Editor
         SerializedProperty isQuizNode = serializedObject.FindProperty("isQuizNode");
         SerializedProperty quizIndex = serializedObject.FindProperty("quizIndex");
         SerializedProperty allowedTries = serializedObject.FindProperty("allowedTries");
+        SerializedProperty answerExplanationNode = serializedObject.FindProperty(
+            "answerExplanationNode"
+        );
 
         EditorGUILayout.PropertyField(isEventNode);
         EditorGUILayout.Space();
@@ -68,6 +72,7 @@ public class DialogueNodeEditor : Editor
             {
                 EditorGUILayout.PropertyField(quizIndex);
                 EditorGUILayout.PropertyField(allowedTries);
+                EditorGUILayout.PropertyField(answerExplanationNode);
             }
 
             EditorGUILayout.Space();
@@ -116,7 +121,6 @@ public class DialogueChoiceDrawer : PropertyDrawer
 
         if (DialogueEditorContext.isQuizNode)
         {
-            EditorGUI.indentLevel++;
             lineRect.y += lineHeight + spacing;
             EditorGUI.PropertyField(lineRect, isCorrectChoice);
             EditorGUI.indentLevel--;

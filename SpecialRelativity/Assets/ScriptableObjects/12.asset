@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 12
   m_EditorClassIdentifier: 
-  dialogueText: "Look at that! If you are standing on the train, the ball looks like
-    it is falling straight down. \nThis fits what we mentioned earlier \u2013 the
-    ball moves together with the train."
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: Look at that! If you are standing on the train, the ball looks like
+    it is falling straight down.
   choices: []
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: d5094f5cea68e472c9e083b77d1a8153, type: 2}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 0}

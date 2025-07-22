@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 16
   m_EditorClassIdentifier: 
-  dialogueText: "This is because the laws of physics are the same in every non-accelerating
-    frame of reference. Regardless of the velocity, if I drop a ball, it falls straight
-    down. \nIn fact, no other physics experiments I can conduct will allow me to
-    determine what velocity we are travelling at. \nAnother point you might find
-    interesting is that the speed of light remains the same regardless of the frame
-    of reference."
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: It may seem strange, but now that we are on the train and moving
+    together with it, we no longer perceive the train to be moving.
   choices: []
-  autoAdvance: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 1
   nextNode: {fileID: 0}
-  onNodeEnter:
-    m_PersistentCalls:
-      m_Calls: []
+  voiceClip: {fileID: 0}
