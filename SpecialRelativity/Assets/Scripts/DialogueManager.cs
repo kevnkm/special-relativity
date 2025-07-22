@@ -27,6 +27,10 @@ public class DialogueManager : MonoBehaviour
     [Header("Animation")]
     [SerializeField]
     private Animator einsteinAnimator;
+    public Animator EinsteinAnimator
+    {
+        get { return einsteinAnimator; }
+    }
 
     [Header("Optional Events")]
     [SerializeField]
@@ -67,9 +71,6 @@ public class DialogueManager : MonoBehaviour
         TypewriterEffect.CompleteTextRevealed += RevealChoices;
 
         StartDialogue(startNode);
-
-        einsteinAnimator.ResetTrigger("Walk Stop");
-        einsteinAnimator.SetTrigger("Walk Start");
     }
 
     public void StartDialogue(DialogueNode startNode)
