@@ -71,8 +71,6 @@ public class DialogueManager : MonoBehaviour
                 StartDialogue(currentNode.nextNode);
             else
                 Debug.Log("No auto-advance or next node defined.");
-            // disable auto-advance button after use
-            autoAdvanceButton.gameObject.SetActive(false);
         });
 
         // Listen to CompleteTextRevealed event to show choices
