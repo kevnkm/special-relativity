@@ -1,7 +1,6 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -31,10 +30,6 @@ public class DialogueManager : MonoBehaviour
     {
         get { return einsteinAnimator; }
     }
-
-    [Header("Optional Events")]
-    [SerializeField]
-    private UnityEvent onTrainEnter;
 
     private void Awake()
     {
@@ -81,46 +76,59 @@ public class DialogueManager : MonoBehaviour
 
     private void ShowNode()
     {
-        dialogueText.text = currentNode.dialogueText;
-
-        // 🔊 Play voice clip if present
-        if (currentNode.voiceClip != null)
+        if (currentNode.isEventNode)
         {
-            AudioManager.Instance.Play(currentNode.voiceClip);
+            dialogueCanvas.gameObject.SetActive(false);
+            if (currentNode.eventObject != null)
+                Instantiate(currentNode.eventObject);
+            else
+                Debug.LogWarning("Event object is not assigned in the DialogueNode.");
         }
-
-        ClearChoices();
-
-        if (currentNode.choices.Count == 0)
+        else
         {
-            choiceButtons[0].gameObject.SetActive(true);
-            choiceTexts[0].text = "Click anywhere to continue";
+            dialogueCanvas.gameObject.SetActive(true);
+            dialogueText.text = currentNode.dialogueText;
 
-            choiceTexts[0].ForceMeshUpdate();
+            // 🔊 Play voice clip if present
+            if (currentNode.voiceClip != null)
+                AudioManager.Instance.Play(currentNode.voiceClip);
 
-            choiceButtons[0].GetComponent<RectTransform>().sizeDelta = new Vector2(
-                choiceButtons[0].GetComponent<RectTransform>().sizeDelta.x,
-                choiceTexts[0].preferredHeight + 50f
-            );
-        }
+            ClearChoices();
 
-        for (int i = 0; i < currentNode.choices.Count; i++)
-        {
-            if (i >= choiceButtons.Length)
+            if (currentNode.choices.Count == 0)
             {
-                Debug.LogWarning("Not enough choice buttons available.");
-                break;
+                choiceButtons[0].gameObject.SetActive(true);
+                choiceTexts[0].text = "Click anywhere to continue";
+
+                choiceTexts[0].ForceMeshUpdate();
+
+                choiceButtons[0].GetComponent<RectTransform>().sizeDelta = new Vector2(
+                    choiceButtons[0].GetComponent<RectTransform>().sizeDelta.x,
+                    choiceTexts[0].preferredHeight + 50f
+                );
             }
+            else
+            {
+                for (int i = 0; i < currentNode.choices.Count; i++)
+                {
+                    if (i >= choiceButtons.Length)
+                    {
+                        Debug.LogWarning("Not enough choice buttons available.");
+                        break;
+                    }
+                    Debug.Log($"Setting up choice {i}: {currentNode.choices[i].choiceText}");
 
-            choiceButtons[i].gameObject.SetActive(true);
-            choiceTexts[i].text = currentNode.choices[i].choiceText;
+                    choiceButtons[i].gameObject.SetActive(true);
+                    choiceTexts[i].text = currentNode.choices[i].choiceText;
 
-            choiceTexts[i].ForceMeshUpdate();
+                    choiceTexts[i].ForceMeshUpdate();
 
-            choiceButtons[i].GetComponent<RectTransform>().sizeDelta = new Vector2(
-                choiceButtons[i].GetComponent<RectTransform>().sizeDelta.x,
-                choiceTexts[i].preferredHeight + 50f
-            );
+                    choiceButtons[i].GetComponent<RectTransform>().sizeDelta = new Vector2(
+                        choiceButtons[i].GetComponent<RectTransform>().sizeDelta.x,
+                        choiceTexts[i].preferredHeight + 50f
+                    );
+                }
+            }
         }
     }
 
@@ -132,6 +140,14 @@ public class DialogueManager : MonoBehaviour
         }
 
         choicesContainer.SetActive(false);
+    }
+
+    public void StartNextNode()
+    {
+        if (currentNode.nextNode != null)
+            StartDialogue(currentNode.nextNode);
+        else
+            Debug.Log("No next node defined for this dialogue.");
     }
 
     private void OnButtonClick(int choiceIndex)
