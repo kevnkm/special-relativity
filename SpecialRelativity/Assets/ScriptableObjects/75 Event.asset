@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 51
+  m_Name: 75 Event
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
@@ -21,5 +21,5 @@ MonoBehaviour:
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 5f49e0b8aecf543b1b8643f433726f18, type: 2}
+  nextNode: {fileID: 11400000, guid: 0b485456c3d3d4b299d7d4f88dfaaafb, type: 2}
   voiceClip: {fileID: 0}

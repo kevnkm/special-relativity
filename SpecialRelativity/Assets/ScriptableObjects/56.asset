@@ -10,16 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 51
+  m_Name: 56
   m_EditorClassIdentifier: 
-  isEventNode: 1
+  isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 
-  choices: []
+  dialogueText: "Yes! Did you see that? It\u2019s very brief, but we can close the
+    gates while the train is in the station."
+  choices:
+  - choiceText: Yes!
+    nextNode: {fileID: 11400000, guid: 47640886aed1e4f47bf676226ac98e68, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Can I see that one more time?
+    nextNode: {fileID: 11400000, guid: e701b9ad05f75425c93242522fd37fb4, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 5f49e0b8aecf543b1b8643f433726f18, type: 2}
+  nextNode: {fileID: 0}
   voiceClip: {fileID: 0}

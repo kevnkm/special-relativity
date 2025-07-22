@@ -10,16 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 51 2
+  m_Name: 78
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 
-  choices: []
+  dialogueText: What do you think you would see from the current perspective when
+    we close and open the gates?
+  choices:
+  - choiceText: The gates are going to hit the train, since the platform is even
+      shorter now!
+    nextNode: {fileID: 0}
+    isCorrectChoice: 0
+  - choiceText: "The gates somehow don\u2019t hit the train."
+    nextNode: {fileID: 0}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
+  autoAdvance: 0
   nextNode: {fileID: 0}
   voiceClip: {fileID: 0}

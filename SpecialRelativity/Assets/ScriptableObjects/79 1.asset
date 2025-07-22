@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 51
+  m_Name: 79 1
   m_EditorClassIdentifier: 
-  isEventNode: 1
+  isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 
+  dialogueText: Yes, that seems like the only logical conclusion. But we agreed earlier
+    that there can only be one physical reality, so if the gates hit the train in
+    the train frame, they must have also hit the train in the platform frame. Was
+    there a problem with what we saw earlier?
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 5f49e0b8aecf543b1b8643f433726f18, type: 2}
+  nextNode: {fileID: 0}
   voiceClip: {fileID: 0}

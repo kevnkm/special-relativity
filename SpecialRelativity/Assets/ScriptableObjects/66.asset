@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 51
+  m_Name: 66
   m_EditorClassIdentifier: 
-  isEventNode: 1
+  isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 
+  dialogueText: I will give you a chance to explore these effects more later, but
+    for now, I have a question for you!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 5f49e0b8aecf543b1b8643f433726f18, type: 2}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 51cd9a8c875bc433293841bea85099e9, type: 2}
   voiceClip: {fileID: 0}
