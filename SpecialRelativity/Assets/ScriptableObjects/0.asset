@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
+  eventObject: {fileID: 2862524573664123572, guid: e783b70e178b34582bbc08d5cf16f257, type: 3}
   dialogueText: "Hello there, nice to meet you. I\u2019m Albert, how do you do?"
   choices: []
   quizIndex: 0
