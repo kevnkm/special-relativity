@@ -8,7 +8,8 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(DeactivateLever(0));
+        for (int i = 0; i < gateLevers.Length; i++)
+            StartCoroutine(DeactivateLever(i));
     }
 
     private IEnumerator DeactivateLever(int index = 0)
