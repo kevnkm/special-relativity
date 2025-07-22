@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: 3-2
   m_EditorClassIdentifier: 
   isEventNode: 0
+  isQuizNode: 0
   eventObject: {fileID: 0}
   dialogueText: I have no idea! To prevent the train from running away, perhaps?
   choices: []
+  quizIndex: 0
+  allowedTries: 0
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: be52b6e9c77b1427d822a330837ac81d, type: 2}
+  nextNode: {fileID: 11400000, guid: 74cbf7f9949a4405890b94d4f747e588, type: 2}
   voiceClip: {fileID: 8300000, guid: 9fac134b8e78a4fd2ac544b49e1550fb, type: 3}

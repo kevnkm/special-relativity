@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 6 4
+  m_Name: 3-Event
   m_EditorClassIdentifier: 
   isEventNode: 1
-  eventObject: {fileID: 0}
-  dialogueText: "Let\u2019s imagine that I am on a train moving past the platform
-    at a constant speed, and as the train passes by the platform, I drop a ball that
-    I am holding."
+  isQuizNode: 0
+  eventObject: {fileID: 2862524573664123572, guid: 01ba3ae7ca8f24a74b2c5fc4c8d8d922, type: 3}
+  dialogueText: 
   choices: []
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 2a9f11d03d0c44f28a47c9527589cff1, type: 2}
+  quizIndex: 0
+  allowedTries: 0
+  autoAdvance: 0
+  nextNode: {fileID: 11400000, guid: be52b6e9c77b1427d822a330837ac81d, type: 2}
+  voiceClip: {fileID: 0}

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 3-1
+  m_Name: 6 Event
   m_EditorClassIdentifier: 
-  isEventNode: 0
+  isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
-  dialogueText: Yeah, I do wonder why they have the gates in the first place, nobody
-    seems to know!
+  eventObject: {fileID: 2862524573664123572, guid: 6ea59420a3abc4ff6ae98788475f483f, type: 3}
+  dialogueText: "Let\u2019s imagine that I am on a train moving past the platform
+    at a constant speed, and as the train passes by the platform, I drop a ball that
+    I am holding."
   choices: []
   quizIndex: 0
   allowedTries: 0
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 74cbf7f9949a4405890b94d4f747e588, type: 2}
-  voiceClip: {fileID: 8300000, guid: da5736ed32a7649f2a2e6cf454bda209, type: 3}
+  nextNode: {fileID: 11400000, guid: 2a9f11d03d0c44f28a47c9527589cff1, type: 2}
+  voiceClip: {fileID: 0}

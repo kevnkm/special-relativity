@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Choice")]
     [SerializeField]
+    private Button autoAdvanceButton;
+
+    [SerializeField]
     private Button[] choiceButtons;
 
     [SerializeField]
@@ -62,6 +65,16 @@ public class DialogueManager : MonoBehaviour
             choiceButtons[i].gameObject.SetActive(false);
         }
 
+        autoAdvanceButton.onClick.AddListener(() =>
+        {
+            if (currentNode.autoAdvance && currentNode.nextNode != null)
+                StartDialogue(currentNode.nextNode);
+            else
+                Debug.Log("No auto-advance or next node defined.");
+            // disable auto-advance button after use
+            autoAdvanceButton.gameObject.SetActive(false);
+        });
+
         // Listen to CompleteTextRevealed event to show choices
         TypewriterEffect.CompleteTextRevealed += RevealChoices;
 
@@ -98,18 +111,8 @@ public class DialogueManager : MonoBehaviour
 
             ClearChoices();
 
-            if (currentNode.choices.Count == 0)
-            {
-                choiceButtons[0].gameObject.SetActive(true);
-                choiceTexts[0].text = "Click anywhere to continue";
-
-                choiceTexts[0].ForceMeshUpdate();
-
-                choiceButtons[0].GetComponent<RectTransform>().sizeDelta = new Vector2(
-                    choiceButtons[0].GetComponent<RectTransform>().sizeDelta.x,
-                    choiceTexts[0].preferredHeight + 50f
-                );
-            }
+            if (currentNode.choices.Count == 0 || currentNode.autoAdvance)
+                SetDefaultChoice();
             else
             {
                 for (int i = 0; i < currentNode.choices.Count; i++)
@@ -134,8 +137,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void SetDefaultChoice()
+    {
+        autoAdvanceButton.gameObject.SetActive(true);
+    }
+
     private void ClearChoices()
     {
+        autoAdvanceButton.gameObject.SetActive(false);
+
         foreach (Button button in choiceButtons)
         {
             button.gameObject.SetActive(false);
@@ -149,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         if (currentNode.nextNode != null)
             StartDialogue(currentNode.nextNode);
         else
-            Debug.Log("No next node defined for this dialogue.");
+            Debug.Log($"No next node defined for this dialogue: {currentNode.name}");
     }
 
     private void OnButtonClick(int choiceIndex)
