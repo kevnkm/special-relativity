@@ -53,6 +53,7 @@ public class DialogueNodeEditor : Editor
         if (isEventNode.boolValue)
         {
             EditorGUILayout.PropertyField(eventObject);
+            EditorGUILayout.PropertyField(nextNode);
         }
         else
         {
