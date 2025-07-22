@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: 6 2
   m_EditorClassIdentifier: 
   isEventNode: 0
+  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 'Let me show you what I mean. '
+  dialogueText: Let me show you what I mean.
   choices: []
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: a2b6b30db3cab4968899f8080f089e2e, type: 2}
   voiceClip: {fileID: 8300000, guid: 7880f7422fcbd4ec58e77a104068c558, type: 3}
