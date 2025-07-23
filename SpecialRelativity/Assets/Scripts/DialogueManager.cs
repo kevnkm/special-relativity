@@ -49,8 +49,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject ball;
 
-    private AnimationCurve ballDropYPosAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, -2);
-
     private DialogueNode currentNode;
 
     private void Awake()
