@@ -19,16 +19,16 @@ MonoBehaviour:
     frame of reference.
   choices:
   - choiceText: Platform is shorter, stopwatch is slower
-    nextNode: {fileID: 11400000, guid: b1ca1b46fa8e447a18b774303d12d273, type: 2}
+    nextNode: {fileID: 11400000, guid: 13eab5d06085a40db9a631dcdc9db85a, type: 2}
     isCorrectChoice: 0
   - choiceText: Platform is shorter, stopwatch is faster
-    nextNode: {fileID: 11400000, guid: 3065805141ca14d4fbc56963d7681572, type: 2}
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
     isCorrectChoice: 0
   - choiceText: Platform is longer, stopwatch is slower
-    nextNode: {fileID: 11400000, guid: 0b4410a0c5f2d47d282543ece3a1c251, type: 2}
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
     isCorrectChoice: 0
   - choiceText: Platform is longer, stopwatch is faster
-    nextNode: {fileID: 11400000, guid: 62a3537b518714d238aed797dd445f15, type: 2}
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
     isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0

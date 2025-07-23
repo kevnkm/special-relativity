@@ -22,4 +22,4 @@ MonoBehaviour:
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 69b478a3858754419b7777e6c3c4c780, type: 2}
-  voiceClip: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 16f9b7a4e839f4202a2bde66fc9ae82d, type: 3}

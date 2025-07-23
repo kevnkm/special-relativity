@@ -15,24 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Predict what you will see when you are on the train, in the train
-    frame of reference.
-  choices:
-  - choiceText: Platform is shorter, stopwatch is slower
-    nextNode: {fileID: 11400000, guid: b1ca1b46fa8e447a18b774303d12d273, type: 2}
-    isCorrectChoice: 0
-  - choiceText: Platform is shorter, stopwatch is faster
-    nextNode: {fileID: 11400000, guid: 3065805141ca14d4fbc56963d7681572, type: 2}
-    isCorrectChoice: 0
-  - choiceText: Platform is longer, stopwatch is slower
-    nextNode: {fileID: 11400000, guid: 0b4410a0c5f2d47d282543ece3a1c251, type: 2}
-    isCorrectChoice: 0
-  - choiceText: Platform is longer, stopwatch is faster
-    nextNode: {fileID: 11400000, guid: 62a3537b518714d238aed797dd445f15, type: 2}
-    isCorrectChoice: 0
+  dialogueText: "Great, now that you have your prediction, let\u2019s test it out!"
+  choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 11400000}
-  voiceClip: {fileID: 8300000, guid: 28a62a7a9e417495f9bfd7320c14ae53, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 3065805141ca14d4fbc56963d7681572, type: 2}
+  voiceClip: {fileID: 8300000, guid: dbcbd449477dc400eb8801d7177d44da, type: 3}
