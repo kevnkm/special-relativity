@@ -11,8 +11,10 @@ public class Event_1 : MonoBehaviour
     private IEnumerator WaitBeforeNextNode()
     {
         yield return new WaitForSeconds(1f);
-
-        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-10, 0, 0), 2f));
+        yield return StartCoroutine(
+            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-10, 0, 0), 2f)
+        );
+        yield return new WaitForSeconds(1f);
 
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);

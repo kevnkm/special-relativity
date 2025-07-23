@@ -34,24 +34,36 @@ public class DialogueManager : MonoBehaviour
         get { return einsteinAnimator; }
     }
 
+    [SerializeField]
+    private Animator trainEinsteinAnimator;
+    public Animator TrainEinsteinAnimator
+    {
+        get { return trainEinsteinAnimator; }
+    }
+
     [Header("Scene Objects")]
     [SerializeField]
     private GameObject train;
+
+    [Header("Event 2")]
+    [SerializeField]
+    private GameObject ball;
+
+    private AnimationCurve ballDropYPosAnimationCurve = AnimationCurve.EaseInOut(0, 0, 1, -2);
+
+    private DialogueNode currentNode;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
-    private DialogueNode currentNode;
 
     public void Start()
     {
@@ -254,6 +266,35 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
 
-        train.transform.position = targetPosition; // Ensure final position is set
+        train.transform.position = targetPosition;
+    }
+
+    public IEnumerator MoveTrainSmooth(Vector3 positionDelta, float duration)
+    {
+        Vector3 startPosition = train.transform.position;
+        Vector3 targetPosition = startPosition + positionDelta;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            train.transform.position = Vector3.Lerp(
+                startPosition,
+                targetPosition,
+                Mathf.SmoothStep(0f, 1f, elapsedTime / duration)
+            );
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        train.transform.position = targetPosition;
+    }
+
+    public void ReleaseBall(Vector3 force)
+    {
+        ball.transform.SetParent(train.transform);
+        var ballRigidbody = ball.GetComponent<Rigidbody>();
+        ballRigidbody.isKinematic = false;
+        ballRigidbody.AddForce(force, ForceMode.Impulse);
     }
 }
