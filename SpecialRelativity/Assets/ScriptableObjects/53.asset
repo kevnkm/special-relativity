@@ -22,5 +22,5 @@ MonoBehaviour:
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 197a6698be24e473ea32aca75b8dde77, type: 2}
-  voiceClip: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: dc4762b6d89064c4a847e0b451fd07cd, type: 2}
+  voiceClip: {fileID: 8300000, guid: 2f5dd11cf29014af39232dd177809147, type: 3}

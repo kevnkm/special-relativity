@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 45 8
+  m_Name: 53 1
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 
+  dialogueText: "It doesn\u2019t just look shorter, it is shorter according to the
+    platform reference frame! This is exactly a demonstration of length contraction."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 197a6698be24e473ea32aca75b8dde77, type: 2}
+  voiceClip: {fileID: 8300000, guid: 9f5fc539f345c41a68f7c664c970cce8, type: 3}

@@ -32,4 +32,4 @@ MonoBehaviour:
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
   nextNode: {fileID: 11400000, guid: d5094f5cea68e472c9e083b77d1a8153, type: 2}
-  voiceClip: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 3060aab9886ca47fb9bbff0e6541767b, type: 3}
