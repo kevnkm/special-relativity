@@ -12,7 +12,8 @@ public class Event_1 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Transitioning to the next event.");
+        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-10, 0, 0), 2f));
+
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
