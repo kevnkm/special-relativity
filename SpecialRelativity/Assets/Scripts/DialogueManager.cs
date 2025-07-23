@@ -34,6 +34,10 @@ public class DialogueManager : MonoBehaviour
         get { return einsteinAnimator; }
     }
 
+    [Header("Scene Objects")]
+    [SerializeField]
+    private GameObject train;
+
     private void Awake()
     {
         if (Instance == null)
@@ -230,5 +234,26 @@ public class DialogueManager : MonoBehaviour
 
             EinsteinAnimator.SetTrigger("Idle");
         }
+    }
+
+    public IEnumerator MoveTrain(Vector3 positionDelta, float duration)
+    {
+        Vector3 startPosition = train.transform.position;
+        Vector3 targetPosition = startPosition + positionDelta;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            train.transform.position = Vector3.Lerp(
+                startPosition,
+                targetPosition,
+                elapsedTime / duration
+            );
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        train.transform.position = targetPosition; // Ensure final position is set
     }
 }
