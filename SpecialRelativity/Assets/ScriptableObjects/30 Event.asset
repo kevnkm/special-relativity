@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
+  eventObject: {fileID: 2862524573664123572, guid: 28b67db3bcb764e969b0a17737692b22, type: 3}
   dialogueText: 
   choices: []
   quizIndex: 0

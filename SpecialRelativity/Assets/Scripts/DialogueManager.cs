@@ -64,6 +64,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField]
+    private GameObject platformFrameAnchor;
+    public GameObject PlatformFrameAnchor
+    {
+        get { return platformFrameAnchor; }
+    }
+
+    [SerializeField]
     private TeleportationProvider teleportationProvider;
     public TeleportationProvider TeleportationProvider
     {

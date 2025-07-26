@@ -10,9 +10,20 @@ public class Event_6 : MonoBehaviour
 
     private IEnumerator WaitBeforeNextNode()
     {
+        var camera = Camera.main.GetComponent<FadeCamera>();
+
+        yield return new WaitForSeconds(1f);
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
+
+        var anchor = DialogueManager.Instance.PlatformFrameAnchor;
+        var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
+
+        Utility.LocatePlayer(anchor, teleportationProvider);
+
+        yield return new WaitForSeconds(0.5f);
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
