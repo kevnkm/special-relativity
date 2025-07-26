@@ -34,9 +34,7 @@ public class Event_4 : MonoBehaviour
         StartCoroutine(BallDropCoroutine());
         yield return StartCoroutine(EinsteinAnimationCoroutine());
 
-        Debug.Log($"Event: {gameObject.name}");
         DialogueManager.Instance.StartNextNode();
-        Debug.Log("Transitioning to the next event.");
         Destroy(gameObject);
     }
 
