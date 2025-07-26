@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -45,11 +46,29 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject train;
 
+    [SerializeField]
+    private GameObject environment;
+
     [Header("Event 2")]
     [SerializeField]
     private GameObject ball;
 
     private DialogueNode currentNode;
+
+    [Header("Teleportation")]
+    [SerializeField]
+    private GameObject trainFrameAnchor;
+    public GameObject TrainFrameAnchor
+    {
+        get { return trainFrameAnchor; }
+    }
+
+    [SerializeField]
+    private TeleportationProvider teleportationProvider;
+    public TeleportationProvider TeleportationProvider
+    {
+        get { return teleportationProvider; }
+    }
 
     private void Awake()
     {
@@ -286,6 +305,27 @@ public class DialogueManager : MonoBehaviour
         }
 
         train.transform.position = targetPosition;
+    }
+
+    public IEnumerator MoveEnvironment(Vector3 positionDelta, float duration)
+    {
+        Vector3 startPosition = environment.transform.position;
+        Vector3 targetPosition = startPosition + positionDelta;
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            environment.transform.position = Vector3.Lerp(
+                startPosition,
+                targetPosition,
+                elapsedTime / duration
+            );
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        environment.transform.position = targetPosition;
     }
 
     public void ReleaseBall(Vector3 force)

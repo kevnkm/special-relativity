@@ -19,13 +19,13 @@ MonoBehaviour:
     what velocity is the train moving at?"
   choices:
   - choiceText: 2m/s to our left
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 8579371609fda47f285d481ddcc322e6, type: 2}
     isCorrectChoice: 0
   - choiceText: 0m/s
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 7eff4cb853aec4452b0134b659833d26, type: 2}
     isCorrectChoice: 1
   - choiceText: 2m/s to our right
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: dbd5cf6e8032a45efaf1ed567dacec0a, type: 2}
     isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0

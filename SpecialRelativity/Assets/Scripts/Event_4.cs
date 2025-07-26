@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class Event_4 : MonoBehaviour
 {
+    [SerializeField]
+    private Vector3 ballDropForce = new Vector3(0f, 0.05f, 0.1f);
+
+    [SerializeField]
+    private Vector3 environmentPositionDelta = new Vector3(10, 0, 0);
+
     private void Start()
     {
         StartCoroutine(WaitBeforeNextNode());
@@ -10,10 +16,72 @@ public class Event_4 : MonoBehaviour
 
     private IEnumerator WaitBeforeNextNode()
     {
+        var camera = Camera.main.GetComponent<FadeCamera>();
+
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Transitioning to the next event.");
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
+
+        var anchor = DialogueManager.Instance.TrainFrameAnchor;
+        var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
+
+        Utility.LocatePlayer(anchor, teleportationProvider);
+
+        yield return new WaitForSeconds(0.5f);
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
+
+        StartCoroutine(EnvironmentAnimationCoroutine());
+        StartCoroutine(BallDropCoroutine());
+        yield return StartCoroutine(EinsteinAnimationCoroutine());
+
+        Debug.Log($"Event: {gameObject.name}");
         DialogueManager.Instance.StartNextNode();
+        Debug.Log("Transitioning to the next event.");
         Destroy(gameObject);
+    }
+
+    private IEnumerator EnvironmentAnimationCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(DialogueManager.Instance.MoveEnvironment(environmentPositionDelta, 2f));
+    }
+
+    private IEnumerator BallDropCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        DialogueManager.Instance.ReleaseBall(ballDropForce);
+    }
+
+    private IEnumerator EinsteinAnimationCoroutine()
+    {
+        var animator = DialogueManager.Instance.TrainEinsteinAnimator;
+
+        animator.SetTrigger("Drop");
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        float timeout = 5f;
+        float elapsed = 0f;
+        while ((animator.IsInTransition(0) || !stateInfo.IsName("Drop")) && elapsed < timeout)
+        {
+            yield return null;
+            elapsed += Time.deltaTime;
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        }
+
+        if (!stateInfo.IsName("Drop"))
+        {
+            Debug.LogWarning("Drop animation state never started.");
+            yield break;
+        }
+
+        float clipLength = stateInfo.length;
+
+        yield return new WaitUntil(
+            () =>
+                animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f
+                && !animator.IsInTransition(0)
+        );
+
+        animator.SetTrigger("Idle");
     }
 }
