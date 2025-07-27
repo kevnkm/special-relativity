@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Event_9 : MonoBehaviour
 {
+    [SerializeField]
+    private AudioClip audioClip;
+
     private void Start()
     {
         Debug.Log($"{gameObject.name} started.");
@@ -13,7 +16,9 @@ public class Event_9 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log("Transitioning to the next event.");
+        AudioManager.Instance.Play(audioClip);
+        yield return new WaitForSeconds(audioClip.length);
+
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
