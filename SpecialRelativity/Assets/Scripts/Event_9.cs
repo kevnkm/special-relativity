@@ -5,6 +5,7 @@ public class Event_9 : MonoBehaviour
 {
     private void Start()
     {
+        Debug.Log($"{gameObject.name} started.");
         StartCoroutine(WaitBeforeNextNode());
     }
 
