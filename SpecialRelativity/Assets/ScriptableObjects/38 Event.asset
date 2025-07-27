@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
+  eventObject: {fileID: 2862524573664123572, guid: 22fa683c42feb42e3ab4d8d31cdf4a3c, type: 3}
   dialogueText: Of course! Here, a summary of the most important points to keep in
     mind.
   choices: []
