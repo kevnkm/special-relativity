@@ -67,6 +67,13 @@ public class DialogueManager : MonoBehaviour
         get { return rightGate; }
     }
 
+    [SerializeField]
+    private GameObject stopwatch;
+    public GameObject Stopwatch
+    {
+        get { return stopwatch; }
+    }
+
     [Header("Event 2")]
     [SerializeField]
     private GameObject ball;
