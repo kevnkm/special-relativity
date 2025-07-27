@@ -16,7 +16,7 @@ MonoBehaviour:
   isQuizNode: 0
   eventObject: {fileID: 0}
   dialogueText: Remember, we saw earlier that the train was longer than the platform,
-    but now it is shorter! See? (Show ghost of train at rest.)
+    but now it is shorter! See?
   choices: []
   quizIndex: 0
   allowedTries: 0
