@@ -19,6 +19,7 @@ public class Event_6 : MonoBehaviour
         var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
 
         Utility.LocatePlayer(anchor, teleportationProvider);
+        DialogueManager.Instance.Train.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
