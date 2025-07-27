@@ -22,6 +22,6 @@ MonoBehaviour:
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 44dc11482cd32477193c83c98e56e654, type: 2}
   voiceClip: {fileID: 8300000, guid: 57d8554b468064da4b4f996fd487e62d, type: 3}
