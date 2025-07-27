@@ -23,8 +23,3 @@ public class DialogueNode : ScriptableObject
 
     public AudioClip voiceClip;
 }
-
-public static class DialogueEditorContext
-{
-    public static bool isQuizNode;
-}

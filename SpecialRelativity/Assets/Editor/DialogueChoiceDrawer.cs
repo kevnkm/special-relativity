@@ -6,8 +6,10 @@ public class DialogueChoiceDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        int lines = DialogueEditorContext.isQuizNode ? 4 : 2;
-        return EditorGUIUtility.singleLineHeight * lines + 10f;
+        // 3 lines: choiceText, nextNode, isCorrectChoice + padding
+        int lines = 3;
+        float spacing = 2f;
+        return EditorGUIUtility.singleLineHeight * lines + spacing * (lines - 1) + 6f; // total height
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -27,12 +29,8 @@ public class DialogueChoiceDrawer : PropertyDrawer
         lineRect.y += lineHeight + spacing;
         EditorGUI.PropertyField(lineRect, nextNode);
 
-        if (DialogueEditorContext.isQuizNode)
-        {
-            lineRect.y += lineHeight + spacing;
-            EditorGUI.PropertyField(lineRect, isCorrectChoice);
-            EditorGUI.indentLevel--;
-        }
+        lineRect.y += lineHeight + spacing;
+        EditorGUI.PropertyField(lineRect, isCorrectChoice);
 
         EditorGUI.EndProperty();
     }
