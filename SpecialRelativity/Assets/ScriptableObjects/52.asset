@@ -19,7 +19,7 @@ MonoBehaviour:
     before?"
   choices:
   - choiceText: Yeah, it does! It seems shorter.
-    nextNode: {fileID: 11400000, guid: 43294b2cdafe8469ca9d70e354d73389, type: 2}
+    nextNode: {fileID: 11400000, guid: dc4762b6d89064c4a847e0b451fd07cd, type: 2}
     isCorrectChoice: 0
   - choiceText: "Hmm, I don\u2019t quite see it. It looks the same."
     nextNode: {fileID: 11400000, guid: 43294b2cdafe8469ca9d70e354d73389, type: 2}
