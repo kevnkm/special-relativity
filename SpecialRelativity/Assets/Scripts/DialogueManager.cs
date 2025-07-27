@@ -53,6 +53,20 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject environment;
 
+    [SerializeField]
+    private Gate leftGate;
+    public Gate LeftGate
+    {
+        get { return leftGate; }
+    }
+
+    [SerializeField]
+    private Gate rightGate;
+    public Gate RightGate
+    {
+        get { return rightGate; }
+    }
+
     [Header("Event 2")]
     [SerializeField]
     private GameObject ball;
