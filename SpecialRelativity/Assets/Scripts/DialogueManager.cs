@@ -45,6 +45,10 @@ public class DialogueManager : MonoBehaviour
     [Header("Scene Objects")]
     [SerializeField]
     private GameObject train;
+    public GameObject Train
+    {
+        get { return train; }
+    }
 
     [SerializeField]
     private GameObject environment;
