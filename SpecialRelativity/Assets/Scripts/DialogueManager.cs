@@ -77,6 +77,10 @@ public class DialogueManager : MonoBehaviour
     [Header("Event 2")]
     [SerializeField]
     private GameObject ball;
+    public GameObject Ball
+    {
+        get { return ball; }
+    }
 
     private DialogueNode currentNode;
 

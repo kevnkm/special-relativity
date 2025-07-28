@@ -28,6 +28,7 @@ public class Event_2 : MonoBehaviour
     private IEnumerator BallDropCoroutine()
     {
         yield return new WaitForSeconds(1.5f);
+        DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Show();
         DialogueManager.Instance.ReleaseBall(ballDropForce);
     }
 
