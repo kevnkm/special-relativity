@@ -14,6 +14,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private Canvas dialogueCanvas;
 
+    [SerializeField]
+    private GameObject userResponse;
+    public GameObject UserResponse
+    {
+        get { return userResponse; }
+    }
+
     [Header("Choice")]
     [SerializeField]
     private Button autoAdvanceButton;

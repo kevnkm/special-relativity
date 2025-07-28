@@ -21,6 +21,8 @@ public class Event_6 : MonoBehaviour
         Utility.LocatePlayer(anchor, teleportationProvider);
         DialogueManager.Instance.Train.gameObject.SetActive(false);
 
+        DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 0.7f;
+
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
         yield return new WaitForSeconds(1f);

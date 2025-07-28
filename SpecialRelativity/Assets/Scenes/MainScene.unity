@@ -5799,6 +5799,7 @@ MonoBehaviour:
   choicesContainer: {fileID: 715655226}
   startNode: {fileID: 11400000, guid: 8a080452cb2c84116a37dc6051c2f029, type: 2}
   dialogueCanvas: {fileID: 170558917}
+  userResponse: {fileID: 1996808014}
   autoAdvanceButton: {fileID: 387804175}
   choiceButtons:
   - {fileID: 627777254}
