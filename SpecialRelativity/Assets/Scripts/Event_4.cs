@@ -27,6 +27,9 @@ public class Event_4 : MonoBehaviour
 
         Utility.LocatePlayer(anchor, teleportationProvider);
 
+        DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Hide();
+        DialogueManager.Instance.ResetBall();
+
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
 
@@ -47,6 +50,7 @@ public class Event_4 : MonoBehaviour
     private IEnumerator BallDropCoroutine()
     {
         yield return new WaitForSeconds(1.5f);
+        DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Show();
         DialogueManager.Instance.ReleaseBall(ballDropForce);
     }
 

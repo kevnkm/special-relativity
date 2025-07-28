@@ -82,6 +82,9 @@ public class DialogueManager : MonoBehaviour
         get { return ball; }
     }
 
+    [SerializeField]
+    private GameObject einsteinHand;
+
     private DialogueNode currentNode;
 
     [Header("Teleportation")]
@@ -370,5 +373,11 @@ public class DialogueManager : MonoBehaviour
         var ballRigidbody = ball.GetComponent<Rigidbody>();
         ballRigidbody.isKinematic = false;
         ballRigidbody.AddForce(force, ForceMode.Impulse);
+    }
+
+    public void ResetBall()
+    {
+        ball.transform.SetParent(einsteinHand.transform);
+        ball.transform.localPosition = Vector3.zero;
     }
 }

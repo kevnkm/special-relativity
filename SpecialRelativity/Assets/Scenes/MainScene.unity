@@ -5821,6 +5821,7 @@ MonoBehaviour:
   rightGate: {fileID: 1950785193}
   stopwatch: {fileID: 533729162}
   ball: {fileID: 1817786989}
+  einsteinHand: {fileID: 1718843707}
   trainFrameAnchor: {fileID: 114693022}
   platformFrameAnchor: {fileID: 1647550529}
   teleportationProvider: {fileID: 1933144377}
@@ -9091,6 +9092,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99a99a2c55ed445dabb042a8e451847a, type: 3}
+--- !u!1 &1718843707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4549111882529890269, guid: 447ce67cfb2d04cfea50c950f1b6ea81, type: 3}
+  m_PrefabInstance: {fileID: 952902105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752967702
 GameObject:
   m_ObjectHideFlags: 0
