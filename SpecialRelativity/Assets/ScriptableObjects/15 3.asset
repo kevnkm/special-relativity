@@ -13,16 +13,25 @@ MonoBehaviour:
   m_Name: 15 3
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
+  isQuizNode: 1
   eventObject: {fileID: 0}
   dialogueText: "Well, that\u2019s what a person standing on the platform would say.
     But to us, standing on the train, is this true? As (Again,) we said, the ball
     moves together with the train, and to us, it looks like the ball has not moved
     horizontally! Therefore, to us, the train is moving at a velocity of\u2026"
-  choices: []
+  choices:
+  - choiceText: 2m/s to our left
+    nextNode: {fileID: 11400000, guid: 32dc4c0ed95b949469e2defd309a254c, type: 2}
+    isCorrectChoice: 0
+  - choiceText: 0m/s
+    nextNode: {fileID: 11400000, guid: b220dfa6a864a4623ba3805a54dd10ec, type: 2}
+    isCorrectChoice: 1
+  - choiceText: 2m/s to our right
+    nextNode: {fileID: 11400000, guid: 32dc4c0ed95b949469e2defd309a254c, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
+  autoAdvance: 0
   nextNode: {fileID: 11400000, guid: 04a979617448f444da12f3765a381427, type: 2}
   voiceClip: {fileID: 8300000, guid: 4059cc8ef6cba4493be02007d17235b1, type: 3}
