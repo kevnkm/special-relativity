@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 91
+  m_EditorClassIdentifier: 
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: "In the train frame, the gates are closer together in space than
+    in the platform frame. Therefore, the \u201Cclosing of the gate\u201D must happen
+    further apart in time. In other words, no longer at the same time!"
+  choices:
+  - choiceText: Wow, I see!
+    nextNode: {fileID: 11400000, guid: 4f3a135b3d192469ca51bd4b8c46e8e1, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Hmm, I'm skeptical
+    nextNode: {fileID: 11400000, guid: 4f3a135b3d192469ca51bd4b8c46e8e1, type: 2}
+    isCorrectChoice: 0
+  quizIndex: 0
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 0}

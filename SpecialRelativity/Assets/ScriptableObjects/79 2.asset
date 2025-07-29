@@ -15,11 +15,29 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Yes, that seems like the only logical conclusion. But we agreed earlier
-    that there can only be one physical reality, so if the gates hit the train in
-    the train frame, they must have also hit the train in the platform frame. Was
-    there a problem with what we saw earlier?
-  choices: []
+  dialogueText: Yes, we did say that there can only be one physical reality. Since
+    the gates did not hit the train from the platform frame, then they must not have
+    hit the train in the train frame. But how exactly does that happen?
+  choices:
+  - choiceText: It is possibly because the train can phase through the gates when
+      it is travelling at high speeds.
+    nextNode: {fileID: 11400000, guid: 8870c5710ebac4e299b4f68c89beb3ad, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Maybe the gates are closing at different times in the train frame
+      of reference.
+    nextNode: {fileID: 11400000, guid: 8870c5710ebac4e299b4f68c89beb3ad, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Perhaps there are two possible realities because quantum superposition
+      allows both things to happen at once.
+    nextNode: {fileID: 11400000, guid: 8870c5710ebac4e299b4f68c89beb3ad, type: 2}
+    isCorrectChoice: 0
+  - choiceText: I change my mind, I think the gates will hit the train in the train
+      frame of reference.
+    nextNode: {fileID: 11400000, guid: b89851deaf2e84bb593d25d8695ff62f, type: 2}
+    isCorrectChoice: 0
+  - choiceText: I think there is some other explanation for this.
+    nextNode: {fileID: 11400000, guid: 8870c5710ebac4e299b4f68c89beb3ad, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}

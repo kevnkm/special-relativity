@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 79 1
+  m_Name: 80 2
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Yes, that seems like the only logical conclusion. But we agreed earlier
-    that there can only be one physical reality, so if the gates hit the train in
-    the train frame, they must have also hit the train in the platform frame. Was
-    there a problem with what we saw earlier?
+  dialogueText: Oh? So there was a problem with what we saw earlier?
   choices:
   - choiceText: Maybe it is physically impossible for the gates to move fast enough
       to allow the train through.
@@ -44,4 +41,4 @@ MonoBehaviour:
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: a7be2a6062c084f83b77f269607f97d4, type: 3}
+  voiceClip: {fileID: 0}
