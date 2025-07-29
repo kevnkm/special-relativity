@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
   m_Name: 116 Event
   m_EditorClassIdentifier: 
-  isEventNode: 0
+  isEventNode: 1
   isQuizNode: 0
   eventObject: {fileID: 0}
   dialogueText: 
@@ -21,5 +21,5 @@ MonoBehaviour:
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 0
-  nextNode: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 4254f6ca65eb745cc83f4ed2238bb7a5, type: 2}
   voiceClip: {fileID: 0}

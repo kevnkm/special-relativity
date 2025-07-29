@@ -20,10 +20,10 @@ MonoBehaviour:
     of reference!
   choices:
   - choiceText: That makes sense
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: d0328fd26eadc44849e3541f989c8017, type: 2}
     isCorrectChoice: 0
   - choiceText: I'm still not convinced
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: d0328fd26eadc44849e3541f989c8017, type: 2}
     isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0

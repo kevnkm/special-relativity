@@ -20,6 +20,6 @@ MonoBehaviour:
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: f9697057ec5fb4d06ae3db3482021bea, type: 2}
   voiceClip: {fileID: 0}
