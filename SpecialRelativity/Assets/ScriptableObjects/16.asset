@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: It may seem strange, but now that we are on the train and moving
-    together with it, we no longer perceive the train to be moving.
+  dialogueText: So this answer is not quite correct.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 58bd8d165cae448ae840bf14a664711f, type: 2}
-  voiceClip: {fileID: 8300000, guid: 959486138d58a4a8da13975dbed212c9, type: 3}
+  nextNode: {fileID: 11400000, guid: b220dfa6a864a4623ba3805a54dd10ec, type: 2}
+  voiceClip: {fileID: 8300000, guid: 8ddff3954e7e04245ad498a1ffbeebd3, type: 3}

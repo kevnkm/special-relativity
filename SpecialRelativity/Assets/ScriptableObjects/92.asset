@@ -23,4 +23,4 @@ MonoBehaviour:
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: a529e9bdb95df4845ac5a2f7616e1de6, type: 2}
-  voiceClip: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 2b83fe6c48f9c4345bd293bb73d1553a, type: 3}

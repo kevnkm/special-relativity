@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Instead, we can say that it is the platform and even the whole world
-    around us that is moving, while the train stays completely still.
+  dialogueText: It may seem strange, but now that we are on the train and moving
+    together with it, we no longer perceive the train to be moving.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 67c1a69a322144633afa55cb5d2ac08c, type: 2}
-  voiceClip: {fileID: 8300000, guid: a0a26a747345f4f44a091cc1f9c855ca, type: 3}
+  nextNode: {fileID: 11400000, guid: 58bd8d165cae448ae840bf14a664711f, type: 2}
+  voiceClip: {fileID: 8300000, guid: 959486138d58a4a8da13975dbed212c9, type: 3}
