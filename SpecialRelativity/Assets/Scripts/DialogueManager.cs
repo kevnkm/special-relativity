@@ -15,6 +15,13 @@ public class DialogueManager : MonoBehaviour
     private Canvas dialogueCanvas;
 
     [SerializeField]
+    private SummaryCanvas summaryCanvas;
+    public SummaryCanvas SummaryCanvas
+    {
+        get { return summaryCanvas; }
+    }
+
+    [SerializeField]
     private GameObject userResponse;
     public GameObject UserResponse
     {
