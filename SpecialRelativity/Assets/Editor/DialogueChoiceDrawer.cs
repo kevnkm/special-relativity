@@ -6,8 +6,8 @@ public class DialogueChoiceDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        // 3 lines: choiceText, nextNode, isCorrectChoice + padding
-        int lines = 3;
+        // 3 lines: choiceText, nextNode + padding
+        int lines = 2;
         float spacing = 2f;
         return EditorGUIUtility.singleLineHeight * lines + spacing * (lines - 1) + 6f; // total height
     }
@@ -21,16 +21,12 @@ public class DialogueChoiceDrawer : PropertyDrawer
 
         var choiceText = property.FindPropertyRelative("choiceText");
         var nextNode = property.FindPropertyRelative("nextNode");
-        var isCorrectChoice = property.FindPropertyRelative("isCorrectChoice");
 
         Rect lineRect = new Rect(position.x, position.y, position.width, lineHeight);
         EditorGUI.PropertyField(lineRect, choiceText);
 
         lineRect.y += lineHeight + spacing;
         EditorGUI.PropertyField(lineRect, nextNode);
-
-        lineRect.y += lineHeight + spacing;
-        EditorGUI.PropertyField(lineRect, isCorrectChoice);
 
         EditorGUI.EndProperty();
     }
