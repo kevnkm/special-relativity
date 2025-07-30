@@ -3,6 +3,4 @@ public class DialogueChoice
 {
     public string choiceText;
     public DialogueNode nextNode;
-
-    public bool isCorrectChoice;
 }
