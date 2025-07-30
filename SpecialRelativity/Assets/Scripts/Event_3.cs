@@ -11,6 +11,8 @@ public class Event_3 : MonoBehaviour
     private IEnumerator WaitBeforeNextNode()
     {
         yield return new WaitForSeconds(1f);
+        DialogueManager.Instance.EinsteinAnimator.SetTrigger("Left Turn");
+        yield return new WaitForSeconds(1f);
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
