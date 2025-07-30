@@ -16,10 +16,6 @@ public class DialogueNodeEditor : Editor
         SerializedProperty choices = serializedObject.FindProperty("choices");
         SerializedProperty isQuizNode = serializedObject.FindProperty("isQuizNode");
         SerializedProperty quizIndex = serializedObject.FindProperty("quizIndex");
-        SerializedProperty allowedTries = serializedObject.FindProperty("allowedTries");
-        SerializedProperty answerExplanationNode = serializedObject.FindProperty(
-            "answerExplanationNode"
-        );
 
         EditorGUILayout.PropertyField(isEventNode);
         EditorGUILayout.Space();
@@ -40,8 +36,6 @@ public class DialogueNodeEditor : Editor
             if (isQuizNode.boolValue)
             {
                 EditorGUILayout.PropertyField(quizIndex);
-                EditorGUILayout.PropertyField(allowedTries);
-                EditorGUILayout.PropertyField(answerExplanationNode);
             }
 
             EditorGUILayout.Space();
