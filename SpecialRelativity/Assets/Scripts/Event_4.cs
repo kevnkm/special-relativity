@@ -22,6 +22,8 @@ public class Event_4 : MonoBehaviour
 
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
 
+        DialogueManager.Instance.RelocateTrain(new Vector3(10f, 0f, 0f));
+
         var anchor = DialogueManager.Instance.TrainFrameAnchor;
         var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
 
@@ -70,12 +72,6 @@ public class Event_4 : MonoBehaviour
             yield return null;
             elapsed += Time.deltaTime;
             stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        }
-
-        if (!stateInfo.IsName("Drop"))
-        {
-            Debug.LogWarning("Drop animation state never started.");
-            yield break;
         }
 
         float clipLength = stateInfo.length;

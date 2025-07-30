@@ -10,7 +10,7 @@ public class Event_0 : MonoBehaviour
 
     private IEnumerator EventCoroutine()
     {
-        StartCoroutine(DialogueManager.Instance.MoveTrainSmooth(new Vector3(-20f, 0f, 0f), 3f));
+        StartCoroutine(DialogueManager.Instance.MoveTrainSmooth(new Vector3(-27f, 0f, 0f), 3f));
         yield return new WaitForSeconds(3f);
         DialogueManager.Instance.EinsteinAnimator.SetTrigger("Walk Start");
         yield return new WaitForSeconds(3f);

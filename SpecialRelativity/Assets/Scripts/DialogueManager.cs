@@ -311,6 +311,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void RelocateTrain(Vector3 positionDelta)
+    {
+        train.transform.position += positionDelta;
+    }
+
     public IEnumerator MoveTrain(Vector3 positionDelta, float duration)
     {
         Vector3 startPosition = train.transform.position;

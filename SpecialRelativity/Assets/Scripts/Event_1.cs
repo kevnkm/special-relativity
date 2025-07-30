@@ -12,7 +12,7 @@ public class Event_1 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-10, 0, 0), 2f)
+            DialogueManager.Instance.MoveTrainSmooth(new Vector3(12, 0, 0), 2f)
         );
         yield return new WaitForSeconds(1f);
 
