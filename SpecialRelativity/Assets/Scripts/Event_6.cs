@@ -27,6 +27,8 @@ public class Event_6 : MonoBehaviour
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
         yield return new WaitForSeconds(1f);
 
+        DialogueManager.Instance.EinsteinAnimator.SetTrigger("Right Turn");
+
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
