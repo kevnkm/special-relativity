@@ -7,7 +7,7 @@ public class DialogueNode : ScriptableObject
     public bool isEventNode;
     public bool isQuizNode;
 
-    [Tooltip("If event mode is enabled, this GameObject will be triggered.")]
+    [Tooltip("If is event node, this GameObject will be instantiated.")]
     public GameObject eventObject;
 
     [TextArea]
@@ -15,8 +15,6 @@ public class DialogueNode : ScriptableObject
 
     public List<DialogueChoice> choices;
     public int quizIndex;
-    public int allowedTries;
-    public DialogueNode answerExplanationNode;
 
     public bool autoAdvance;
     public DialogueNode nextNode;
