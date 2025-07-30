@@ -30,7 +30,7 @@ public class Event_4 : MonoBehaviour
         DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Hide();
         DialogueManager.Instance.ResetBall();
 
-        DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 2f;
+        DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 1.6f;
 
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
