@@ -6422,6 +6422,7 @@ MonoBehaviour:
   leftGate: {fileID: 1952140970}
   rightGate: {fileID: 1950785193}
   stopwatch: {fileID: 533729162}
+  einsteinOnTrain: {fileID: 1752967702}
   ball: {fileID: 1817786989}
   einsteinHand: {fileID: 1718843707}
   trainFrameAnchor: {fileID: 114693022}

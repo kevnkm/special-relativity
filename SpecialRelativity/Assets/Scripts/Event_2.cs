@@ -11,6 +11,7 @@ public class Event_2 : MonoBehaviour
 
     private void Start()
     {
+        DialogueManager.Instance.EinsteinOnTrain.SetActive(true);
         StartCoroutine(WaitBeforeNextNode());
     }
 

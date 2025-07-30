@@ -88,6 +88,13 @@ public class DialogueManager : MonoBehaviour
         get { return stopwatch; }
     }
 
+    [SerializeField]
+    private GameObject einsteinOnTrain;
+    public GameObject EinsteinOnTrain
+    {
+        get { return einsteinOnTrain; }
+    }
+
     [Header("Event 2")]
     [SerializeField]
     private GameObject ball;
@@ -137,6 +144,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
+        einsteinOnTrain.SetActive(false);
         backgroundButton.onClick.AddListener(() => OnBackgroundClick());
 
         TypewriterEffect.TextHeightUpdated += (float height) =>
