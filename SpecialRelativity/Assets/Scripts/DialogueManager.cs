@@ -66,6 +66,17 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     private GameObject environment;
+    public GameObject Environment
+    {
+        get { return environment; }
+    }
+
+    [SerializeField]
+    private GameObject platform;
+    public GameObject Platform
+    {
+        get { return platform; }
+    }
 
     [SerializeField]
     private Gate leftGate;

@@ -5,6 +5,7 @@ public class Event_10 : MonoBehaviour
 {
     private void Start()
     {
+        DialogueManager.Instance.UserResponse.SetActive(false);
         Debug.Log($"{gameObject.name} started.");
         StartCoroutine(WaitBeforeNextNode());
     }

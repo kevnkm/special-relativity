@@ -10,7 +10,6 @@ public class Stopwatch : MonoBehaviour
     private void OnEnable()
     {
         timeText.text = "00.00";
-        StartCoroutine(CountCoroutine());
     }
 
     private void OnDisable()
@@ -35,5 +34,27 @@ public class Stopwatch : MonoBehaviour
     private void StopCount()
     {
         StopCoroutine(CountCoroutine());
+    }
+
+    public void ResetTimer()
+    {
+        timeText.text = "00.00";
+    }
+
+    public IEnumerator CountToTime(float targetTime, float duration)
+    {
+        float elapsed = 0f;
+        float startTime = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            float currentTime = Mathf.Lerp(startTime, targetTime, t);
+            int seconds = Mathf.FloorToInt(currentTime % 60);
+            int milliseconds = Mathf.FloorToInt((currentTime - Mathf.Floor(currentTime)) * 100);
+            timeText.text = string.Format("{0:D2}.{1:D2}", seconds, milliseconds);
+            yield return null;
+        }
     }
 }

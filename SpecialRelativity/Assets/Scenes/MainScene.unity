@@ -1447,7 +1447,7 @@ Transform:
   m_GameObject: {fileID: 139282340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: -0.57, z: -1.32}
+  m_LocalPosition: {x: 10, y: -0.57, z: -1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6966,7 +6966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 142547090}
   choicesContainer: {fileID: 715655226}
-  startNode: {fileID: 11400000, guid: 1854d52aa6e444240825cd57b47b032b, type: 2}
+  startNode: {fileID: 11400000, guid: 9cb544e8a69414e5c84e283d6a42c793, type: 2}
   dialogueCanvas: {fileID: 170558917}
   summaryCanvas: {fileID: 1905154654}
   userResponse: {fileID: 1996808014}
@@ -6988,6 +6988,7 @@ MonoBehaviour:
   trainEinsteinAnimator: {fileID: 952902107}
   train: {fileID: 139282340}
   environment: {fileID: 1253594090}
+  platform: {fileID: 2031539049}
   leftGate: {fileID: 1952140970}
   rightGate: {fileID: 1950785193}
   einsteinOnTrain: {fileID: 1752967702}
@@ -10369,7 +10370,7 @@ Transform:
   m_GameObject: {fileID: 1769947899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: 0.57, z: 1.32}
+  m_LocalPosition: {x: 4.5, y: 2, z: 0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
