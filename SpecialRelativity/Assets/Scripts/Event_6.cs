@@ -19,6 +19,9 @@ public class Event_6 : MonoBehaviour
         var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
 
         Utility.LocatePlayer(anchor, teleportationProvider);
+        DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Hide();
+        DialogueManager.Instance.ResetBall();
+        DialogueManager.Instance.UserResponse.SetActive(false);
         DialogueManager.Instance.Train.gameObject.SetActive(false);
 
         DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 0.7f;

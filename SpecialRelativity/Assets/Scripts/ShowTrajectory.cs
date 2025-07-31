@@ -11,7 +11,7 @@ public class ShowTrajectory : MonoBehaviour
     private bool isTracking = false;
     private Vector3 lastPoint;
 
-    private void Start()
+    private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.enabled = false;

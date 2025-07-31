@@ -13,7 +13,7 @@ public class Event_11 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.5f, 1, 1);
+        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
         DialogueManager.Instance.Train.gameObject.SetActive(true);
 
         yield return StartCoroutine(
@@ -31,7 +31,7 @@ public class Event_11 : MonoBehaviour
 
     private IEnumerator CloseAndOpenGate()
     {
-        while (DialogueManager.Instance.Train.transform.position.x > 0)
+        while (DialogueManager.Instance.Train.transform.position.x > 2.5f)
         {
             yield return null;
         }

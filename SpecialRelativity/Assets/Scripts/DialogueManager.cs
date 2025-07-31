@@ -233,6 +233,7 @@ public class DialogueManager : MonoBehaviour
                     );
                 }
             }
+            userResponse.SetActive(true);
         }
     }
 

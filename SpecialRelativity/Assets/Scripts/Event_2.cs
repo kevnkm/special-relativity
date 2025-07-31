@@ -17,6 +17,8 @@ public class Event_2 : MonoBehaviour
 
     private IEnumerator WaitBeforeNextNode()
     {
+        yield return StartCoroutine(InitializeTrain());
+
         StartCoroutine(TrainAnimationCoroutine());
         StartCoroutine(BallDropCoroutine());
         yield return StartCoroutine(EinsteinAnimationCoroutine());
@@ -31,6 +33,14 @@ public class Event_2 : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Show();
         DialogueManager.Instance.ReleaseBall(ballDropForce);
+    }
+
+    private IEnumerator InitializeTrain()
+    {
+        DialogueManager.Instance.Train.transform.position = new Vector3(60f, -0.57f, -1.32f);
+        yield return StartCoroutine(
+            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-52f, 0, 0), 2f)
+        );
     }
 
     private IEnumerator TrainAnimationCoroutine()

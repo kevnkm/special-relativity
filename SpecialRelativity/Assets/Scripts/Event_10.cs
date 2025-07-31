@@ -13,11 +13,16 @@ public class Event_10 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        DialogueManager.Instance.Train.transform.position = new Vector3(50, -0.57f, -1.32f);
-        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.5f, 1, 1);
+        DialogueManager.Instance.Ball.GetComponent<ShowTrajectory>().Hide();
+        DialogueManager.Instance.ResetBall();
+        DialogueManager.Instance.UserResponse.SetActive(false);
+        DialogueManager.Instance.EinsteinOnTrain.SetActive(false);
+
+        DialogueManager.Instance.Train.transform.position = new Vector3(61.5f, -0.57f, -1.32f);
+        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
         DialogueManager.Instance.Train.gameObject.SetActive(true);
 
-        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-50, 0, 0), 7f));
+        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-60, 0, 0), 7f));
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
