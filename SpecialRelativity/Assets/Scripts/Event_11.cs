@@ -35,7 +35,7 @@ public class Event_11 : MonoBehaviour
 
     private IEnumerator CloseAndOpenGate()
     {
-        while (DialogueManager.Instance.Train.transform.position.x > 0f)
+        while (DialogueManager.Instance.Train.transform.position.x > 4f)
         {
             yield return null;
         }
