@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1b78defb6774ba6b090a430bf8b992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballDropForce: {x: 0, y: 0.05, z: 0.1}
+  ballDropForce: {x: 0, y: 0.05, z: 0.2}
   environmentPositionDelta: {x: 10, y: 0, z: 0}
