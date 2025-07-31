@@ -82,17 +82,24 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField]
-    private GameObject stopwatch;
-    public GameObject Stopwatch
-    {
-        get { return stopwatch; }
-    }
-
-    [SerializeField]
     private GameObject einsteinOnTrain;
     public GameObject EinsteinOnTrain
     {
         get { return einsteinOnTrain; }
+    }
+
+    [SerializeField]
+    private Stopwatch platformStopwatch;
+    public Stopwatch PlatformStopwatch
+    {
+        get { return platformStopwatch; }
+    }
+
+    [SerializeField]
+    private Stopwatch trainStopwatch;
+    public Stopwatch TrainStopwatch
+    {
+        get { return trainStopwatch; }
     }
 
     [Header("Event 2")]
