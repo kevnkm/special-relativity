@@ -48,7 +48,7 @@ public class Event_15 : MonoBehaviour
         // StartCoroutine(DialogueManager.Instance.TrainStopwatch.CountToTime(1.49f, 2f));
         // StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(2f, 2f));
 
-        StartCoroutine(CloseAndOpenGate());
+        // StartCoroutine(CloseAndOpenGate());
         yield return StartCoroutine(
             DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 2f)
         );

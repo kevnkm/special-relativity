@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
+  eventObject: {fileID: 2862524573664123572, guid: 31b4dbac9f5144925a1a8b5f1c2b8bd2, type: 3}
   dialogueText: 
   choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 8f10fc13ce07a4b4f8fd9503eecef78f, type: 2}
   voiceClip: {fileID: 0}
