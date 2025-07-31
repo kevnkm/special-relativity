@@ -19,8 +19,6 @@ MonoBehaviour:
     velocity, you are always measuring it with respect to a specific frame of reference.
   choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: a0bdae2bd821e402a8006988f166a647, type: 2}
+  nextNode: {fileID: 11400000, guid: 963330091201e404499be5d00eb22574, type: 2}
   voiceClip: {fileID: 8300000, guid: 02111b014b0c74c55866b14862ae5c81, type: 3}
