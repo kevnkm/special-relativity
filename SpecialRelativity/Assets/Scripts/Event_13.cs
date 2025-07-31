@@ -13,9 +13,15 @@ public class Event_13 : MonoBehaviour
     private IEnumerator WaitBeforeNextNode()
     {
         yield return new WaitForSeconds(1f);
+        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
+
+        DialogueManager.Instance.TrainStopwatch.transform.localScale = new Vector3(2.5f, 1, 1);
+        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);
-        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
+
+        DialogueManager.Instance.Ball.SetActive(false);
         DialogueManager.Instance.EinsteinOnTrain.SetActive(true);
 
         DialogueManager.Instance.Train.transform.position = new Vector3(60f, -0.57f, -1.32f);
