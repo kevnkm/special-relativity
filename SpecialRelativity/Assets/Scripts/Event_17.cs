@@ -18,29 +18,44 @@ public class Event_17 : MonoBehaviour
     private IEnumerator WaitBeforeNextNode()
     {
         yield return new WaitForSeconds(1f);
+        DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
+        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
-        StartCoroutine(CloseAndOpenGate());
-        yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 10f)
+        if (DialogueManager.Instance.Environment.transform.position.x >= 32f)
+        {
+            DialogueManager.Instance.Environment.transform.position = new Vector3(16f, -0.57f, 0f);
+        }
+ 
+        Coroutine moveEnv = StartCoroutine(
+            DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), 10f)
         );
+
+        // Now gates can wait for position change *while* movement happens
+        yield return StartCoroutine(CloseAndOpenGate());
+
+        // Ensure movement completes
+        yield return moveEnv;
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
+ 
     }
 
     private IEnumerator CloseAndOpenGate()
     {
+        Debug.Log("Right Gate Close by Event17");
         yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
         yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
-        yield return new WaitForSeconds(7f);
-        while (DialogueManager.Instance.Environment.transform.position.x < 0f)
+        // yield return new WaitForSeconds(10f);
+        while (DialogueManager.Instance.Environment.transform.position.x < 32f)
         {
             yield return null;
         }
 
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
+        Debug.Log("Left Gate Close by Event17");
+        yield return StartCoroutine(DialogueManager.Instance.LeftGate.CloseGate(0.2f));
+        yield return StartCoroutine(DialogueManager.Instance.LeftGate.OpenGate(0.2f));
     }
 }
