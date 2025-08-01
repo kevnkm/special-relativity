@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: The second signals trigger the gates.
+  dialogueText: Perfect, it seems to be working as intended!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 58b7ec7bfd497483383e45185cf43c6d, type: 2}
-  voiceClip: {fileID: 8300000, guid: 1e4798cb6a45e4485b1e1923ddf71e29, type: 3}
+  nextNode: {fileID: 11400000, guid: 853ffd1673e8e4e97a58197209735b84, type: 2}
+  voiceClip: {fileID: 8300000, guid: 4bcc2b1d2e4b34176a7968fd7e010a83, type: 3}

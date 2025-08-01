@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 120
+  m_Name: 93
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Finally, we introduced the concept of simultaneity to resolve what
-    appeared to be a paradoxical situation.
+  dialogueText: "Let\u2019s do the following: there is a button on the track that
+    sends out a signal at the speed of light once the train rolls over it."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 45615eb8d6c8c474db50f1fc5a0e49fa, type: 2}
-  voiceClip: {fileID: 8300000, guid: bd0d1b5bb195c4b54a99c319e29ad56e, type: 3}
+  nextNode: {fileID: 11400000, guid: f0b97c9d50e1c480bb718abc9b3ee55c, type: 2}
+  voiceClip: {fileID: 8300000, guid: 5f0f1990ca7234290baa67e77f3fe89a, type: 3}

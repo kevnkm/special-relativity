@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 84
+  m_Name: 82
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "Alright, again! Feel free to watch as many times as you want to
-    observe what\u2019s happening with each gate."
-  choices: []
+  dialogueText: Did you see that?
+  choices:
+  - choiceText: Yes!
+    nextNode: {fileID: 11400000, guid: 00bd86f805e82411c85760e4f03e6606, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Can I see that one more time?
+    nextNode: {fileID: 11400000, guid: 2e6908c81d8054e908b8a2ac711b2f7b, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 6dcf99dc9b9ef41f7ac8883d75d13a42, type: 2}
-  voiceClip: {fileID: 8300000, guid: 1d76c44361ce14da2b17ab13ac25393c, type: 3}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 94667f673c0224e4fbe85b2bfed6fad1, type: 3}

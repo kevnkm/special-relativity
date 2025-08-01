@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 82 Event
+  m_Name: 106
   m_EditorClassIdentifier: 
-  isEventNode: 1
+  isEventNode: 0
   isQuizNode: 0
-  eventObject: {fileID: 2862524573664123572, guid: 31b4dbac9f5144925a1a8b5f1c2b8bd2, type: 3}
-  dialogueText: 
+  eventObject: {fileID: 0}
+  dialogueText: Look, the front gate is triggered first!
   choices: []
   quizIndex: 0
-  autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 2e6908c81d8054e908b8a2ac711b2f7b, type: 2}
-  voiceClip: {fileID: 0}
+  allowedTries: 0
+  answerExplanationNode: {fileID: 0}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 42889448a47a74918ad433a26677b6c0, type: 2}
+  voiceClip: {fileID: 8300000, guid: 2039c9f4eb0754561b62c2a12a1eb278, type: 3}

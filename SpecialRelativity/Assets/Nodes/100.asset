@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: The button triggers the first signal.
+  dialogueText: The second signals trigger the gates.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 9d1e849935e924d2fbfbd9864708f7cc, type: 2}
-  voiceClip: {fileID: 8300000, guid: 9339893c7e1b84e4797f802f8a0d8bdb, type: 3}
+  nextNode: {fileID: 11400000, guid: 58b7ec7bfd497483383e45185cf43c6d, type: 2}
+  voiceClip: {fileID: 8300000, guid: 1e4798cb6a45e4485b1e1923ddf71e29, type: 3}

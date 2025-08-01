@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Once the signal is received by this sensor in the middle of the platform,
-    it will send out two signals, one to each gate.
+  dialogueText: When each gate receives their respective signals, they will close,
+    then open.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 4a76ebab32c384ff982203c35c075dec, type: 2}
-  voiceClip: {fileID: 8300000, guid: 58b9f2ac962f14666a333b85dd68e3de, type: 3}
+  nextNode: {fileID: 11400000, guid: 070fb0443116e4a979976245df25d6ef, type: 2}
+  voiceClip: {fileID: 8300000, guid: f5d72159e0ef1465994d02ebc82684a4, type: 3}

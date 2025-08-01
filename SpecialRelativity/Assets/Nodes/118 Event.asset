@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 98 Event
+  m_Name: 118 Event
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 2862524573664123572, guid: f80be43053c1844b8bebea729ab2cc68, type: 3}
+  eventObject: {fileID: 2862524573664123572, guid: d6fab6e130279487687108dfb358fddc, type: 3}
   dialogueText: 
   choices: []
   quizIndex: 0
   autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 8fe3f35fc110142ef85cd8adcbddaca8, type: 2}
+  nextNode: {fileID: 11400000, guid: 0bac275085a7d45459dbe6edb61ffa5b, type: 2}
   voiceClip: {fileID: 0}

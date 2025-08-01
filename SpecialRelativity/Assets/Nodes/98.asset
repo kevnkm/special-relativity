@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 121
+  m_Name: 98
   m_EditorClassIdentifier: 
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Thank you for indulging in my whims, and I hope this little foray
-    has alleviated some of the boredom of waiting for your train.
+  dialogueText: The button triggers the first signal.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 7d0e7fbbeed5b49edbbcc4af40e10e59, type: 2}
-  voiceClip: {fileID: 8300000, guid: 803e15be1674042faa17b6faaac2684c, type: 3}
+  nextNode: {fileID: 11400000, guid: 9d1e849935e924d2fbfbd9864708f7cc, type: 2}
+  voiceClip: {fileID: 8300000, guid: 9339893c7e1b84e4797f802f8a0d8bdb, type: 3}

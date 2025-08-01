@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: This is definitely a thought experiment worth pondering more about!
+  dialogueText: 'To recap what we discussed today:'
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 7e111f97ba5c44fdd8f4f5305d7acbd5, type: 2}
-  voiceClip: {fileID: 0}
+  nextNode: {fileID: 11400000, guid: 16b426437c13d449181a1c1924b17192, type: 2}
+  voiceClip: {fileID: 8300000, guid: 3be6df32b1e604c6fa7c63b147720c68, type: 3}

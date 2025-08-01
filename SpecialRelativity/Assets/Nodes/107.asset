@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: The button triggers the first signal.
+  dialogueText: Now the back gate is triggered!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: b11ce42daf10a43bf966f05fef1ae37c, type: 2}
-  voiceClip: {fileID: 8300000, guid: 378483f962efe4994bb7aa98ca66855d, type: 3}
+  nextNode: {fileID: 11400000, guid: 42cf56c73e44543c9929a77e629c7043, type: 2}
+  voiceClip: {fileID: 8300000, guid: 8c523f988c8f6444ca147e24faabf1e5, type: 3}

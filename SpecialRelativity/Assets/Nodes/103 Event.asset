@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 122
+  m_Name: 103 Event
   m_EditorClassIdentifier: 
-  isEventNode: 0
+  isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 0}
-  dialogueText: "Now, if you\u2019d excuse me, my train is here."
+  eventObject: {fileID: 2862524573664123572, guid: a9517af8a10ae4604a990cf6c96eba69, type: 3}
+  dialogueText: 
   choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: f9697057ec5fb4d06ae3db3482021bea, type: 2}
-  voiceClip: {fileID: 8300000, guid: 6a30b0d9d1ad64c5c99973818568d282, type: 3}
+  autoAdvance: 0
+  nextNode: {fileID: 11400000, guid: 224d932209ed24f24aa2e28b70885b0f, type: 2}
+  voiceClip: {fileID: 0}

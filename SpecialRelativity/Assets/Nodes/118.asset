@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: We learned about the concept of different frames of reference and
-    that velocity can only be measured with respect to some frame of reference.
+  dialogueText: "Now, if you\u2019d excuse me, my train is here."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 7eacbbe7e72034a55865a7e47010c3b8, type: 2}
-  voiceClip: {fileID: 8300000, guid: 8676d47b8bfa048009c16fd5e9ddfec7, type: 3}
+  nextNode: {fileID: 11400000, guid: f9697057ec5fb4d06ae3db3482021bea, type: 2}
+  voiceClip: {fileID: 8300000, guid: 6a30b0d9d1ad64c5c99973818568d282, type: 3}

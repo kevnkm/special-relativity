@@ -15,19 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Because one gate is travelling towards the signal while the other
-    is travelling away, the gates no longer close at the same time in the train frame
-    of reference!
-  choices:
-  - choiceText: That makes sense
-    nextNode: {fileID: 11400000, guid: d0328fd26eadc44849e3541f989c8017, type: 2}
-    isCorrectChoice: 0
-  - choiceText: I'm still not convinced
-    nextNode: {fileID: 11400000, guid: d0328fd26eadc44849e3541f989c8017, type: 2}
-    isCorrectChoice: 0
+  dialogueText: 'Here is another summary sheet for you:'
+  choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: c6a31260f223245d2a926883064acec5, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: c91ec6283792b4c4ebb33a67cc7f769a, type: 2}
+  voiceClip: {fileID: 8300000, guid: af7838dbab6b64067a1e85089b88a060, type: 3}

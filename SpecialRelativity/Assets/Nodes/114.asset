@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: For now, that brings us to the end of my mini-lecture.
+  dialogueText: We learned about the concept of different frames of reference and
+    that velocity can only be measured with respect to some frame of reference.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 52e36c2d2ea5146eca764d0786ec73ac, type: 2}
-  voiceClip: {fileID: 8300000, guid: 5ac763f7935364f3181800a24ce6ef0c, type: 3}
+  nextNode: {fileID: 11400000, guid: 7eacbbe7e72034a55865a7e47010c3b8, type: 2}
+  voiceClip: {fileID: 8300000, guid: 8676d47b8bfa048009c16fd5e9ddfec7, type: 3}

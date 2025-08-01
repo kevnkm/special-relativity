@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "Let\u2019s do the following: there is a button on the track that
-    sends out a signal at the speed of light once the train rolls over it."
+  dialogueText: Once the signal is received by this sensor in the middle of the platform,
+    it will send out two signals, one to each gate.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: f0b97c9d50e1c480bb718abc9b3ee55c, type: 2}
-  voiceClip: {fileID: 8300000, guid: 5f0f1990ca7234290baa67e77f3fe89a, type: 3}
+  nextNode: {fileID: 11400000, guid: 4a76ebab32c384ff982203c35c075dec, type: 2}
+  voiceClip: {fileID: 8300000, guid: 58b9f2ac962f14666a333b85dd68e3de, type: 3}

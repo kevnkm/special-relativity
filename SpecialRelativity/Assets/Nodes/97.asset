@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Now, let us see the mechanism in action.
+  dialogueText: Here comes the train.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 370bf1e66ec0949e2b57cc1e803aae00, type: 2}
-  voiceClip: {fileID: 8300000, guid: 4a10576d0dbbf4ee1ac4980c79ffa8ac, type: 3}
+  nextNode: {fileID: 11400000, guid: aae83f12d9b0b4ab69365ea364c8fcba, type: 2}
+  voiceClip: {fileID: 8300000, guid: a37a7f71a7c05452cb9b012d1a3ecacc, type: 3}

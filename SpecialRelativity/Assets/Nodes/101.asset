@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: The first signal triggers the second signals.
+  dialogueText: The train leaves.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: fdb1582fe7cf7456b8899cf8ee45a162, type: 2}
-  voiceClip: {fileID: 8300000, guid: f8471712c16e642f7baff65a6c88d256, type: 3}
+  nextNode: {fileID: 11400000, guid: 18f0427ccedbb4c66bc23df70b29de78, type: 2}
+  voiceClip: {fileID: 0}

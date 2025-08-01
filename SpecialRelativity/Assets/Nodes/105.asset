@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Now, let us see how it looks like when we are on the train. Remember,
-    the speed of light travels at the same speed regardless of the reference frame.
+  dialogueText: The first signal triggers the second signals.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 6b40c4c52e9204105b1d5bba9dbf7f14, type: 2}
-  voiceClip: {fileID: 8300000, guid: 32cffed9be76344b0bc276b8f44d59fe, type: 3}
+  nextNode: {fileID: 11400000, guid: dc3efd6814daa471691f2abd0fd3b936, type: 2}
+  voiceClip: {fileID: 8300000, guid: d8bed7077189a4106807aa49167f6d5a, type: 3}

@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: When each gate receives their respective signals, they will close,
-    then open.
+  dialogueText: Now, let us see the mechanism in action.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 070fb0443116e4a979976245df25d6ef, type: 2}
-  voiceClip: {fileID: 8300000, guid: f5d72159e0ef1465994d02ebc82684a4, type: 3}
+  nextNode: {fileID: 11400000, guid: 370bf1e66ec0949e2b57cc1e803aae00, type: 2}
+  voiceClip: {fileID: 8300000, guid: 4a10576d0dbbf4ee1ac4980c79ffa8ac, type: 3}
