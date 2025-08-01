@@ -148,6 +148,42 @@ public class DialogueManager : MonoBehaviour
         get { return teleportationProvider; }
     }
 
+    [Header("Event 19")]
+    [SerializeField]
+    private Collider trainCollider;
+    public Collider TrainCollider
+    {
+        get { return trainCollider; }
+    }
+
+    [SerializeField]
+    private LightSphere platformButtonLightSphere;
+    public LightSphere PlatformButtonLightSphere
+    {
+        get { return platformButtonLightSphere; }
+    }
+
+    [SerializeField]
+    private LightSphere signalLightSphere;
+    public LightSphere SignalLightSphere
+    {
+        get { return signalLightSphere; }
+    }
+
+    [SerializeField]
+    private GameObject platformButtonObject;
+    public GameObject PlatformButtonObject
+    {
+        get { return platformButtonObject; }
+    }
+
+    [SerializeField]
+    private GameObject signalLightSphereObject;
+    public GameObject SignalLightSphereObject
+    {
+        get { return signalLightSphereObject; }
+    }
+
     private void Awake()
     {
         if (Instance == null)

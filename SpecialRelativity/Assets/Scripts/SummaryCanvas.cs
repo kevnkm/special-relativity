@@ -51,13 +51,39 @@ public class SummaryCanvas : MonoBehaviour
     public void TogglePanelVisibility()
     {
         isPanelVisible = !isPanelVisible;
-        panel1.SetActive(isPanelVisible);
+        if (isPanelVisible)
+        {
+            if (currentPanel == 1)
+            {
+                panel1.SetActive(true);
+                panel2.SetActive(false);
+            }
+            else if (currentPanel == 2)
+            {
+                panel1.SetActive(false);
+                panel2.SetActive(true);
+            }
+        }
+        else
+        {
+            panel1.SetActive(false);
+            panel2.SetActive(false);
+        }
+
         toggleText.text = isPanelVisible ? "Hide Summary" : "Show Summary";
         gameObject.GetComponent<FollowCamera>().yPos = isPanelVisible ? 1.2f : 1.8f;
     }
 
+    private int currentPanel = 1;
 
-   
+    public void ShowPanel2()
+    {
+        panel1.SetActive(false);
+        panel2.SetActive(true);
+        toggleText.text = "Hide Summary";
+        gameObject.GetComponent<FollowCamera>().yPos = 1.2f;
+    }
+
     // public void TogglePanelVisibility()
     // {
     //     bool anyPanelVisible = panel1.activeSelf || panel2.activeSelf;
