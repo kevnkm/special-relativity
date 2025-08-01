@@ -25,7 +25,7 @@ public class Event_17 : MonoBehaviour
         {
             DialogueManager.Instance.Environment.transform.position = new Vector3(16f, -0.57f, 0f);
         }
- 
+
         Coroutine moveEnv = StartCoroutine(
             DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), 10f)
         );
@@ -39,7 +39,6 @@ public class Event_17 : MonoBehaviour
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
- 
     }
 
     private IEnumerator CloseAndOpenGate()
