@@ -35,7 +35,8 @@ public class Event_11 : MonoBehaviour
 
     private IEnumerator CloseAndOpenGate()
     {
-        while (DialogueManager.Instance.Train.transform.position.x > 4f)
+        // Less than x-pos 14 now
+        while (DialogueManager.Instance.Train.transform.position.x > 14f)
         {
             yield return null;
         }

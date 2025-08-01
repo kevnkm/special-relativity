@@ -16,18 +16,23 @@ public class Event_15 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
 
-        DialogueManager.Instance.Train.transform.position = new Vector3(10f, -0.57f, -1.32f);
+        DialogueManager.Instance.Train.transform.position = new Vector3(21.5f, -0.57f, -1.32f);
         DialogueManager.Instance.Train.transform.localScale = new Vector3(1, 1, 1);
 
         DialogueManager.Instance.TrainStopwatch.transform.localScale = new Vector3(1, 1, 1);
-        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+
+        //Original Here
+        // DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+
+        //Made following modification
+        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = true;
 
         DialogueManager.Instance.Platform.transform.localScale = new Vector3(0.5f, 1, 1);
 
         // DialogueManager.Instance.PlatformStopwatch.ResetTimer();
         // DialogueManager.Instance.TrainStopwatch.ResetTimer();
-        DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
-        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
+        DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);
+        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
 
         DialogueManager.Instance.Train.gameObject.SetActive(true);
 
@@ -45,8 +50,8 @@ public class Event_15 : MonoBehaviour
         // einstein left turn animation
         DialogueManager.Instance.EinsteinAnimator.SetTrigger("Left Turn");
 
-        // StartCoroutine(DialogueManager.Instance.TrainStopwatch.CountToTime(1.49f, 2f));
-        // StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(2f, 2f));
+        StartCoroutine(DialogueManager.Instance.TrainStopwatch.CountToTime(2f, 2f));
+        StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(1.49f, 2f));
 
         // StartCoroutine(CloseAndOpenGate());
         yield return StartCoroutine(
@@ -59,7 +64,7 @@ public class Event_15 : MonoBehaviour
 
     private IEnumerator CloseAndOpenGate()
     {
-        while (DialogueManager.Instance.Environment.transform.position.x < 5f)
+        while (DialogueManager.Instance.Environment.transform.position.x < 21.5f)
         {
             yield return null;
         }

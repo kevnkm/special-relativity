@@ -16,7 +16,7 @@ public class Event_13 : MonoBehaviour
         DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
 
         DialogueManager.Instance.TrainStopwatch.transform.localScale = new Vector3(2.5f, 1, 1);
-        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = true;
 
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);

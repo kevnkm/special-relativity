@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12423738, g: 0.1555364, b: 0.21305649, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.124305174, g: 0.15562575, b: 0.21316291, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12222,7 +12222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de88c6c6a5b464e1ca8c806f5e93a093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel1: {fileID: 956189080}
+  panel2: {fileID: 832744553}
   toggleButton: {fileID: 18242080}
   toggleText: {fileID: 1788166859}
 --- !u!1 &1922615064

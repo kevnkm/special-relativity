@@ -35,10 +35,10 @@ public class Event_17 : MonoBehaviour
         yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
         yield return new WaitForSeconds(7f);
-        // while (DialogueManager.Instance.Environment.transform.position.x < 0f)
-        // {
-        //     yield return null;
-        // }
+        while (DialogueManager.Instance.Environment.transform.position.x < 0f)
+        {
+            yield return null;
+        }
 
         yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
         yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
