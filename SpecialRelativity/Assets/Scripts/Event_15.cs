@@ -29,8 +29,8 @@ public class Event_15 : MonoBehaviour
 
         DialogueManager.Instance.Platform.transform.localScale = new Vector3(0.5f, 1, 1);
 
-        // DialogueManager.Instance.PlatformStopwatch.ResetTimer();
-        // DialogueManager.Instance.TrainStopwatch.ResetTimer();
+        DialogueManager.Instance.PlatformStopwatch.ResetTimer();
+        DialogueManager.Instance.TrainStopwatch.ResetTimer();
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
 
@@ -55,7 +55,7 @@ public class Event_15 : MonoBehaviour
 
         // StartCoroutine(CloseAndOpenGate());
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 2f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(14, 0, 0), 2f)
         );
 
         DialogueManager.Instance.StartNextNode();
