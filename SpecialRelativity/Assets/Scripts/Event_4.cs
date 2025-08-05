@@ -49,7 +49,7 @@ public class Event_4 : MonoBehaviour
     private IEnumerator EnvironmentAnimationCoroutine()
     {
         yield return new WaitForSeconds(0.1f);
-        StartCoroutine(DialogueManager.Instance.MoveEnvironment(environmentPositionDelta, 2f));
+        StartCoroutine(DialogueManager.Instance.MovePlatform(environmentPositionDelta, 2f));
     }
 
     private IEnumerator BallDropCoroutine()

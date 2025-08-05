@@ -26,6 +26,9 @@ public class Event_6 : MonoBehaviour
 
         DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 0.7f;
 
+        DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
+            Quaternion.Euler(0, -90, 0);
+
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
         yield return new WaitForSeconds(1f);

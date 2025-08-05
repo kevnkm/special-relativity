@@ -48,14 +48,16 @@ public class Event_15 : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // einstein left turn animation
-        DialogueManager.Instance.EinsteinAnimator.SetTrigger("Left Turn");
+        // DialogueManager.Instance.EinsteinAnimator.SetTrigger("Left Turn");
+        DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
+            Quaternion.Euler(0, -90, 0);
 
         StartCoroutine(DialogueManager.Instance.TrainStopwatch.CountToTime(2f, 2f));
         StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(1.49f, 2f));
 
         // StartCoroutine(CloseAndOpenGate());
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 2f)
+            DialogueManager.Instance.MovePlatform(new Vector3(6, 0, 0), 2f)
         );
 
         DialogueManager.Instance.StartNextNode();
@@ -64,7 +66,7 @@ public class Event_15 : MonoBehaviour
 
     private IEnumerator CloseAndOpenGate()
     {
-        while (DialogueManager.Instance.Environment.transform.position.x < 21.5f)
+        while (DialogueManager.Instance.Platform.transform.position.x < 21.5f)
         {
             yield return null;
         }

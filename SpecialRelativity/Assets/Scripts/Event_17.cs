@@ -21,20 +21,18 @@ public class Event_17 : MonoBehaviour
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
-        if (DialogueManager.Instance.Environment.transform.position.x >= 32f)
+        if (DialogueManager.Instance.Platform.transform.position.x >= 32f)
         {
-            DialogueManager.Instance.Environment.transform.position = new Vector3(16f, -0.57f, 0f);
+            DialogueManager.Instance.Platform.transform.position = new Vector3(16f, -0.57f, 0f);
         }
-
-        Coroutine moveEnv = StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), 10f)
-        );
 
         // Now gates can wait for position change *while* movement happens
         yield return StartCoroutine(CloseAndOpenGate());
 
         // Ensure movement completes
-        yield return moveEnv;
+        yield return StartCoroutine(
+            DialogueManager.Instance.MovePlatform(new Vector3(16, 0, 0), 10f)
+        );
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
@@ -48,7 +46,7 @@ public class Event_17 : MonoBehaviour
         yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
         // yield return new WaitForSeconds(10f);
-        while (DialogueManager.Instance.Environment.transform.position.x < 32f)
+        while (DialogueManager.Instance.Platform.transform.position.x < 32f)
         {
             yield return null;
         }
