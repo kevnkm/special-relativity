@@ -19,34 +19,29 @@ public class SummaryCanvas : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI toggleText;
 
+    [SerializeField]
+    private Transform inactivePosition;
+
     private void Start()
     {
         toggleButton.onClick.AddListener(() => OnToggleButtonClicked?.Invoke());
         toggleButton.onClick.AddListener(TogglePanelVisibility);
     }
 
+    private void Update()
+    {
+        if (isPanelVisible)
+            return;
+
+        // If the panel is not visible, move it to the inactive position smoothly
+        transform.position = Vector3.Lerp(
+            transform.position,
+            inactivePosition.position,
+            Time.deltaTime * 2f
+        );
+    }
+
     private bool isPanelVisible = true;
-
-    // public void TogglePanelVisibility()
-    // {
-
-    //     isPanelVisible = !isPanelVisible;
-
-    //     // If panel1 is active, deactivate it
-    //     if (panel1.activeSelf)
-    //     {
-    //         panel1.SetActive(isPanelVisible);
-    //     }
-
-    //     // Else if panel2 is active, deactivate it
-    //     else if (panel2.activeSelf)
-    //     {
-    //         panel2.SetActive(isPanelVisible);
-    //     }
-    //     // panel.SetActive(isPanelVisible);
-    //     toggleText.text = isPanelVisible ? "Hide Summary" : "Show Summary";
-    //     gameObject.GetComponent<FollowCamera>().yPos = isPanelVisible ? 1.2f : 1.8f;
-    // }
 
     public void TogglePanelVisibility()
     {
@@ -71,7 +66,9 @@ public class SummaryCanvas : MonoBehaviour
         }
 
         toggleText.text = isPanelVisible ? "Hide Summary" : "Show Summary";
-        gameObject.GetComponent<FollowCamera>().yPos = isPanelVisible ? 1.2f : 1.8f;
+
+        // Enable FollowCamera only if a panel is visible
+        gameObject.GetComponent<FollowCamera>().enabled = isPanelVisible;
     }
 
     private int currentPanel = 1;
@@ -83,26 +80,4 @@ public class SummaryCanvas : MonoBehaviour
         toggleText.text = "Hide Summary";
         gameObject.GetComponent<FollowCamera>().yPos = 1.2f;
     }
-
-    // public void TogglePanelVisibility()
-    // {
-    //     bool anyPanelVisible = panel1.activeSelf || panel2.activeSelf;
-
-    //     if (anyPanelVisible)
-    //     {
-    //         // Hide whichever one is currently active
-    //         if (panel1.activeSelf) panel1.SetActive(false);
-    //         if (panel2.activeSelf) panel2.SetActive(false);
-    //     }
-    //     else
-    //     {
-    //         // If nothing is active, show panel1 by default
-    //         panel1.SetActive(true);
-    //     }
-
-    //     // Update status after toggling
-    //     bool updatedVisibility = panel1.activeSelf || panel2.activeSelf;
-    //     toggleText.text = updatedVisibility ? "Hide Summary" : "Show Summary";
-    //     gameObject.GetComponent<FollowCamera>().yPos = updatedVisibility ? 1.2f : 1.8f;
-    // }
 }
