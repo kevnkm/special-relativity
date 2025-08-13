@@ -30,7 +30,7 @@ public class Event_13 : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-20, 0, 0), 3f)
+            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-40, 0, 0), 3f)
         );
 
         Debug.Log("Transitioning to the next event.");
