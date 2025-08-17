@@ -1,1 +1,3 @@
 # SpecialRelativity
+
+This project is a dialogue-based educational model in virtual reality that uses a thought experiment to explain the principle of relativity of simultaneity in special relativity. The model features an Einstein character who guides the user through the train-in-the-tunnel paradox, where a train's length-contraction appears to conflict with the tunnel's length-contraction depending on the observer's frame of reference. The experience visually demonstrates how the constant speed of light resolves this paradox, showing that events that are simultaneous for one observer are not for another.
