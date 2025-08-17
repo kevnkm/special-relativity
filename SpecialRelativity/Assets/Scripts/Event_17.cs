@@ -12,44 +12,32 @@ public class Event_17 : MonoBehaviour
     private void Start()
     {
         Debug.Log($"{gameObject.name} started.");
-        StartCoroutine(WaitBeforeNextNode());
+        StartCoroutine(EventCoroutine());
     }
 
-    private IEnumerator WaitBeforeNextNode()
+    private IEnumerator EventCoroutine()
     {
         yield return new WaitForSeconds(1f);
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
-        if (DialogueManager.Instance.Platform.transform.position.x >= 32f)
-        {
-            DialogueManager.Instance.Platform.transform.position = new Vector3(16f, -0.57f, 0f);
-        }
-
-        // Now gates can wait for position change *while* movement happens
-        yield return StartCoroutine(CloseAndOpenGate());
-
-        // Ensure movement completes
-        yield return StartCoroutine(
-            DialogueManager.Instance.MovePlatform(new Vector3(16, 0, 0), 10f)
-        );
+        yield return StartCoroutine(GateEventCoroutine());
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
 
-    private IEnumerator CloseAndOpenGate()
+    private IEnumerator GateEventCoroutine()
     {
+        var moveTime = 10f;
         Debug.Log("Right Gate Close by Event17");
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
+        StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
+        StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
-        // yield return new WaitForSeconds(10f);
-        while (DialogueManager.Instance.Platform.transform.position.x < 32f)
-        {
-            yield return null;
-        }
+        StartCoroutine(DialogueManager.Instance.MovePlatform(new Vector3(16, 0, 0), moveTime));
+
+        yield return new WaitForSeconds(moveTime * 0.9f);
 
         Debug.Log("Left Gate Close by Event17");
         yield return StartCoroutine(DialogueManager.Instance.LeftGate.CloseGate(0.2f));
