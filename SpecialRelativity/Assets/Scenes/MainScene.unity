@@ -7756,7 +7756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 142547090}
   choicesContainer: {fileID: 715655226}
-  startNode: {fileID: 11400000, guid: 8a080452cb2c84116a37dc6051c2f029, type: 2}
+  startNode: {fileID: 11400000, guid: 13eab5d06085a40db9a631dcdc9db85a, type: 2}
   dialogueCanvas: {fileID: 170558917}
   summaryCanvas: {fileID: 1905154654}
   userResponse: {fileID: 1996808014}
@@ -14057,7 +14057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095373815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14065,7 +14065,7 @@ Transform:
   - {fileID: 413835861}
   - {fileID: 613086597}
   m_Father: {fileID: 1769947901}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &2115646608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 657184242118504721, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
