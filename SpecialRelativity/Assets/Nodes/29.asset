@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Alright then, back to the issue at hand.
+  dialogueText: Furthermore, there is no preferred frame of reference. In other words,
+    there is no single absolute answer for the velocity of an object.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: ae9f549066a9c4441a2b69a83aec2c1a, type: 2}
-  voiceClip: {fileID: 8300000, guid: 0de5608754bdf4c678b08eaaa56bde78, type: 3}
+  nextNode: {fileID: 11400000, guid: 3f7a3b91e3f384257bfe497c8bb535d6, type: 2}
+  voiceClip: {fileID: 8300000, guid: b30b61f04cec94557bc460775d5d54bd, type: 3}

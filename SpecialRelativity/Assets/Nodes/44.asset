@@ -15,13 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: These effects are usually not observed in daily life because they
-    are only apparent when objects are travelling near the speed of light, which
-    is three hundred million m/s.
+  dialogueText: 'Alright! Now that you understand the idea of frames of reference,
+    we shall move on to the more mind-boggling stuff: relativistic effects.'
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 492497b192dc542a19adff0f1447ab34, type: 2}
-  voiceClip: {fileID: 8300000, guid: f96554dd1c29849a2b15f26283331289, type: 3}
+  nextNode: {fileID: 11400000, guid: 79d3c15ad249745f5a761a3c1f1e11ce, type: 2}
+  voiceClip: {fileID: 8300000, guid: b81caad6645384c4bae3bc3cbc97bb11, type: 3}

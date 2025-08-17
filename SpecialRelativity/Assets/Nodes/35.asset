@@ -15,13 +15,18 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "You should keep this idea in mind as we move on. When things get
-    less intuitive, remember there can only be one physical reality \u2013 we should
-    not end up with contradictions to what has happened."
-  choices: []
+  dialogueText: "In the interest of time, I won\u2019t go into the details now, but
+    perhaps you can ask me later if we have the time."
+  choices:
+  - choiceText: "I\u2019m certainly interested!"
+    nextNode: {fileID: 11400000, guid: 232d8f2dd82084d1cbac0e6e556cb9d0, type: 2}
+    isCorrectChoice: 0
+  - choiceText: "That\u2019s alright, thanks for the offer."
+    nextNode: {fileID: 11400000, guid: 232d8f2dd82084d1cbac0e6e556cb9d0, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: d1f767459d24a4ee8b2bab32f4d98cac, type: 2}
-  voiceClip: {fileID: 8300000, guid: 139a60db22d43407394ea691ded1d1b0, type: 3}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 96f718deed5474c85bfc7bb93d93e017, type: 3}

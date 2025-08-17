@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Remember, we saw earlier that the train was longer than the platform,
-    but now it is shorter! See?
+  dialogueText: "It\u2019s going very fast now\u2026 to get a better view, let us
+    also slow down time by a hundred million times and watch everything in slow motion."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: dc4762b6d89064c4a847e0b451fd07cd, type: 2}
-  voiceClip: {fileID: 8300000, guid: 2f5dd11cf29014af39232dd177809147, type: 3}
+  nextNode: {fileID: 11400000, guid: 1854d52aa6e444240825cd57b47b032b, type: 2}
+  voiceClip: {fileID: 8300000, guid: d23213d43db5b4373ab044b6cefce03b, type: 3}

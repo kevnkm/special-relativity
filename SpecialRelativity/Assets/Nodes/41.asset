@@ -15,12 +15,13 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: In particular, the two effects we are focusing on today are length
-    contraction and time dilation.
+  dialogueText: "You should keep this idea in mind as we move on. When things get
+    less intuitive, remember there can only be one physical reality \u2013 we should
+    not end up with contradictions to what has happened."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 0c00d1b1c05bb40b7a6530e1ffddb7d3, type: 2}
-  voiceClip: {fileID: 8300000, guid: 96eaff99ca1374e3887569252445f664, type: 3}
+  nextNode: {fileID: 11400000, guid: d1f767459d24a4ee8b2bab32f4d98cac, type: 2}
+  voiceClip: {fileID: 8300000, guid: 139a60db22d43407394ea691ded1d1b0, type: 3}

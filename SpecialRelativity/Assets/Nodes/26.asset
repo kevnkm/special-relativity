@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: In fact, no other physics experiments I can conduct will allow me
-    to determine what velocity we are travelling at.
+  dialogueText: It may seem strange, but now that we are on the train and moving
+    together with it, we no longer perceive the train to be moving.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 04aa059fc2ff34ccd935fb6e037b9e49, type: 2}
-  voiceClip: {fileID: 8300000, guid: f4e84c87dfec54151bd724e0266d23b0, type: 3}
+  nextNode: {fileID: 11400000, guid: 58bd8d165cae448ae840bf14a664711f, type: 2}
+  voiceClip: {fileID: 8300000, guid: 959486138d58a4a8da13975dbed212c9, type: 3}

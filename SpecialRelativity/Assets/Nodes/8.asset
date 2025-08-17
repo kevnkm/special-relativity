@@ -13,27 +13,14 @@ MonoBehaviour:
   m_Name: 8
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 1
   eventObject: {fileID: 0}
-  dialogueText: Could you tell me what velocity the train is moving at?
+  dialogueText: Seeing as that we have some time while waiting for the train, would
+    you mind playing the role of an audience for me please?
   choices:
-  - choiceText: 2m/s to our left
-    nextNode: {fileID: 11400000, guid: 3562aa7250c4e46ce9757702a52e12aa, type: 2}
-    isCorrectChoice: 0
-  - choiceText: 0.5m/s to our left
-    nextNode: {fileID: 11400000, guid: d6127263ec2b443e6a2d96824df089e3, type: 2}
-    isCorrectChoice: 0
-  - choiceText: 0m/s
-    nextNode: {fileID: 11400000, guid: 4927c433089004313b89ccddda5f8d67, type: 2}
-    isCorrectChoice: 0
-  - choiceText: 0.5m/s to our right
-    nextNode: {fileID: 11400000, guid: 8c42e33eca38246d9b2579002c9dc783, type: 2}
-    isCorrectChoice: 0
-  - choiceText: 2m/s to our right
-    nextNode: {fileID: 11400000, guid: e00ce15db3da94ecf917b0f31d9b8e5e, type: 2}
-    isCorrectChoice: 1
-  quizIndex: 0
-  allowedTries: 0
+  - choiceText: "That sounds interesting! I\u2019m all ears."
+    nextNode: {fileID: 11400000, guid: 82b2c1bfd763648cfb9bb9145a81c204, type: 2}
+  - choiceText: "I\u2019m afraid I\u2019m not very well-versed in the ways of physics."
+    nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
   autoAdvance: 0
   nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: fa74937880d6b437fa40af58976ef00f, type: 3}
+  voiceClip: {fileID: 8300000, guid: 7f2aadab842bf42b095e977fceed71e7, type: 3}

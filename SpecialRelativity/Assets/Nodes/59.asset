@@ -15,12 +15,18 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: It is a bit harder to demonstrate, but we shall try it with this
-    stopwatch I have here.
-  choices: []
+  dialogueText: "Yes! Did you see that? It\u2019s very brief, but we can close the
+    gates while the train is in the station."
+  choices:
+  - choiceText: Yes!
+    nextNode: {fileID: 11400000, guid: 47640886aed1e4f47bf676226ac98e68, type: 2}
+    isCorrectChoice: 0
+  - choiceText: Can I see that one more time?
+    nextNode: {fileID: 11400000, guid: e701b9ad05f75425c93242522fd37fb4, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 84da8750899ca455295bb14b7eb5aa31, type: 2}
-  voiceClip: {fileID: 8300000, guid: 01b4b7f6e4c8f484b97fba2af9bb6884, type: 3}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 30b20301e8ff942a68640af396838adc, type: 3}

@@ -13,23 +13,13 @@ MonoBehaviour:
   m_Name: 14
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 1
+  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "From this new perspective, the \u201Ctrain frame of reference,\u201D
-    what velocity is the train moving at?"
-  choices:
-  - choiceText: 2m/s to our left
-    nextNode: {fileID: 11400000, guid: 8579371609fda47f285d481ddcc322e6, type: 2}
-    isCorrectChoice: 0
-  - choiceText: 0m/s
-    nextNode: {fileID: 11400000, guid: 7eff4cb853aec4452b0134b659833d26, type: 2}
-    isCorrectChoice: 1
-  - choiceText: 2m/s to our right
-    nextNode: {fileID: 11400000, guid: dbd5cf6e8032a45efaf1ed567dacec0a, type: 2}
-    isCorrectChoice: 0
+  dialogueText: You will notice that the ball has travelled a horizontal distance,
+    even though I dropped the ball simply by letting go of it.
+  choices: []
   quizIndex: 0
   allowedTries: 0
-  answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: d5094f5cea68e472c9e083b77d1a8153, type: 2}
-  voiceClip: {fileID: 8300000, guid: 3060aab9886ca47fb9bbff0e6541767b, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 43c86f281e80f42aba6192c5600898e9, type: 2}
+  voiceClip: {fileID: 8300000, guid: 82b8e90c5eb814b40a9c769b4eb43b29, type: 3}

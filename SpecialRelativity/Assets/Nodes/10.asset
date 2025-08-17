@@ -13,15 +13,10 @@ MonoBehaviour:
   m_Name: 10
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "Now, imagine if you are standing on the train. By doing so, we can
-    say that we are in a different frame of reference, the \u201Ctrain frame of reference\u201D.
-    Watch the ball this time\u2026"
+  dialogueText: Perhaps surprisingly, special relativity does not require much background
+    knowledge or mathematics to understand, and I intend to take things step by step.
   choices: []
-  quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 1546f82c283324a98b77c1ab4b82c807, type: 2}
-  voiceClip: {fileID: 8300000, guid: 885001718cc0c4815891806aa4bbd7bf, type: 3}
+  nextNode: {fileID: 11400000, guid: 534655c71e5fc4eb48ffc9607120b789, type: 2}
+  voiceClip: {fileID: 8300000, guid: 097e08799731447b98b34ddcabfb6ed0, type: 3}

@@ -15,12 +15,13 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "This seems quite counterintuitive, but it is true! Isn\u2019t that
-    fascinating?"
+  dialogueText: The reason is that when we are on the train, it is the platform that
+    appears to be moving, relative to us. Thus, the platform is shorter, and time
+    moves slower, compared to us on the train.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: b1281ce952c3b48b89607900797e307e, type: 2}
-  voiceClip: {fileID: 8300000, guid: da30b5fd5fce04be68b625f02789412f, type: 3}
+  nextNode: {fileID: 11400000, guid: 44dc11482cd32477193c83c98e56e654, type: 2}
+  voiceClip: {fileID: 8300000, guid: 57d8554b468064da4b4f996fd487e62d, type: 3}

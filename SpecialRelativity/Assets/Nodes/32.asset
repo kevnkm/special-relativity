@@ -15,13 +15,13 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: In the platform frame of reference, you saw that the ball was travelling
-    horizontally as it fell, while it fell straight down from the train frame of
-    reference.
+  dialogueText: This is because the laws of physics are the same in every non-accelerating
+    frame of reference. Regardless of the velocity, if I drop a ball, it falls straight
+    down.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 3331b66eb893f43ac8eb84533d788bab, type: 2}
-  voiceClip: {fileID: 8300000, guid: a57008dbd0fe54c2788affd770fb8ab6, type: 3}
+  nextNode: {fileID: 11400000, guid: 23debc8779cf84649b0a6c20a7489c42, type: 2}
+  voiceClip: {fileID: 8300000, guid: b31fdcc7a71d44ed8b2e8312e7107465, type: 3}

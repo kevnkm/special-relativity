@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "It\u2019s going very fast now\u2026 to get a better view, let us
-    also slow down time by a hundred million times and watch everything in slow motion."
+  dialogueText: We are going to speed up our train a hundred million times so that
+    it is travelling at about 70% the speed of light. Look, here it comes!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 1854d52aa6e444240825cd57b47b032b, type: 2}
-  voiceClip: {fileID: 8300000, guid: d23213d43db5b4373ab044b6cefce03b, type: 3}
+  nextNode: {fileID: 11400000, guid: 0bb822f89544c4db29ac7b70fb598f4d, type: 2}
+  voiceClip: {fileID: 8300000, guid: a360429b7e3f7407685af85f87f3f08d, type: 3}

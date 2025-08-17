@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: We are going to speed up our train a hundred million times so that
-    it is travelling at about 70% the speed of light. Look, here it comes!
+  dialogueText: "Length contraction refers to how moving objects appear contracted
+    \u2013 they are shorter \u2013 in the direction of movement."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 0bb822f89544c4db29ac7b70fb598f4d, type: 2}
-  voiceClip: {fileID: 8300000, guid: a360429b7e3f7407685af85f87f3f08d, type: 3}
+  nextNode: {fileID: 11400000, guid: 73bcadb8b36814c1ca81c62d13cb341e, type: 2}
+  voiceClip: {fileID: 8300000, guid: 3a6ab90f4cb414e70afe6c4b61040cf8, type: 3}

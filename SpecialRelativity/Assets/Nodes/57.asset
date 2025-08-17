@@ -15,12 +15,18 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: So as it turns out, the mistake in station design could be fixed
-    if we just have very fast trains! Haha!
-  choices: []
+  dialogueText: Hey, check out the gates now. Is there a moment in time where we
+    could close the gates and briefly contain the train?
+  choices:
+  - choiceText: I think so! It looks like it fits.
+    nextNode: {fileID: 11400000, guid: 42cee25709e6d4d6eb4bff2ce7920321, type: 2}
+    isCorrectChoice: 0
+  - choiceText: "I\u2019m not sure. Wouldn\u2019t the train be travelling too fast?"
+    nextNode: {fileID: 11400000, guid: 42cee25709e6d4d6eb4bff2ce7920321, type: 2}
+    isCorrectChoice: 0
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 7f927e615b9f04c52a9978452eeefbd7, type: 2}
-  voiceClip: {fileID: 8300000, guid: 5cae7ba51839440869737cd59d92675c, type: 3}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 342d5e15e620a4f8bb75cee75cd3f1f6, type: 3}

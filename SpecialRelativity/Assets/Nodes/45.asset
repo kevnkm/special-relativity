@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "What would this look like? Let\u2019s find out!"
+  dialogueText: In particular, the two effects we are focusing on today are length
+    contraction and time dilation.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 14176b5aa8e564ebe94681f30db3a4e1, type: 2}
-  voiceClip: {fileID: 8300000, guid: 56e113ad2a65a4e9fa9ce86c0783e5ed, type: 3}
+  nextNode: {fileID: 11400000, guid: 0c00d1b1c05bb40b7a6530e1ffddb7d3, type: 2}
+  voiceClip: {fileID: 8300000, guid: 96eaff99ca1374e3887569252445f664, type: 3}

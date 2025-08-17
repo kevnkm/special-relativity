@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: 16
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: So this answer is not quite correct.
+  dialogueText: "If we assume that there is no air resistance, you can see that the
+    ball has travelled exactly the same horizontal distance as the train \u2013 it
+    is right below where I am standing on the train!"
   choices: []
-  quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: b220dfa6a864a4623ba3805a54dd10ec, type: 2}
-  voiceClip: {fileID: 8300000, guid: 8ddff3954e7e04245ad498a1ffbeebd3, type: 3}
+  nextNode: {fileID: 11400000, guid: d0cf7b0ddefba45fda48400d6eeecd73, type: 2}
+  voiceClip: {fileID: 8300000, guid: 5c34141d335084ab2b9bdc00a4a23765, type: 3}

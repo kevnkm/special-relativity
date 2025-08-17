@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: 17
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: It may seem strange, but now that we are on the train and moving
-    together with it, we no longer perceive the train to be moving.
+  dialogueText: "From our point of view on the platform, the ball has a horizontal
+    velocity matching the train: we can call this perspective the \u201Cplatform
+    frame of reference\u201D."
   choices: []
-  quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 58bd8d165cae448ae840bf14a664711f, type: 2}
-  voiceClip: {fileID: 8300000, guid: 959486138d58a4a8da13975dbed212c9, type: 3}
+  nextNode: {fileID: 11400000, guid: ce9277c2aba21484d8c949452f50beec, type: 2}
+  voiceClip: {fileID: 8300000, guid: f0acdd97bc1e64fddb7b288c1bc78fd8, type: 3}

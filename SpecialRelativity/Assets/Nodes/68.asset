@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: From the platform frame of reference, we saw that the train looked
-    shorter and a stopwatch on the train was slower.
+  dialogueText: I will give you a chance to explore these effects more later, but
+    for now, I have a question for you!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 0dbcba255a3684dc5ba00561df804b6c, type: 2}
-  voiceClip: {fileID: 8300000, guid: 21551427a11894ba2893419f74159f65, type: 3}
+  nextNode: {fileID: 11400000, guid: 51cd9a8c875bc433293841bea85099e9, type: 2}
+  voiceClip: {fileID: 8300000, guid: 9e9c4c14b1ad64b628b40010c537145a, type: 3}

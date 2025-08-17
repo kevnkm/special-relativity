@@ -15,17 +15,13 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Did you see that?
-  choices:
-  - choiceText: What? Did the train just go past?
-    nextNode: {fileID: 11400000, guid: 84171db03e5664c13bf8b60a4fe10f7a, type: 2}
-    isCorrectChoice: 0
-  - choiceText: It was very fast, but I caught a glimpse!
-    nextNode: {fileID: 11400000, guid: 3bbdb8ae6ad3e429a88448443008607e, type: 2}
-    isCorrectChoice: 0
+  dialogueText: These effects are usually not observed in daily life because they
+    are only apparent when objects are travelling near the speed of light, which
+    is three hundred million m/s.
+  choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 5d0c5dcdab7be498e86279b57abff539, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 492497b192dc542a19adff0f1447ab34, type: 2}
+  voiceClip: {fileID: 8300000, guid: f96554dd1c29849a2b15f26283331289, type: 3}

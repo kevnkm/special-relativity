@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 13 Event
+  m_EditorClassIdentifier: 
+  isEventNode: 1
+  isQuizNode: 0
+  eventObject: {fileID: 2862524573664123572, guid: 6ea59420a3abc4ff6ae98788475f483f, type: 3}
+  dialogueText: "Let\u2019s imagine that I am on a train moving past the platform
+    at a constant speed, and as the train passes by the platform, I drop a ball that
+    I am holding."
+  choices: []
+  quizIndex: 0
+  allowedTries: 0
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 2a9f11d03d0c44f28a47c9527589cff1, type: 2}
+  voiceClip: {fileID: 0}
