@@ -23,7 +23,9 @@ public class Event_10 : MonoBehaviour
         DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
         DialogueManager.Instance.Train.gameObject.SetActive(true);
 
-        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-49.5f, 0, 0), 7f));
+        yield return StartCoroutine(
+            DialogueManager.Instance.MoveTrain(new Vector3(-49.5f, 0, 0), 7f)
+        );
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();

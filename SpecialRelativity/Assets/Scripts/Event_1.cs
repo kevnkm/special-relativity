@@ -5,6 +5,7 @@ public class Event_1 : MonoBehaviour
 {
     private void Start()
     {
+        DialogueManager.Instance.UserResponse.SetActive(false);
         StartCoroutine(WaitBeforeNextNode());
     }
 

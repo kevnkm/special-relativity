@@ -9,9 +9,13 @@ public class Event_2 : MonoBehaviour
     [SerializeField]
     private Vector3 trainPositionDelta = new Vector3(-10, 0, 0);
 
+    [SerializeField]
+    private AnimationClip einsteinDropAnimation;
+
     private void Start()
     {
         DialogueManager.Instance.EinsteinOnTrain.SetActive(true);
+        DialogueManager.Instance.UserResponse.SetActive(false);
         StartCoroutine(WaitBeforeNextNode());
     }
 
@@ -24,7 +28,9 @@ public class Event_2 : MonoBehaviour
         yield return StartCoroutine(EinsteinAnimationCoroutine());
 
         yield return new WaitForSeconds(1f);
+        Debug.Log($"Event 2 completed.");
         DialogueManager.Instance.StartNextNode();
+        // DialogueManager.Instance.UserResponse.SetActive(true);
         Destroy(gameObject);
     }
 
@@ -55,20 +61,8 @@ public class Event_2 : MonoBehaviour
 
         animator.SetTrigger("Drop");
 
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        while (animator.IsInTransition(0) || !stateInfo.IsName("Drop"))
-        {
-            yield return null;
-            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        }
-
-        float clipLength = stateInfo.length;
-
-        yield return new WaitUntil(
-            () =>
-                animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f
-                && !animator.IsInTransition(0)
-        );
+        // Wait for the duration of the "Drop" animation.
+        yield return new WaitForSeconds(einsteinDropAnimation.length);
 
         animator.SetTrigger("Idle");
     }
