@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballDropForce: {x: -0.01, y: 0.05, z: 0.1}
   trainPositionDelta: {x: -10, y: 0, z: 0}
+  einsteinDropAnimation: {fileID: 7400000, guid: 4841a6f9e76324ad7b1348f8759a1d19, type: 2}
