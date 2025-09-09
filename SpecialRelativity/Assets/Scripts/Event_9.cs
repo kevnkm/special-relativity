@@ -15,8 +15,6 @@ public class Event_9 : MonoBehaviour
 
     private IEnumerator WaitBeforeNextNode()
     {
-        yield return new WaitForSeconds(1f);
-
         AudioManager.Instance.Play(audioClip);
         yield return new WaitForSeconds(audioClip.length);
 
