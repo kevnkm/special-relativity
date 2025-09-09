@@ -17,7 +17,7 @@ public class Event_18 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
 
-        DialogueManager.Instance.Train.transform.position = new Vector3(20f, 0f, -1.32f);
+        DialogueManager.Instance.Train.transform.position = new Vector3(16f, 0f, -1.32f);
         DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
 
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);

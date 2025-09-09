@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 4720760}
   - component: {fileID: 4720763}
   - component: {fileID: 4720764}
+  - component: {fileID: 4720765}
   m_Layer: 0
   m_Name: GateCollisionDetector (1)
   m_TagString: Untagged
@@ -270,6 +271,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gate: {fileID: 1950785193}
+--- !u!114 &4720765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f05bc3385ed7454893b08ed66e6320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9495113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2644,7 @@ GameObject:
   - component: {fileID: 224455379}
   - component: {fileID: 224455382}
   - component: {fileID: 224455383}
+  - component: {fileID: 224455384}
   m_Layer: 0
   m_Name: GateCollisionDetector
   m_TagString: Untagged
@@ -2764,6 +2778,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gate: {fileID: 1952140970}
+--- !u!114 &224455384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224455377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f05bc3385ed7454893b08ed66e6320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &246888352
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +5972,7 @@ GameObject:
   - component: {fileID: 737653787}
   - component: {fileID: 737653786}
   - component: {fileID: 737653790}
+  - component: {fileID: 737653791}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: SignalLightSphere
@@ -6080,6 +6107,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &737653791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737653784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f05bc3385ed7454893b08ed66e6320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738124110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7755,7 +7794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 142547090}
   choicesContainer: {fileID: 715655226}
-  startNode: {fileID: 11400000, guid: 8a080452cb2c84116a37dc6051c2f029, type: 2}
+  startNode: {fileID: 11400000, guid: 4f3a135b3d192469ca51bd4b8c46e8e1, type: 2}
   dialogueCanvas: {fileID: 170558917}
   summaryCanvas: {fileID: 1905154654}
   userResponse: {fileID: 1996808014}
@@ -7791,6 +7830,8 @@ MonoBehaviour:
   trainCollider: {fileID: 52120997}
   platformButtonLightSphere: {fileID: 1114035951}
   signalLightSphere: {fileID: 737653786}
+  leftGateCollider: {fileID: 4720760}
+  rightGateCollider: {fileID: 4720760}
   platformButtonObject: {fileID: 59323550}
   signalLightSphereObject: {fileID: 1628455264}
 --- !u!1 &1070421475
@@ -8119,6 +8160,7 @@ GameObject:
   - component: {fileID: 1114035952}
   - component: {fileID: 1114035951}
   - component: {fileID: 1114035955}
+  - component: {fileID: 1114035956}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: ButtonLightSphere
@@ -8253,6 +8295,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1114035956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114035949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f05bc3385ed7454893b08ed66e6320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115204677
 GameObject:
   m_ObjectHideFlags: 0

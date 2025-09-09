@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class TrainCollisionDetector : MonoBehaviour
+public class CollisionDetector : MonoBehaviour
 {
     public event Action<Collider> OnTriggerEntered;
 

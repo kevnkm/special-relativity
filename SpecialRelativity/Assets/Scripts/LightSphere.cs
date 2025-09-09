@@ -27,7 +27,7 @@ public class LightSphere : MonoBehaviour
 
         transform.localScale = Vector3.one;
         if (scaleOnStart)
-            TriggerScale(new Vector3(100, 100, 100), 10f);
+            TriggerScale(new Vector3(50, 50, 50));
     }
 
     private void SetMaterialColor(Color color)
@@ -38,7 +38,7 @@ public class LightSphere : MonoBehaviour
         }
     }
 
-    public void TriggerScale(Vector3 targetScale, float duration)
+    public void TriggerScale(Vector3 targetScale, float duration = 20f)
     {
         if (scaleRoutine != null)
             StopCoroutine(scaleRoutine);
@@ -77,7 +77,7 @@ public class LightSphere : MonoBehaviour
             LightSphere otherLightSphere = other.GetComponent<LightSphere>();
             if (otherLightSphere != null)
             {
-                otherLightSphere.TriggerScale(new Vector3(100, 100, 100), 8f);
+                otherLightSphere.TriggerScale(new Vector3(50, 50, 50));
             }
             else
             {

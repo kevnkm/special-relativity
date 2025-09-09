@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Event_20 : MonoBehaviour
 {
-    private TrainCollisionDetector listener;
+    private CollisionDetector listener;
 
     private void Start()
     {
@@ -12,7 +12,7 @@ public class Event_20 : MonoBehaviour
         Debug.Log($"{gameObject.name} started.");
 
         listener =
-            DialogueManager.Instance.TrainCollider.gameObject.GetComponent<TrainCollisionDetector>();
+            DialogueManager.Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>();
         listener.OnTriggerEntered += HandleTrainTrigger;
 
         StartCoroutine(EventCoroutine());
@@ -68,7 +68,7 @@ public class Event_20 : MonoBehaviour
         StartCoroutine(WaitForThreshold());
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 12f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 20f)
         );
 
         ///
@@ -113,10 +113,7 @@ public class Event_20 : MonoBehaviour
     private void HandleTrainTrigger(Collider other)
     {
         Debug.Log($"Train collided with: {other.name}");
-        DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(
-            new Vector3(100, 100, 100),
-            8f
-        );
+        DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(new Vector3(100, 100, 100));
         listener.OnTriggerEntered -= HandleTrainTrigger;
     }
 

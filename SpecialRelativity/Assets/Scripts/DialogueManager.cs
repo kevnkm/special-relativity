@@ -171,6 +171,20 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField]
+    private Collider leftGateCollider;
+    public Collider LeftGateCollider
+    {
+        get { return leftGateCollider; }
+    }
+
+    [SerializeField]
+    private Collider rightGateCollider;
+    public Collider RightGateCollider
+    {
+        get { return rightGateCollider; }
+    }
+
+    [SerializeField]
     private GameObject platformButtonObject;
     public GameObject PlatformButtonObject
     {
@@ -307,6 +321,19 @@ public class DialogueManager : MonoBehaviour
             StartDialogue(currentNode.nextNode);
         else
             Debug.Log($"No next node defined for this dialogue: {currentNode.name}");
+    }
+
+    public void StartNode(DialogueNode node)
+    {
+        Debug.Log($"Starting node: {node.name}");
+        dialogueCanvas.gameObject.SetActive(true);
+        dialogueText.text = node.dialogueText;
+
+        if (node.voiceClip != null)
+        {
+            StartCoroutine(TalkAnimation());
+            AudioManager.Instance.Play(node.voiceClip);
+        }
     }
 
     private void OnButtonClick(int choiceIndex)

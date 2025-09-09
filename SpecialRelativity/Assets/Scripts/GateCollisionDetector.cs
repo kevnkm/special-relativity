@@ -6,18 +6,9 @@ public class GateCollisionDetector : MonoBehaviour
     [SerializeField]
     private Gate gate;
 
-    public IEnumerator CloseAndOpenGate(float closeDuration, float openDuration)
+    public IEnumerator CloseAndOpenGate(float closeDuration = 0.2f, float openDuration = 0.2f)
     {
         yield return StartCoroutine(gate.CloseGate(closeDuration));
         yield return StartCoroutine(gate.OpenGate(openDuration));
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("SignalLightSphere"))
-        {
-            Debug.Log($"LightSphere collided with gate: {gameObject.name}");
-            StartCoroutine(CloseAndOpenGate(0.2f, 0.2f));
-        }
     }
 }
