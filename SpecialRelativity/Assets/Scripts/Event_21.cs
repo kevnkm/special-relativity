@@ -7,14 +7,15 @@ public class Event_21 : MonoBehaviour
     {
         DialogueManager.Instance.UserResponse.SetActive(false);
         DialogueManager.Instance.SummaryCanvas.OnToggleButtonClicked += OnToggleButtonClick;
-        StartCoroutine(WaitBeforeNextNode());
+        StartCoroutine(ShowSummaryCanvas());
     }
 
-    private IEnumerator WaitBeforeNextNode()
+    private IEnumerator ShowSummaryCanvas()
     {
         DialogueManager.Instance.SummaryCanvas.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        DialogueManager.Instance.SummaryCanvas.ShowButtons();
         DialogueManager.Instance.SummaryCanvas.ShowPanel2();
-        yield return new WaitForSeconds(1f);
     }
 
     private void OnToggleButtonClick()

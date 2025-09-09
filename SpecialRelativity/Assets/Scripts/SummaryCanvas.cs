@@ -22,10 +22,22 @@ public class SummaryCanvas : MonoBehaviour
     [SerializeField]
     private Transform inactivePosition;
 
+    [SerializeField]
+    private Button panel1Button;
+
+    [SerializeField]
+    private Button panel2Button;
+
     private void Start()
     {
         toggleButton.onClick.AddListener(() => OnToggleButtonClicked?.Invoke());
         toggleButton.onClick.AddListener(TogglePanelVisibility);
+
+        panel1Button.gameObject.SetActive(false);
+        panel2Button.gameObject.SetActive(false);
+
+        panel1.SetActive(true);
+        panel2.SetActive(false);
     }
 
     private void Update()
@@ -78,5 +90,29 @@ public class SummaryCanvas : MonoBehaviour
         panel1.SetActive(false);
         panel2.SetActive(true);
         toggleText.text = "Hide Summary";
+    }
+
+    public void ShowButtons()
+    {
+        panel1Button.gameObject.SetActive(true);
+        panel2Button.gameObject.SetActive(true);
+
+        panel1Button.onClick.AddListener(() => SwitchPanel(2));
+        panel2Button.onClick.AddListener(() => SwitchPanel(1));
+    }
+
+    private void SwitchPanel(int panelNumber)
+    {
+        currentPanel = panelNumber;
+        if (panelNumber == 1)
+        {
+            panel1.SetActive(true);
+            panel2.SetActive(false);
+        }
+        else if (panelNumber == 2)
+        {
+            panel1.SetActive(false);
+            panel2.SetActive(true);
+        }
     }
 }
