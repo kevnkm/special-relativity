@@ -22,12 +22,12 @@ public class Event_19 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        DialogueManager.Instance.Train.transform.position = new Vector3(46f, -0.57f, -1.32f);
+        DialogueManager.Instance.Train.transform.position = new Vector3(20f, 0f, -1.32f);
         yield return StartCoroutine(
             DialogueManager.Instance.MoveTrain(new Vector3(-30f, 0, 0f), 5f)
         );
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5f); // wait for the rest of the visualization
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
