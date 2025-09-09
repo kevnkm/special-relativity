@@ -34,6 +34,9 @@ public class Event_15 : MonoBehaviour
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
 
+        DialogueManager.Instance.TrainStopwatch.ResetTimer();
+        DialogueManager.Instance.PlatformStopwatch.ResetTimer();
+
         DialogueManager.Instance.Train.gameObject.SetActive(true);
         #endregion
 
