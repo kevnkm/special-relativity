@@ -22,7 +22,7 @@ public class Event_18 : MonoBehaviour
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
         DialogueManager.Instance.Platform.transform.localScale = new Vector3(1f, 1, 1);
-        DialogueManager.Instance.Platform.transform.position = new Vector3(0, 0, 0);
+        DialogueManager.Instance.Environment.transform.position = new Vector3(0, 0, 0);
 
         DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
             Quaternion.Euler(0, 0, 0);
