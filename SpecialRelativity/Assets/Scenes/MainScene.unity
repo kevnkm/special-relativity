@@ -1396,7 +1396,6 @@ MonoBehaviour:
   followSpeed: 5
   rotationSpeed: 3
   offset: {x: 0, y: 1, z: 2}
-  yPos: 0.5
 --- !u!114 &108673725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2533,7 +2532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.6}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &207501390
@@ -7756,7 +7755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 142547090}
   choicesContainer: {fileID: 715655226}
-  startNode: {fileID: 11400000, guid: 51cd9a8c875bc433293841bea85099e9, type: 2}
+  startNode: {fileID: 11400000, guid: 8a080452cb2c84116a37dc6051c2f029, type: 2}
   dialogueCanvas: {fileID: 170558917}
   summaryCanvas: {fileID: 1905154654}
   userResponse: {fileID: 1996808014}
@@ -12963,7 +12962,6 @@ MonoBehaviour:
   followSpeed: 5
   rotationSpeed: 3
   offset: {x: 0, y: 0, z: 1.2}
-  yPos: 1.2
 --- !u!4 &1905154653
 Transform:
   m_ObjectHideFlags: 0
@@ -13642,7 +13640,6 @@ MonoBehaviour:
   followSpeed: 5
   rotationSpeed: 3
   offset: {x: 0, y: 0, z: 1}
-  yPos: 0.7
 --- !u!4 &1996808017
 Transform:
   m_ObjectHideFlags: 0
@@ -14339,7 +14336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.6}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2138517749

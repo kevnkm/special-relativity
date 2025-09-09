@@ -44,8 +44,6 @@ public class Event_15 : MonoBehaviour
         var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
 
         Utility.LocatePlayer(anchor, teleportationProvider);
-
-        DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 1.6f;
         #endregion
 
         yield return new WaitForSeconds(0.5f);

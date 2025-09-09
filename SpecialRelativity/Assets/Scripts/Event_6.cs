@@ -25,8 +25,6 @@ public class Event_6 : MonoBehaviour
         DialogueManager.Instance.UserResponse.SetActive(false);
         DialogueManager.Instance.Train.gameObject.SetActive(false);
 
-        DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 0.7f;
-
         DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
             Quaternion.Euler(0, -90, 0);
 

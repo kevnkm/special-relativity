@@ -6,7 +6,6 @@ public class FollowCamera : MonoBehaviour
     public float followSpeed = 5f;
     public float rotationSpeed = 3f;
     public Vector3 offset = new Vector3(0f, 0f, 2f); // Offset relative to camera's local space
-    public float yPos = 0.5f; // Fixed height offset
 
     private void Start()
     {
@@ -31,7 +30,6 @@ public class FollowCamera : MonoBehaviour
         // Apply offset in flattened local space
         Vector3 targetPosition =
             cameraTransform.position + flatRight * offset.x + flatForward * offset.z;
-        targetPosition.y = yPos; // fixed Y position
 
         // Smooth follow
         transform.position = Vector3.Lerp(

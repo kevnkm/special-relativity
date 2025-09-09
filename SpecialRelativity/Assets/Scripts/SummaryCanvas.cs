@@ -78,6 +78,5 @@ public class SummaryCanvas : MonoBehaviour
         panel1.SetActive(false);
         panel2.SetActive(true);
         toggleText.text = "Hide Summary";
-        gameObject.GetComponent<FollowCamera>().yPos = 1.2f;
     }
 }
