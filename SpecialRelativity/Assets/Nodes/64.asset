@@ -15,18 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: See, while 2s have passed for us, it looks like the stopwatch on
-    the train has registered only about 1.5s. Voila, time dilation!
-  choices:
-  - choiceText: Wow, how amazing!
-    nextNode: {fileID: 11400000, guid: 62a74ef6dce01460caf12f73d7a9507c, type: 2}
-    isCorrectChoice: 0
-  - choiceText: "I can\u2019t quite wrap my head around it."
-    nextNode: {fileID: 11400000, guid: a83deeef402bb486faf4984b2bc56457, type: 2}
-    isCorrectChoice: 0
+  dialogueText: Imagine again that I am on the train with a similar watch.
+  choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0675ed0e99a68403fbec7157daba4539, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 7ef39680bf8bc443097640f3f557108c, type: 2}
+  voiceClip: {fileID: 8300000, guid: 6aea989e133e94dc5afadf896b3e5f5b, type: 3}

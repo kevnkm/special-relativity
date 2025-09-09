@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Another point you might find interesting is that the speed of light
-    remains the same regardless of the frame of reference.
+  dialogueText: Instead, we can say that it is the platform and even the whole world
+    around us that is moving, while the train stays completely still.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 626cd6d67a647439198af334a7dd0729, type: 2}
-  voiceClip: {fileID: 8300000, guid: a34e0256fc8254cd2a395a259488fdeb, type: 3}
+  nextNode: {fileID: 11400000, guid: 66c279d5c9d4842808c8c1abe9b79edd, type: 2}
+  voiceClip: {fileID: 8300000, guid: a0a26a747345f4f44a091cc1f9c855ca, type: 3}

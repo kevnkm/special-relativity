@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: There is one last matter I would like to bring to your attention.
+  dialogueText: However, if I removed the platform and everything else, then you
+    will find that it is impossible to tell what velocity the train is moving at!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 26c09191b203b4a068f2911d5b5de57b, type: 2}
-  voiceClip: {fileID: 8300000, guid: d533d5659113d48539444b306a501070, type: 3}
+  nextNode: {fileID: 11400000, guid: 2ad76d0d433124f58a9a3beb03d7bfc6, type: 2}
+  voiceClip: {fileID: 8300000, guid: 6cb74ada4f00c4f339b95a7867c65fe7, type: 3}

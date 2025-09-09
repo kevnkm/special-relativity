@@ -15,12 +15,13 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Furthermore, there is no preferred frame of reference. In other words,
-    there is no single absolute answer for the velocity of an object.
+  dialogueText: "Now, imagine if you are standing on the train. By doing so, we can
+    say that we are in a different frame of reference, the \u201Ctrain frame of reference\u201D.
+    Watch the ball this time\u2026"
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 3f7a3b91e3f384257bfe497c8bb535d6, type: 2}
-  voiceClip: {fileID: 8300000, guid: b30b61f04cec94557bc460775d5d54bd, type: 3}
+  nextNode: {fileID: 11400000, guid: 1546f82c283324a98b77c1ab4b82c807, type: 2}
+  voiceClip: {fileID: 8300000, guid: 885001718cc0c4815891806aa4bbd7bf, type: 3}

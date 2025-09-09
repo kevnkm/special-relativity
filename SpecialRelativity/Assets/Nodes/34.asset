@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Instead, we are simply perceiving the same reality, the same physical
-    event, from two different frames of reference.
+  dialogueText: Another point you might find interesting is that the speed of light
+    remains the same regardless of the frame of reference.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 24cc75e8e1aa1409faa95bee7044e805, type: 2}
-  voiceClip: {fileID: 8300000, guid: 8bc55e8431b5a4736b18888a48bd8374, type: 3}
+  nextNode: {fileID: 11400000, guid: 626cd6d67a647439198af334a7dd0729, type: 2}
+  voiceClip: {fileID: 8300000, guid: a34e0256fc8254cd2a395a259488fdeb, type: 3}

@@ -15,18 +15,10 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "In the interest of time, I won\u2019t go into the details now, but
-    perhaps you can ask me later if we have the time."
-  choices:
-  - choiceText: "I\u2019m certainly interested!"
-    nextNode: {fileID: 11400000, guid: 232d8f2dd82084d1cbac0e6e556cb9d0, type: 2}
-    isCorrectChoice: 0
-  - choiceText: "That\u2019s alright, thanks for the offer."
-    nextNode: {fileID: 11400000, guid: 232d8f2dd82084d1cbac0e6e556cb9d0, type: 2}
-    isCorrectChoice: 0
+  dialogueText: The key idea here is that velocity is relative! When you are measuring
+    velocity, you are always measuring it with respect to a specific frame of reference.
+  choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 96f718deed5474c85bfc7bb93d93e017, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 963330091201e404499be5d00eb22574, type: 2}
+  voiceClip: {fileID: 8300000, guid: 02111b014b0c74c55866b14862ae5c81, type: 3}

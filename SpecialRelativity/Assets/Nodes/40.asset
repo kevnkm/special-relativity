@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 'Alright! Now that you understand the idea of frames of reference,
-    we shall move on to the more mind-boggling stuff: relativistic effects.'
+  dialogueText: Instead, we are simply perceiving the same reality, the same physical
+    event, from two different frames of reference.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 79d3c15ad249745f5a761a3c1f1e11ce, type: 2}
-  voiceClip: {fileID: 8300000, guid: b81caad6645384c4bae3bc3cbc97bb11, type: 3}
+  nextNode: {fileID: 11400000, guid: 24cc75e8e1aa1409faa95bee7044e805, type: 2}
+  voiceClip: {fileID: 8300000, guid: 8bc55e8431b5a4736b18888a48bd8374, type: 3}

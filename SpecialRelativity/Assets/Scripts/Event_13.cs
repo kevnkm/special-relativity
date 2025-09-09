@@ -16,9 +16,10 @@ public class Event_13 : MonoBehaviour
         DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
 
         DialogueManager.Instance.TrainStopwatch.transform.localScale = new Vector3(2.5f, 1, 1);
-        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+        DialogueManager.Instance.TrainStopwatch.transform.localEulerAngles = new Vector3(0, 180, 0);
 
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(true);
+        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(true);
 
         DialogueManager.Instance.Ball.SetActive(false);
@@ -29,7 +30,7 @@ public class Event_13 : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-50, 0, 0), 3f)
+            DialogueManager.Instance.MoveTrainSmooth(new Vector3(-40, 0, 0), 3f)
         );
 
         Debug.Log("Transitioning to the next event.");

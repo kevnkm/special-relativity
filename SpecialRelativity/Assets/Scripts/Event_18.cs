@@ -16,18 +16,23 @@ public class Event_18 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
 
-        DialogueManager.Instance.Train.transform.position = new Vector3(10f, -0.57f, -1.32f);
-        DialogueManager.Instance.Train.transform.localScale = new Vector3(1, 1, 1);
+        DialogueManager.Instance.Train.transform.position = new Vector3(20f, -0.57f, -1.32f);
+        DialogueManager.Instance.Train.transform.localScale = new Vector3(0.25f, 1, 1);
 
-        DialogueManager.Instance.TrainStopwatch.transform.localScale = new Vector3(1, 1, 1);
-        DialogueManager.Instance.TrainStopwatch.GetComponent<FaceCamera>().enabled = false;
+        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
-        DialogueManager.Instance.Platform.transform.localScale = new Vector3(0.5f, 1, 1);
+        DialogueManager.Instance.Platform.transform.localScale = new Vector3(1f, 1, 1);
+
+        DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
+            Quaternion.Euler(0, 0, 0);
 
         // DialogueManager.Instance.PlatformStopwatch.ResetTimer();
         // DialogueManager.Instance.TrainStopwatch.ResetTimer();
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
+
+        DialogueManager.Instance.PlatformButtonObject.SetActive(true);
+        DialogueManager.Instance.SignalLightSphereObject.SetActive(true);
 
         DialogueManager.Instance.Train.gameObject.SetActive(true);
 
@@ -42,8 +47,8 @@ public class Event_18 : MonoBehaviour
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
         yield return new WaitForSeconds(1f);
 
-        // einstein right turn animation
-        DialogueManager.Instance.EinsteinAnimator.SetTrigger("Right Turn");
+        // // einstein right turn animation
+        // DialogueManager.Instance.EinsteinAnimator.SetTrigger("Right Turn");
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();

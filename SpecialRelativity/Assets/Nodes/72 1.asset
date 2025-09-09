@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Your prediction was correct!
+  dialogueText: "Great, now that you have your prediction, let\u2019s test it out!"
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 69b478a3858754419b7777e6c3c4c780, type: 2}
-  voiceClip: {fileID: 8300000, guid: 16f9b7a4e839f4202a2bde66fc9ae82d, type: 3}
+  nextNode: {fileID: 11400000, guid: b1ca1b46fa8e447a18b774303d12d273, type: 2}
+  voiceClip: {fileID: 8300000, guid: dbcbd449477dc400eb8801d7177d44da, type: 3}

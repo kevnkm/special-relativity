@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: The first signal triggers the second signals.
+  dialogueText: Would you look at that!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: dc3efd6814daa471691f2abd0fd3b936, type: 2}
-  voiceClip: {fileID: 8300000, guid: d8bed7077189a4106807aa49167f6d5a, type: 3}
+  nextNode: {fileID: 11400000, guid: b527d3aa37e234b8a8a574e06ee5d1de, type: 2}
+  voiceClip: {fileID: 8300000, guid: 4713aaee51f24489ab5cda862210925e, type: 3}

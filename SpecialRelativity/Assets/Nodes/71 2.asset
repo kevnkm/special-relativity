@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
+  m_Name: 71 2
+  m_EditorClassIdentifier: 
+  isEventNode: 0
+  isQuizNode: 0
+  eventObject: {fileID: 0}
+  dialogueText: Predict what you will see when you are on the train, in the train
+    frame of reference.
+  choices:
+  - choiceText: Platform is shorter, less time pass on the stopwatch
+    nextNode: {fileID: 11400000, guid: 13eab5d06085a40db9a631dcdc9db85a, type: 2}
+  - choiceText: Platform is shorter, more time pass on the stopwatch
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
+  - choiceText: Platform is longer, less time pass on the stopwatch
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
+  - choiceText: Platform is longer, more time pass on the stopwatch
+    nextNode: {fileID: 11400000, guid: 9413b8316a35f4d37b6444152b92346a, type: 2}
+  quizIndex: 0
+  autoAdvance: 0
+  nextNode: {fileID: 11400000}
+  voiceClip: {fileID: 8300000, guid: 28a62a7a9e417495f9bfd7320c14ae53, type: 3}

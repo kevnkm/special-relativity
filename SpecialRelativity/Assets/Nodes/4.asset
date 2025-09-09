@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Small talk aside, I have a favor to ask, if I may.
+  dialogueText: "But because the architects made a mistake when building the platform
+    and made it too short, the head of the train just sticks out, and they can\u2019t
+    close the gates!"
   choices:
-  - choiceText: "That sounds interesting! I\u2019m all ears."
-    nextNode: {fileID: 11400000, guid: 82b2c1bfd763648cfb9bb9145a81c204, type: 2}
-    isCorrectChoice: 0
-  - choiceText: "I\u2019m afraid I\u2019m not very well-versed in the ways of physics."
-    nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
-    isCorrectChoice: 0
-  quizIndex: 0
-  allowedTries: 0
-  autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 959ee671ed7cb4c059f6903b2b8c85c6, type: 2}
-  voiceClip: {fileID: 8300000, guid: 625d006fa658c41ce9016fc4f7bf70c6, type: 3}
+  - choiceText: Oh, really?
+    nextNode: {fileID: 11400000, guid: 055e25ca057f3496ab3c3eeca5da70d1, type: 2}
+  - choiceText: Why do they need to close anyway?
+    nextNode: {fileID: 11400000, guid: 50a42deff072a48a0b791620775503a0, type: 2}
+  autoAdvance: 0
+  nextNode: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 3830038be2cf14d65a4b0a8ad2aaaafc, type: 3}

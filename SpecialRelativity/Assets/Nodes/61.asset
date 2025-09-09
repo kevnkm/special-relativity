@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Imagine again that I am on the train with a similar watch.
+  dialogueText: So as it turns out, the mistake in station design could be fixed
+    if we just have very fast trains! Haha!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 7ef39680bf8bc443097640f3f557108c, type: 2}
-  voiceClip: {fileID: 8300000, guid: 6aea989e133e94dc5afadf896b3e5f5b, type: 3}
+  nextNode: {fileID: 11400000, guid: 7f927e615b9f04c52a9978452eeefbd7, type: 2}
+  voiceClip: {fileID: 8300000, guid: 5cae7ba51839440869737cd59d92675c, type: 3}

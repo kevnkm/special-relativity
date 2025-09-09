@@ -65,13 +65,6 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField]
-    private GameObject environment;
-    public GameObject Environment
-    {
-        get { return environment; }
-    }
-
-    [SerializeField]
     private GameObject platform;
     public GameObject Platform
     {
@@ -146,6 +139,42 @@ public class DialogueManager : MonoBehaviour
     public TeleportationProvider TeleportationProvider
     {
         get { return teleportationProvider; }
+    }
+
+    [Header("Event 19")]
+    [SerializeField]
+    private Collider trainCollider;
+    public Collider TrainCollider
+    {
+        get { return trainCollider; }
+    }
+
+    [SerializeField]
+    private LightSphere platformButtonLightSphere;
+    public LightSphere PlatformButtonLightSphere
+    {
+        get { return platformButtonLightSphere; }
+    }
+
+    [SerializeField]
+    private LightSphere signalLightSphere;
+    public LightSphere SignalLightSphere
+    {
+        get { return signalLightSphere; }
+    }
+
+    [SerializeField]
+    private GameObject platformButtonObject;
+    public GameObject PlatformButtonObject
+    {
+        get { return platformButtonObject; }
+    }
+
+    [SerializeField]
+    private GameObject signalLightSphereObject;
+    public GameObject SignalLightSphereObject
+    {
+        get { return signalLightSphereObject; }
     }
 
     private void Awake()
@@ -392,16 +421,16 @@ public class DialogueManager : MonoBehaviour
         train.transform.position = targetPosition;
     }
 
-    public IEnumerator MoveEnvironment(Vector3 positionDelta, float duration)
+    public IEnumerator MovePlatform(Vector3 positionDelta, float duration)
     {
-        Vector3 startPosition = environment.transform.position;
+        Vector3 startPosition = platform.transform.position;
         Vector3 targetPosition = startPosition + positionDelta;
 
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            environment.transform.position = Vector3.Lerp(
+            platform.transform.position = Vector3.Lerp(
                 startPosition,
                 targetPosition,
                 elapsedTime / duration
@@ -410,7 +439,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
 
-        environment.transform.position = targetPosition;
+        platform.transform.position = targetPosition;
     }
 
     public void ReleaseBall(Vector3 force)

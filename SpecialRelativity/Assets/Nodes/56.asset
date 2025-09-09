@@ -15,18 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "Yes! Did you see that? It\u2019s very brief, but we can close the
-    gates while the train is in the station."
-  choices:
-  - choiceText: Yes!
-    nextNode: {fileID: 11400000, guid: 47640886aed1e4f47bf676226ac98e68, type: 2}
-    isCorrectChoice: 0
-  - choiceText: Can I see that one more time?
-    nextNode: {fileID: 11400000, guid: e701b9ad05f75425c93242522fd37fb4, type: 2}
-    isCorrectChoice: 0
+  dialogueText: "It doesn\u2019t just look shorter, it is shorter according to the
+    platform reference frame! This is exactly a demonstration of length contraction."
+  choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
-  autoAdvance: 0
-  nextNode: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 30b20301e8ff942a68640af396838adc, type: 3}
+  autoAdvance: 1
+  nextNode: {fileID: 11400000, guid: 197a6698be24e473ea32aca75b8dde77, type: 2}
+  voiceClip: {fileID: 8300000, guid: 9f5fc539f345c41a68f7c664c970cce8, type: 3}

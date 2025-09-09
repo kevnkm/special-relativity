@@ -5,6 +5,7 @@ public class Event_6 : MonoBehaviour
 {
     private void Start()
     {
+        DialogueManager.Instance.UserResponse.SetActive(false);
         StartCoroutine(WaitBeforeNextNode());
     }
 
@@ -25,6 +26,9 @@ public class Event_6 : MonoBehaviour
         DialogueManager.Instance.Train.gameObject.SetActive(false);
 
         DialogueManager.Instance.UserResponse.GetComponent<FollowCamera>().yPos = 0.7f;
+
+        DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
+            Quaternion.Euler(0, -90, 0);
 
         yield return new WaitForSeconds(0.5f);
         yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);

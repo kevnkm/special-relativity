@@ -12,35 +12,36 @@ public class Event_17 : MonoBehaviour
     private void Start()
     {
         Debug.Log($"{gameObject.name} started.");
-        StartCoroutine(WaitBeforeNextNode());
+        DialogueManager.Instance.UserResponse.SetActive(false);
+        StartCoroutine(EventCoroutine());
     }
 
-    private IEnumerator WaitBeforeNextNode()
+    private IEnumerator EventCoroutine()
     {
         yield return new WaitForSeconds(1f);
+        DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
+        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
-        StartCoroutine(CloseAndOpenGate());
-        yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 10f)
-        );
+        yield return StartCoroutine(GateEventCoroutine());
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
         Destroy(gameObject);
     }
 
-    private IEnumerator CloseAndOpenGate()
+    private IEnumerator GateEventCoroutine()
     {
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
+        var moveTime = 10f;
+        Debug.Log("Right Gate Close by Event17");
+        StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
+        StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
-        yield return new WaitForSeconds(7f);
-        // while (DialogueManager.Instance.Environment.transform.position.x < 0f)
-        // {
-        //     yield return null;
-        // }
+        StartCoroutine(DialogueManager.Instance.MovePlatform(new Vector3(16, 0, 0), moveTime));
 
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
-        yield return StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
+        yield return new WaitForSeconds(moveTime * 0.9f);
+
+        Debug.Log("Left Gate Close by Event17");
+        yield return StartCoroutine(DialogueManager.Instance.LeftGate.CloseGate(0.2f));
+        yield return StartCoroutine(DialogueManager.Instance.LeftGate.OpenGate(0.2f));
     }
 }

@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Look at that! If you are standing on the train, the ball looks like
-    it is falling straight down.
+  dialogueText: Let me show you what I mean.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: d5094f5cea68e472c9e083b77d1a8153, type: 2}
-  voiceClip: {fileID: 8300000, guid: 5ad3823d88e2d40fe8d4f98cbe34840a, type: 3}
+  nextNode: {fileID: 11400000, guid: a2b6b30db3cab4968899f8080f089e2e, type: 2}
+  voiceClip: {fileID: 8300000, guid: 7880f7422fcbd4ec58e77a104068c558, type: 3}

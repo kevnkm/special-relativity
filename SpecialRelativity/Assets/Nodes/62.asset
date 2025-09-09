@@ -15,13 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: We will both start our stopwatches when the train first enters the
-    station. I shall wait for two seconds to pass, then pause and compare the time
-    I would record if I were on the train instead.
+  dialogueText: "That aside, let\u2019s talk about time dilation."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 99c37b8e515ea47c09f3127edd2b6693, type: 2}
-  voiceClip: {fileID: 8300000, guid: a9f17db3da0cc456a87151436dbe92c0, type: 3}
+  nextNode: {fileID: 11400000, guid: 822f5e63868df4f2fa18b18321d18f86, type: 2}
+  voiceClip: {fileID: 8300000, guid: 0829f5446efdd4165966d5261f94c53c, type: 3}

@@ -15,11 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: 'To recap what we discussed today:'
+  dialogueText: Thank you for indulging in my whims, and I hope this little foray
+    has alleviated some of the boredom of waiting for your train.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 16b426437c13d449181a1c1924b17192, type: 2}
-  voiceClip: {fileID: 8300000, guid: 3be6df32b1e604c6fa7c63b147720c68, type: 3}
+  nextNode: {fileID: 11400000, guid: 7d0e7fbbeed5b49edbbcc4af40e10e59, type: 2}
+  voiceClip: {fileID: 8300000, guid: 803e15be1674042faa17b6faaac2684c, type: 3}

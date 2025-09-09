@@ -15,13 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: You may think otherwise. After all, the train is clearly moving at
-    a velocity of 2m/s, and the only reason we perceive it to not be moving right
-    now is an illusion created by the fact that we are moving together with the train.
+  dialogueText: Look at that! If you are standing on the train, the ball looks like
+    it is falling straight down.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: f96c6e022d4974f33b9bb497970f8a3e, type: 2}
-  voiceClip: {fileID: 8300000, guid: 3aaeed38d3d6f4a589a4f825849abdba, type: 3}
+  nextNode: {fileID: 11400000, guid: d5094f5cea68e472c9e083b77d1a8153, type: 2}
+  voiceClip: {fileID: 8300000, guid: 5ad3823d88e2d40fe8d4f98cbe34840a, type: 3}

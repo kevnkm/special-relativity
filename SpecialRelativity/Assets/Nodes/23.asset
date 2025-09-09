@@ -15,12 +15,12 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: However, if I removed the platform and everything else, then you
-    will find that it is impossible to tell what velocity the train is moving at!
+  dialogueText: "This fits what we mentioned earlier \u2013 the ball moves together
+    with the train."
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 2ad76d0d433124f58a9a3beb03d7bfc6, type: 2}
-  voiceClip: {fileID: 8300000, guid: 6cb74ada4f00c4f339b95a7867c65fe7, type: 3}
+  nextNode: {fileID: 11400000, guid: 04a979617448f444da12f3765a381427, type: 2}
+  voiceClip: {fileID: 8300000, guid: 1f55656b12dfd48988a72d3913246d60, type: 3}

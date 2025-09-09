@@ -15,7 +15,7 @@ public class Event_14 : MonoBehaviour
 
         StartCoroutine(DialogueManager.Instance.TrainStopwatch.CountToTime(1.49f, 2f));
         StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(2f, 2f));
-        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-8, 0, 0), 2f));
+        yield return StartCoroutine(DialogueManager.Instance.MoveTrain(new Vector3(-9, 0, 0), 2f));
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();

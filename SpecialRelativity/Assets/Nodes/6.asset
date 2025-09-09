@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: 6
   m_EditorClassIdentifier: 
   isEventNode: 0
+  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Perhaps surprisingly, special relativity does not require much background
-    knowledge or mathematics to understand, and I intend to take things step by step.
-  choices: []
+  dialogueText: Small talk aside, I have a favor to ask, if I may.
+  choices:
+  - choiceText: "That sounds interesting! I\u2019m all ears."
+    nextNode: {fileID: 11400000, guid: 82b2c1bfd763648cfb9bb9145a81c204, type: 2}
+    isCorrectChoice: 0
+  - choiceText: "I\u2019m afraid I\u2019m not very well-versed in the ways of physics."
+    nextNode: {fileID: 11400000, guid: 069bc73b996964d7495a8924b9bb3d48, type: 2}
+    isCorrectChoice: 0
+  quizIndex: 0
+  allowedTries: 0
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 534655c71e5fc4eb48ffc9607120b789, type: 2}
-  voiceClip: {fileID: 8300000, guid: 097e08799731447b98b34ddcabfb6ed0, type: 3}
+  nextNode: {fileID: 11400000, guid: 959ee671ed7cb4c059f6903b2b8c85c6, type: 2}
+  voiceClip: {fileID: 8300000, guid: 625d006fa658c41ce9016fc4f7bf70c6, type: 3}

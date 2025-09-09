@@ -15,12 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Now, if we were in the train frame of reference, what would we see
-    for the platform and stopwatch on the platform?
+  dialogueText: I want you to make a prediction.
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 8f008bd8ba6f64558aeac944f5e34f85, type: 2}
-  voiceClip: {fileID: 8300000, guid: 01a11a34754b649d2ad769259042f7ce, type: 3}
+  nextNode: {fileID: 11400000, guid: ac391d062a6c24de994a9c8c4360e0b4, type: 2}
+  voiceClip: {fileID: 8300000, guid: 979d8d436670f44ff8aa4f2c9c07f89b, type: 3}

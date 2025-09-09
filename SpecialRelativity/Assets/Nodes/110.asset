@@ -15,11 +15,11 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: Now the back gate is triggered!
+  dialogueText: This is definitely a thought experiment worth pondering more about!
   choices: []
   quizIndex: 0
   allowedTries: 0
   answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 42cf56c73e44543c9929a77e629c7043, type: 2}
-  voiceClip: {fileID: 8300000, guid: 8c523f988c8f6444ca147e24faabf1e5, type: 3}
+  nextNode: {fileID: 11400000, guid: 7e111f97ba5c44fdd8f4f5305d7acbd5, type: 2}
+  voiceClip: {fileID: 0}

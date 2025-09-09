@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: 13
   m_EditorClassIdentifier: 
   isEventNode: 0
-  isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: "This fits what we mentioned earlier \u2013 the ball moves together
-    with the train."
+  dialogueText: "Let\u2019s imagine that I am on a train moving past the platform
+    at a constant speed, and as the train passes by the platform, I drop a ball that
+    I am holding."
   choices: []
-  quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
-  nextNode: {fileID: 11400000, guid: 04a979617448f444da12f3765a381427, type: 2}
-  voiceClip: {fileID: 8300000, guid: 1f55656b12dfd48988a72d3913246d60, type: 3}
+  nextNode: {fileID: 11400000, guid: c82b00c0eb52c4c8da3c3ed7a1bec7c0, type: 2}
+  voiceClip: {fileID: 8300000, guid: 0e75bef8228a7481c9473ade31bc74c3, type: 3}
