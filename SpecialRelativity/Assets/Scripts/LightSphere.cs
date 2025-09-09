@@ -19,7 +19,7 @@ public class LightSphere : MonoBehaviour
     {
         var renderer = GetComponent<Renderer>();
         _materialInstance = renderer.material;
-        UpdateBaseColor();
+        SetMaterialColor(baseColor);
 
         sphereCollider = GetComponent<SphereCollider>();
         sphereCollider.isTrigger = true;
@@ -30,17 +30,11 @@ public class LightSphere : MonoBehaviour
             TriggerScale(new Vector3(100, 100, 100), 10f);
     }
 
-    public void SetBaseColor(Color color)
-    {
-        baseColor = color;
-        UpdateBaseColor();
-    }
-
-    private void UpdateBaseColor()
+    private void SetMaterialColor(Color color)
     {
         if (_materialInstance != null)
         {
-            _materialInstance.SetColor("_BaseColor", baseColor);
+            _materialInstance.SetColor("_BaseColor", color);
         }
     }
 
@@ -65,14 +59,14 @@ public class LightSphere : MonoBehaviour
         {
             float t = elapsed / duration;
             transform.localScale = Vector3.Lerp(startScale, targetScale, t);
-            SetBaseColor(Color.Lerp(startColor, endColor, t));
+            SetMaterialColor(Color.Lerp(startColor, endColor, t));
 
             elapsed += Time.deltaTime;
             yield return null;
         }
 
         transform.localScale = targetScale;
-        SetBaseColor(endColor);
+        SetMaterialColor(endColor);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,8 +89,7 @@ public class LightSphere : MonoBehaviour
     public void Reset()
     {
         transform.localScale = Vector3.one;
+        SetMaterialColor(baseColor);
         StopAllCoroutines();
-        if (_materialInstance != null)
-            _materialInstance.SetColor("_BaseColor", baseColor);
     }
 }
