@@ -7,7 +7,7 @@ using UnityEngine;
 /// then back gate closes and opens
 /// once the back of the train makes it through.
 /// </summary>
-public class Event_17 : MonoBehaviour
+public class Event_17_1 : MonoBehaviour
 {
     private void Start()
     {
@@ -18,9 +18,29 @@ public class Event_17 : MonoBehaviour
 
     private IEnumerator EventCoroutine()
     {
+        var camera = Camera.main.GetComponent<FadeCamera>();
+
         yield return new WaitForSeconds(1f);
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeIn, 1f);
+
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
+
+        #region Initialize Train Transform
+        DialogueManager.Instance.Train.transform.position = new Vector3(11f, -0.57f, -1.32f);
+        DialogueManager.Instance.Train.transform.localScale = new Vector3(1, 1, 1);
+        #endregion
+
+        # region Initialize Environment Transform
+        DialogueManager.Instance.Environment.transform.position = new Vector3(6, 0, 0);
+        #endregion
+
+        DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
+        DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+        yield return camera.SetUIFadeTrigger(FadeCamera.FadeType.FadeOut, 1f);
+        yield return new WaitForSeconds(1f);
 
         yield return StartCoroutine(GateEventCoroutine());
 

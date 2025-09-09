@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699d1a1a8bf8f4e569f57fb06252a749, type: 3}
-  m_Name: 84 1 Event (82 Event)
+  m_Name: 84 1 Event (81 Event)
   m_EditorClassIdentifier: 
   isEventNode: 1
   isQuizNode: 0
-  eventObject: {fileID: 2862524573664123572, guid: 31b4dbac9f5144925a1a8b5f1c2b8bd2, type: 3}
+  eventObject: {fileID: 2862524573664123572, guid: fa7d537f161504594bdd3671c17b2a1e, type: 3}
   dialogueText: 
   choices: []
   quizIndex: 0

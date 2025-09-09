@@ -35,6 +35,10 @@ public class Event_15 : MonoBehaviour
         DialogueManager.Instance.Train.gameObject.SetActive(true);
         #endregion
 
+        # region Initialize Environment Transform
+        DialogueManager.Instance.Environment.transform.position = new Vector3(0, 0, 0);
+        #endregion
+
         #region Locate Player
         var anchor = DialogueManager.Instance.TrainFrameAnchor;
         var teleportationProvider = DialogueManager.Instance.TeleportationProvider;
@@ -55,7 +59,7 @@ public class Event_15 : MonoBehaviour
         StartCoroutine(DialogueManager.Instance.PlatformStopwatch.CountToTime(1.49f, 2f));
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MovePlatform(new Vector3(6, 0, 0), 2f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(6, 0, 0), 2f)
         );
 
         DialogueManager.Instance.StartNextNode();

@@ -72,6 +72,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     [SerializeField]
+    private GameObject environment;
+    public GameObject Environment
+    {
+        get { return environment; }
+    }
+
+    [SerializeField]
     private Gate leftGate;
     public Gate LeftGate
     {
@@ -421,16 +428,16 @@ public class DialogueManager : MonoBehaviour
         train.transform.position = targetPosition;
     }
 
-    public IEnumerator MovePlatform(Vector3 positionDelta, float duration)
+    public IEnumerator MoveEnvironment(Vector3 positionDelta, float duration)
     {
-        Vector3 startPosition = platform.transform.position;
+        Vector3 startPosition = environment.transform.position;
         Vector3 targetPosition = startPosition + positionDelta;
 
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            platform.transform.position = Vector3.Lerp(
+            environment.transform.position = Vector3.Lerp(
                 startPosition,
                 targetPosition,
                 elapsedTime / duration
@@ -439,7 +446,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
 
-        platform.transform.position = targetPosition;
+        environment.transform.position = targetPosition;
     }
 
     public void ReleaseBall(Vector3 force)

@@ -74,7 +74,7 @@ public class Event_20 : MonoBehaviour
         StartCoroutine(WaitForThreshold());
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MovePlatform(new Vector3(28f, 0, 0f), 12f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 12f)
         );
 
         ///
