@@ -41,10 +41,6 @@ public class Event_19 : MonoBehaviour
             .Instance.LeftGateCollider.gameObject.GetComponent<CollisionDetector>()
             .OnTriggerEntered += HandleLeftGateTrigger;
 
-        DialogueManager
-            .Instance.RightGateCollider.gameObject.GetComponent<CollisionDetector>()
-            .OnTriggerEntered += HandleRightGateTrigger;
-
         StartCoroutine(WaitBeforeNextNode());
     }
 
@@ -59,8 +55,6 @@ public class Event_19 : MonoBehaviour
         yield return StartCoroutine(
             DialogueManager.Instance.MoveTrain(new Vector3(-30f, 0, 0f), 27f)
         );
-
-        yield return new WaitForSeconds(15f); // wait for the rest of the visualization
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
@@ -89,28 +83,23 @@ public class Event_19 : MonoBehaviour
     private void HandleLeftGateTrigger(Collider other)
     {
         Debug.Log($"Left Gate collided with: {other.name}");
+        if (!other.CompareTag("SignalLightSphere"))
+            return;
+
         DialogueManager
             .Instance.LeftGateCollider.gameObject.GetComponent<CollisionDetector>()
             .OnTriggerEntered -= HandleLeftGateTrigger;
-        DialogueManager.Instance.StartNode(explanationNode4);
         StartCoroutine(
             DialogueManager
                 .Instance.LeftGateCollider.GetComponent<GateCollisionDetector>()
-                .CloseAndOpenGate()
+                .CloseAndOpenGate(1.2f, 1.2f)
         );
-    }
-
-    private void HandleRightGateTrigger(Collider other)
-    {
-        Debug.Log($"Right Gate collided with: {other.name}");
-        DialogueManager
-            .Instance.RightGateCollider.gameObject.GetComponent<CollisionDetector>()
-            .OnTriggerEntered -= HandleRightGateTrigger;
         StartCoroutine(
             DialogueManager
                 .Instance.RightGateCollider.GetComponent<GateCollisionDetector>()
-                .CloseAndOpenGate()
+                .CloseAndOpenGate(1.2f, 1.2f)
         );
+        DialogueManager.Instance.StartNode(explanationNode4);
     }
 
     private IEnumerator StartLastNodeWithCondition()

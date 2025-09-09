@@ -7794,7 +7794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 142547090}
   choicesContainer: {fileID: 715655226}
-  startNode: {fileID: 11400000, guid: 4f3a135b3d192469ca51bd4b8c46e8e1, type: 2}
+  startNode: {fileID: 11400000, guid: 8a080452cb2c84116a37dc6051c2f029, type: 2}
   dialogueCanvas: {fileID: 170558917}
   summaryCanvas: {fileID: 1905154654}
   userResponse: {fileID: 1996808014}
@@ -7830,7 +7830,7 @@ MonoBehaviour:
   trainCollider: {fileID: 52120997}
   platformButtonLightSphere: {fileID: 1114035951}
   signalLightSphere: {fileID: 737653786}
-  leftGateCollider: {fileID: 4720760}
+  leftGateCollider: {fileID: 224455379}
   rightGateCollider: {fileID: 4720760}
   platformButtonObject: {fileID: 59323550}
   signalLightSphereObject: {fileID: 1628455264}
@@ -13918,7 +13918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -80}
+  m_AnchoredPosition: {x: 0, y: 270}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2031539049

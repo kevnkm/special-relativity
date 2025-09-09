@@ -18,8 +18,6 @@ MonoBehaviour:
   dialogueText: The train leaves.
   choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 18f0427ccedbb4c66bc23df70b29de78, type: 2}
   voiceClip: {fileID: 0}

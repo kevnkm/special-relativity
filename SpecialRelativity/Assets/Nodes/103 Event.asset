@@ -19,5 +19,5 @@ MonoBehaviour:
   choices: []
   quizIndex: 0
   autoAdvance: 0
-  nextNode: {fileID: 11400000, guid: 224d932209ed24f24aa2e28b70885b0f, type: 2}
+  nextNode: {fileID: 11400000, guid: b527d3aa37e234b8a8a574e06ee5d1de, type: 2}
   voiceClip: {fileID: 0}

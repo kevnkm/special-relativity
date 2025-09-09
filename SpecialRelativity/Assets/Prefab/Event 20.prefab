@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31f7769ca2a54feeb428b697210c4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explanationNode1: {fileID: 11400000, guid: 224d932209ed24f24aa2e28b70885b0f, type: 2}
+  explanationNode2: {fileID: 11400000, guid: b11ce42daf10a43bf966f05fef1ae37c, type: 2}
+  explanationNode3: {fileID: 11400000, guid: dc3efd6814daa471691f2abd0fd3b936, type: 2}
+  explanationNode4: {fileID: 11400000, guid: 42889448a47a74918ad433a26677b6c0, type: 2}
+  explanationNode5: {fileID: 11400000, guid: 42cf56c73e44543c9929a77e629c7043, type: 2}

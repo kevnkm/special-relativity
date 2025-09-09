@@ -3,7 +3,25 @@ using UnityEngine;
 
 public class Event_20 : MonoBehaviour
 {
-    private CollisionDetector listener;
+    [Tooltip("The button triggers the first signal.")]
+    [SerializeField]
+    private DialogueNode explanationNode1;
+
+    [Tooltip("The first signal triggers the second signals.")]
+    [SerializeField]
+    private DialogueNode explanationNode2;
+
+    [Tooltip("Look, the front gate is triggered first!")]
+    [SerializeField]
+    private DialogueNode explanationNode3;
+
+    [Tooltip("Now the back gate is triggered!")]
+    [SerializeField]
+    private DialogueNode explanationNode4;
+
+    [Tooltip("Would you look at that!")]
+    [SerializeField]
+    private DialogueNode explanationNode5;
 
     private void Start()
     {
@@ -11,9 +29,17 @@ public class Event_20 : MonoBehaviour
 
         Debug.Log($"{gameObject.name} started.");
 
-        listener =
-            DialogueManager.Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>();
-        listener.OnTriggerEntered += HandleTrainTrigger;
+        DialogueManager
+            .Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered += HandleTrainTrigger;
+
+        DialogueManager
+            .Instance.SignalLightSphere.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered += HandleSignalLightTrigger;
+
+        DialogueManager
+            .Instance.RightGateCollider.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered += HandleRightGateTrigger;
 
         StartCoroutine(EventCoroutine());
     }
@@ -29,6 +55,7 @@ public class Event_20 : MonoBehaviour
         DialogueManager.Instance.Train.transform.localScale = new Vector3(1f, 1, 1);
 
         DialogueManager.Instance.Platform.transform.localScale = new Vector3(0.5f, 1, 1);
+        DialogueManager.Instance.Environment.transform.position = new Vector3(0f, 0f, 0f);
 
         DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
             Quaternion.Euler(0, -90, 0);
@@ -66,9 +93,10 @@ public class Event_20 : MonoBehaviour
         ///
 
         StartCoroutine(WaitForThreshold());
+        StartCoroutine(WaitForEnvironmentThreshold());
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 20f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 120f)
         );
 
         ///
@@ -113,24 +141,66 @@ public class Event_20 : MonoBehaviour
     private void HandleTrainTrigger(Collider other)
     {
         Debug.Log($"Train collided with: {other.name}");
-        DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(new Vector3(100, 100, 100));
-        listener.OnTriggerEntered -= HandleTrainTrigger;
+        DialogueManager
+            .Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered -= HandleTrainTrigger;
+        DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(
+            new Vector3(50, 50, 50),
+            80f
+        );
+        DialogueManager.Instance.StartNode(explanationNode1);
     }
 
     private IEnumerator WaitForThreshold()
     {
         while (DialogueManager.Instance.Platform.transform.position.x < 25f)
-        {
             yield return null;
-        }
+
+        DialogueManager.Instance.StartNode(explanationNode4);
 
         yield return StartCoroutine(DialogueManager.Instance.LeftGate.CloseGate(0.2f));
         yield return StartCoroutine(DialogueManager.Instance.LeftGate.OpenGate(0.2f));
     }
 
+    private IEnumerator WaitForEnvironmentThreshold()
+    {
+        while (DialogueManager.Instance.Environment.transform.position.x < 27f)
+            yield return null;
+
+        DialogueManager.Instance.StartNode(explanationNode5);
+    }
+
+    private void HandleSignalLightTrigger(Collider other)
+    {
+        Debug.Log($"Signal Light Sphere collided with: {other.name}");
+        DialogueManager
+            .Instance.SignalLightSphere.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered -= HandleSignalLightTrigger;
+        DialogueManager.Instance.StartNode(explanationNode2);
+        DialogueManager.Instance.SignalLightSphere.TriggerScale(new Vector3(50, 50, 50), 80f);
+    }
+
+    private void HandleRightGateTrigger(Collider other)
+    {
+        Debug.Log($"Right Gate Collider triggered by: {other.name}");
+        if (!other.CompareTag("SignalLightSphere"))
+            return;
+
+        DialogueManager
+            .Instance.RightGateCollider.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered -= HandleRightGateTrigger;
+        DialogueManager.Instance.StartNode(explanationNode3);
+        StartCoroutine(
+            DialogueManager
+                .Instance.RightGateCollider.GetComponent<GateCollisionDetector>()
+                .CloseAndOpenGate()
+        );
+    }
+
     private void OnDestroy()
     {
-        if (listener != null)
-            listener.OnTriggerEntered -= HandleTrainTrigger;
+        DialogueManager
+            .Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>()
+            .OnTriggerEntered -= HandleTrainTrigger;
     }
 }

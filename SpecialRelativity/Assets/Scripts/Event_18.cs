@@ -28,6 +28,8 @@ public class Event_18 : MonoBehaviour
         DialogueManager.Instance.EinsteinAnimator.gameObject.transform.localRotation =
             Quaternion.Euler(0, 0, 0);
 
+        DialogueManager.Instance.EinsteinOnTrain.SetActive(false);
+
         DialogueManager.Instance.PlatformStopwatch.gameObject.SetActive(false);
         DialogueManager.Instance.TrainStopwatch.gameObject.SetActive(false);
 
