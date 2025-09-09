@@ -11,7 +11,7 @@ public class Event_16 : MonoBehaviour
 
     private IEnumerator WaitBeforeNextNode()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.01f);
 
         Debug.Log("Transitioning to the next event.");
         DialogueManager.Instance.StartNextNode();
