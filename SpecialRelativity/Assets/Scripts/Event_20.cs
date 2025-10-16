@@ -144,6 +144,11 @@ public class Event_20 : MonoBehaviour
         DialogueManager
             .Instance.TrainCollider.gameObject.GetComponent<CollisionDetector>()
             .OnTriggerEntered -= HandleTrainTrigger;
+
+        // Set the PlatformButtonLightSphere as a child of the train
+        DialogueManager.Instance.PlatformButtonLightSphere.transform.SetParent(
+            DialogueManager.Instance.Train.transform
+        );
         DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(
             new Vector3(50, 50, 50),
             80f
@@ -177,6 +182,11 @@ public class Event_20 : MonoBehaviour
             .Instance.SignalLightSphere.gameObject.GetComponent<CollisionDetector>()
             .OnTriggerEntered -= HandleSignalLightTrigger;
         DialogueManager.Instance.StartNode(explanationNode2);
+
+        // Set the SignalLightSphere as a child of the train
+        DialogueManager.Instance.SignalLightSphere.transform.SetParent(
+            DialogueManager.Instance.Train.transform
+        );
         DialogueManager.Instance.SignalLightSphere.TriggerScale(new Vector3(50, 50, 50), 80f);
     }
 
