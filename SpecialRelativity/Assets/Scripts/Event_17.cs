@@ -36,6 +36,8 @@ public class Event_17 : MonoBehaviour
         yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
         StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
+        //StartCoroutine(DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), moveTime));
+
         StartCoroutine(DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), moveTime));
 
         yield return new WaitForSeconds(moveTime * 0.9f);

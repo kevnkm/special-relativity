@@ -15,11 +15,10 @@ MonoBehaviour:
   isEventNode: 0
   isQuizNode: 0
   eventObject: {fileID: 0}
-  dialogueText: This is definitely a thought experiment worth pondering more about!
+  dialogueText: This is definitely a thought experiment, or as I would call it, a
+    Gedankenexperiment, worth pondering more about.
   choices: []
   quizIndex: 0
-  allowedTries: 0
-  answerExplanationNode: {fileID: 0}
   autoAdvance: 1
   nextNode: {fileID: 11400000, guid: 7e111f97ba5c44fdd8f4f5305d7acbd5, type: 2}
-  voiceClip: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: bd5c0e26f00a7ad439568c37fa46a9c0, type: 3}

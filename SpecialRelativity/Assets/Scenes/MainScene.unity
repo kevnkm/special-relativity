@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.7
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12423738, g: 0.1555364, b: 0.21305649, a: 0.7}
+  m_IndirectSpecularColor: {r: 0.124305174, g: 0.15562575, b: 0.21316291, a: 0.7}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12136,6 +12136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: train
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99a99a2c55ed445dabb042a8e451847a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14120,6 +14124,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1545205ce82594ad3a1a107534bacae9, type: 3}
       propertyPath: m_Name
       value: button
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1545205ce82594ad3a1a107534bacae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860821652823873765, guid: 1545205ce82594ad3a1a107534bacae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

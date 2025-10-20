@@ -1,8 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using System;
+using System.Collections.Generic;
 
 public class Event_20 : MonoBehaviour
 {
+
     [Tooltip("The button triggers the first signal.")]
     [SerializeField]
     private DialogueNode explanationNode1;
@@ -42,6 +45,8 @@ public class Event_20 : MonoBehaviour
             .OnTriggerEntered += HandleRightGateTrigger;
 
         StartCoroutine(EventCoroutine());
+
+
     }
 
     private IEnumerator EventCoroutine()
@@ -96,7 +101,7 @@ public class Event_20 : MonoBehaviour
         StartCoroutine(WaitForEnvironmentThreshold());
 
         yield return StartCoroutine(
-            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 120f)
+            DialogueManager.Instance.MoveEnvironment(new Vector3(28f, 0, 0f), 40f)
         );
 
         ///
@@ -149,9 +154,14 @@ public class Event_20 : MonoBehaviour
         DialogueManager.Instance.PlatformButtonLightSphere.transform.SetParent(
             DialogueManager.Instance.Train.transform
         );
+        // DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(
+        //     new Vector3(50, 50, 50),
+        //     80f
+        // );
+
         DialogueManager.Instance.PlatformButtonLightSphere.TriggerScale(
             new Vector3(50, 50, 50),
-            80f
+            40f
         );
         DialogueManager.Instance.StartNode(explanationNode1);
     }
@@ -187,7 +197,9 @@ public class Event_20 : MonoBehaviour
         DialogueManager.Instance.SignalLightSphere.transform.SetParent(
             DialogueManager.Instance.Train.transform
         );
-        DialogueManager.Instance.SignalLightSphere.TriggerScale(new Vector3(50, 50, 50), 80f);
+
+        DialogueManager.Instance.SignalLightSphere.TriggerScale(new Vector3(62, 50, 50), 40f);
+
     }
 
     private void HandleRightGateTrigger(Collider other)
