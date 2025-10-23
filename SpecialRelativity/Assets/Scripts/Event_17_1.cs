@@ -52,13 +52,16 @@ public class Event_17_1 : MonoBehaviour
     private IEnumerator GateEventCoroutine()
     {
         var moveTime = 10f;
+        // StartCoroutine(DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), moveTime));
+        StartCoroutine(DialogueManager.Instance.MoveEnvironment(new Vector3(19, 0, 0), moveTime));
+        yield return new WaitForSeconds(0.2f);
         Debug.Log("Right Gate Close by Event17");
         yield return StartCoroutine(DialogueManager.Instance.RightGate.CloseGate(0.2f));
         StartCoroutine(DialogueManager.Instance.RightGate.OpenGate(0.2f));
 
-        StartCoroutine(DialogueManager.Instance.MoveEnvironment(new Vector3(16, 0, 0), moveTime));
+ 
 
-        yield return new WaitForSeconds(moveTime * 0.9f);
+        yield return new WaitForSeconds(moveTime * 0.95f);
 
         Debug.Log("Left Gate Close by Event17");
         yield return StartCoroutine(DialogueManager.Instance.LeftGate.CloseGate(0.2f));
