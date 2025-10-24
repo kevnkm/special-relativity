@@ -35,13 +35,16 @@ Einstein drops a ball inside the moving train.
   ![Falling Ball](./src/specialrelativity_4.gif)
   ![Falling Ball](./src/specialrelativity_5.gif)
 
+  ![Frames of Reference](./src/specialrelativity_6.gif)
+  ![Frames of Reference Summary](./src/specialrelativity_7.gif)
+
 ---
 
 ## Relativistic Effects
 
 Einstein introduces **length contraction** and **time dilation** by accelerating the train to **70% the speed of light** (≈0.7c).
 
-![Relativistic Effects Intro](./src/specialrelativity_6.gif)
+![Relativistic Effects](./src/specialrelativity_8.gif)
 
 Players observe:
 
@@ -49,6 +52,11 @@ Players observe:
 - Time running slower on the moving stopwatch (**time dilation** equation: t = t₀/√(1−v²/c²)).
 
 Players make predictions, test them by switching frames, and visually confirm both effects.
+
+![Relativistic Effects](./src/specialrelativity_9.gif)
+![Relativistic Effects](./src/specialrelativity_10.gif)
+![Relativistic Effects](./src/specialrelativity_11.gif)
+![Relativistic Effects](./src/specialrelativity_12.gif)
 
 ---
 
@@ -69,6 +77,9 @@ Mechanism based on [this explanation video](https://www.youtube.com/watch?v=YAmH
 - Signal triggered at the track center travels at **speed of light**.
 - Gates close upon receiving the signal.
 - In TF, one gate moves toward the signal (closes earlier), the other away (closes later).
+
+![The Barn Paradox PF](./src/specialrelativity_13.gif)
+![The Barn Paradox TF](./src/specialrelativity_14.gif)
 
 ---
 
